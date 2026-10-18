@@ -1,0 +1,132 @@
+1. Views data: multi follows serialize
+  [ok] ce_education.honors (String/CheckBox, serialize 1) -- civicrm_entity_in_operator, multi true
+  [ok] ce_profile_all.checkboxes (String/CheckBox, serialize 1) -- civicrm_entity_in_operator, multi true
+  [FAIL] ce_profile_all.multiselect (String/Select, serialize 1) -- civicrm_entity_in_operator, multi null
+  [FAIL] ce_profile_all.countries (Country/Select, serialize 1) -- civicrm_entity_in_operator, multi null
+  [FAIL] ce_profile_all.states (StateProvince/Select, serialize 1) -- civicrm_entity_in_operator, multi null
+  [FAIL] ce_skills.languages (String/Select, serialize 1) -- civicrm_entity_in_operator, multi null
+  [--] 6 serialized fields; 81 others are not multi
+
+2. in / not in on contacts, against SQL
+  [ok] ce_education.honors in [cum_laude] -- 24 vs 24
+  [ok] ce_education.honors not in [cum_laude] -- 57 vs 57
+  [ok] ce_education.honors in [magna] -- 25 vs 25
+  [ok] ce_education.honors not in [magna] -- 58 vs 58
+  [ok] ce_education.honors in [summa] -- 26 vs 26
+  [ok] ce_education.honors not in [summa] -- 59 vs 59
+  [ok] ce_education.honors in [deans_list] -- 21 vs 21
+  [ok] ce_education.honors not in [deans_list] -- 59 vs 59
+  [ok] ce_education.honors in [cum_laude, magna] -- 38 vs 38
+  [ok] ce_profile_all.checkboxes in [volunteer] -- 25 vs 25
+  [ok] ce_profile_all.checkboxes not in [volunteer] -- 23 vs 23
+  [ok] ce_profile_all.checkboxes in [events] -- 23 vs 23
+  [ok] ce_profile_all.checkboxes not in [events] -- 25 vs 25
+  [ok] ce_profile_all.checkboxes in [advocacy] -- 22 vs 22
+  [ok] ce_profile_all.checkboxes not in [advocacy] -- 26 vs 26
+  [ok] ce_profile_all.checkboxes in [news] -- 22 vs 22
+  [ok] ce_profile_all.checkboxes not in [news] -- 26 vs 26
+  [ok] ce_profile_all.checkboxes in [volunteer, events] -- 41 vs 41
+  [FAIL] ce_profile_all.multiselect in [wed] -- 4 vs 42
+  [FAIL] ce_profile_all.multiselect not in [wed] -- 76 vs 38
+  [FAIL] ce_profile_all.multiselect in [tue] -- 4 vs 35
+  [FAIL] ce_profile_all.multiselect not in [tue] -- 76 vs 45
+  [FAIL] ce_profile_all.multiselect in [thu] -- 6 vs 32
+  [FAIL] ce_profile_all.multiselect not in [thu] -- 74 vs 48
+  [FAIL] ce_profile_all.multiselect in [mon] -- 2 vs 32
+  [FAIL] ce_profile_all.multiselect not in [mon] -- 78 vs 48
+  [FAIL] ce_profile_all.multiselect in [fri] -- 5 vs 29
+  [FAIL] ce_profile_all.multiselect not in [fri] -- 75 vs 51
+  [FAIL] ce_profile_all.multiselect in [wed, tue] -- 8 vs 59
+  [FAIL] ce_profile_all.countries in [1101] -- 8 vs 30
+  [FAIL] ce_profile_all.countries not in [1101] -- 72 vs 50
+  [FAIL] ce_profile_all.countries in [1226] -- 4 vs 29
+  [FAIL] ce_profile_all.countries not in [1226] -- 76 vs 51
+  [FAIL] ce_profile_all.countries in [1082] -- 4 vs 25
+  [FAIL] ce_profile_all.countries not in [1082] -- 76 vs 55
+  [FAIL] ce_profile_all.countries in [1039] -- 7 vs 25
+  [FAIL] ce_profile_all.countries not in [1039] -- 73 vs 55
+  [FAIL] ce_profile_all.countries in [1228] -- 6 vs 24
+  [FAIL] ce_profile_all.countries not in [1228] -- 74 vs 56
+  [FAIL] ce_profile_all.countries in [1076] -- 2 vs 21
+  [FAIL] ce_profile_all.countries not in [1076] -- 78 vs 59
+  [FAIL] ce_profile_all.countries in [1101, 1226] -- 12 vs 52
+  [FAIL] ce_profile_all.states in [1000] -- 6 vs 31
+  [FAIL] ce_profile_all.states not in [1000] -- 58 vs 33
+  [FAIL] ce_profile_all.states in [1002] -- 5 vs 31
+  [FAIL] ce_profile_all.states not in [1002] -- 59 vs 33
+  [FAIL] ce_profile_all.states in [1003] -- 6 vs 27
+  [FAIL] ce_profile_all.states not in [1003] -- 58 vs 37
+  [FAIL] ce_profile_all.states in [1001] -- 5 vs 22
+  [FAIL] ce_profile_all.states not in [1001] -- 59 vs 42
+  [FAIL] ce_profile_all.states in [1004] -- 0 vs 16
+  [FAIL] ce_profile_all.states not in [1004] -- 64 vs 48
+  [FAIL] ce_profile_all.states in [1000, 1002] -- 11 vs 47
+  [FAIL] ce_skills.languages in [es] -- 8 vs 52
+  [FAIL] ce_skills.languages not in [es] -- 69 vs 59
+  [FAIL] ce_skills.languages in [de] -- 15 vs 49
+  [FAIL] ce_skills.languages not in [de] -- 68 vs 63
+  [FAIL] ce_skills.languages in [ar] -- 13 vs 48
+  [FAIL] ce_skills.languages not in [ar] -- 70 vs 62
+  [FAIL] ce_skills.languages in [zh] -- 10 vs 47
+  [FAIL] ce_skills.languages not in [zh] -- 68 vs 63
+  [FAIL] ce_skills.languages in [fr] -- 9 vs 43
+  [FAIL] ce_skills.languages not in [fr] -- 70 vs 65
+  [FAIL] ce_skills.languages in [en] -- 10 vs 39
+  [FAIL] ce_skills.languages not in [en] -- 70 vs 66
+  [FAIL] ce_skills.languages in [es, de] -- 22 vs 64
+
+20 passed, 52 failed
+  - ce_profile_all.multiselect (String/Select, serialize 1) (civicrm_entity_in_operator, multi null)
+  - ce_profile_all.countries (Country/Select, serialize 1) (civicrm_entity_in_operator, multi null)
+  - ce_profile_all.states (StateProvince/Select, serialize 1) (civicrm_entity_in_operator, multi null)
+  - ce_skills.languages (String/Select, serialize 1) (civicrm_entity_in_operator, multi null)
+  - ce_profile_all.multiselect in [wed] (4 vs 42)
+  - ce_profile_all.multiselect not in [wed] (76 vs 38)
+  - ce_profile_all.multiselect in [tue] (4 vs 35)
+  - ce_profile_all.multiselect not in [tue] (76 vs 45)
+  - ce_profile_all.multiselect in [thu] (6 vs 32)
+  - ce_profile_all.multiselect not in [thu] (74 vs 48)
+  - ce_profile_all.multiselect in [mon] (2 vs 32)
+  - ce_profile_all.multiselect not in [mon] (78 vs 48)
+  - ce_profile_all.multiselect in [fri] (5 vs 29)
+  - ce_profile_all.multiselect not in [fri] (75 vs 51)
+  - ce_profile_all.multiselect in [wed, tue] (8 vs 59)
+  - ce_profile_all.countries in [1101] (8 vs 30)
+  - ce_profile_all.countries not in [1101] (72 vs 50)
+  - ce_profile_all.countries in [1226] (4 vs 29)
+  - ce_profile_all.countries not in [1226] (76 vs 51)
+  - ce_profile_all.countries in [1082] (4 vs 25)
+  - ce_profile_all.countries not in [1082] (76 vs 55)
+  - ce_profile_all.countries in [1039] (7 vs 25)
+  - ce_profile_all.countries not in [1039] (73 vs 55)
+  - ce_profile_all.countries in [1228] (6 vs 24)
+  - ce_profile_all.countries not in [1228] (74 vs 56)
+  - ce_profile_all.countries in [1076] (2 vs 21)
+  - ce_profile_all.countries not in [1076] (78 vs 59)
+  - ce_profile_all.countries in [1101, 1226] (12 vs 52)
+  - ce_profile_all.states in [1000] (6 vs 31)
+  - ce_profile_all.states not in [1000] (58 vs 33)
+  - ce_profile_all.states in [1002] (5 vs 31)
+  - ce_profile_all.states not in [1002] (59 vs 33)
+  - ce_profile_all.states in [1003] (6 vs 27)
+  - ce_profile_all.states not in [1003] (58 vs 37)
+  - ce_profile_all.states in [1001] (5 vs 22)
+  - ce_profile_all.states not in [1001] (59 vs 42)
+  - ce_profile_all.states in [1004] (0 vs 16)
+  - ce_profile_all.states not in [1004] (64 vs 48)
+  - ce_profile_all.states in [1000, 1002] (11 vs 47)
+  - ce_skills.languages in [es] (8 vs 52)
+  - ce_skills.languages not in [es] (69 vs 59)
+  - ce_skills.languages in [de] (15 vs 49)
+  - ce_skills.languages not in [de] (68 vs 63)
+  - ce_skills.languages in [ar] (13 vs 48)
+  - ce_skills.languages not in [ar] (70 vs 62)
+  - ce_skills.languages in [zh] (10 vs 47)
+  - ce_skills.languages not in [zh] (68 vs 63)
+  - ce_skills.languages in [fr] (9 vs 43)
+  - ce_skills.languages not in [fr] (70 vs 65)
+  - ce_skills.languages in [en] (10 vs 39)
+  - ce_skills.languages not in [en] (70 vs 66)
+  - ce_skills.languages in [es, de] (22 vs 64)
+ [warning] Drush command terminated abnormally.
+[31mFailed to run drush --uri=https://drupal-civi-composer-exp-d11.ddev.site php:script scripts/smoke/j31-smoke.php: exit status 1[0m

@@ -1,0 +1,11 @@
+uuid: 279ba681-fe3e-44c2-bc28-ce97b7c30841
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+id: civicrm_cv_ce_board_terms.ce_compact
+label: Compact
+description: null
+targetEntityType: civicrm_cv_ce_board_terms
+cache: true

@@ -1,0 +1,89 @@
+uuid: d073fed5-4c18-439a-93bb-d4365b49a3f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+    - datetime
+    - options
+    - text
+id: civicrm_cv_ce_board_terms.civicrm_cv_ce_board_terms.default
+targetEntityType: civicrm_cv_ce_board_terms
+bundle: civicrm_cv_ce_board_terms
+mode: default
+content:
+  custom_26:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  custom_27:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  custom_28:
+    type: datetime_custom
+    label: inline
+    settings:
+      timezone_override: ''
+      date_format: 'M j, Y'
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  custom_29:
+    type: datetime_custom
+    label: inline
+    settings:
+      timezone_override: ''
+      date_format: 'M j, Y'
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  custom_30:
+    type: number_decimal
+    label: inline
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  custom_31:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  custom_32:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  custom_33:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  entity_id:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  id: true

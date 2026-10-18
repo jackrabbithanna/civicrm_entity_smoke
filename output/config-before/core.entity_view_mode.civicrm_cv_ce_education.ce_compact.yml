@@ -1,0 +1,11 @@
+uuid: 704cc974-5173-4b6b-9d75-69355d2e2dfc
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+id: civicrm_cv_ce_education.ce_compact
+label: Compact
+description: null
+targetEntityType: civicrm_cv_ce_education
+cache: true

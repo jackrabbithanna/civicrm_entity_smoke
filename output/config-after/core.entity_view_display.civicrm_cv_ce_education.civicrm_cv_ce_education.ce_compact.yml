@@ -1,0 +1,57 @@
+uuid: ffeb731f-0798-4c9b-9a4d-8cf7a69b7b22
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.civicrm_cv_ce_education.ce_compact
+  module:
+    - civicrm_entity
+    - datetime
+    - options
+id: civicrm_cv_ce_education.civicrm_cv_ce_education.ce_compact
+targetEntityType: civicrm_cv_ce_education
+bundle: civicrm_cv_ce_education
+mode: ce_compact
+content:
+  custom_11:
+    type: datetime_custom
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'M j, Y'
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  custom_7:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  custom_8:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  entity_id:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  custom_10: true
+  custom_12: true
+  custom_13: true
+  custom_14: true
+  custom_15: true
+  custom_16: true
+  custom_9: true
+  id: true

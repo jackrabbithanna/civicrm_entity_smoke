@@ -1,0 +1,11 @@
+uuid: 0c88fdad-22d7-44bb-a189-eec19abb298a
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+id: civicrm_contact.edit
+label: Edit
+description: null
+targetEntityType: civicrm_contact
+cache: true

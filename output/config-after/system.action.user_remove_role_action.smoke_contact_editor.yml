@@ -1,0 +1,14 @@
+uuid: 53de9f4d-fb57-43db-9b13-90d736c8aee6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.smoke_contact_editor
+  module:
+    - user
+id: user_remove_role_action.smoke_contact_editor
+label: 'Remove the smoke_contact_editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: smoke_contact_editor

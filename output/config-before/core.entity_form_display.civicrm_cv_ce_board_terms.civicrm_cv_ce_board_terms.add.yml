@@ -1,0 +1,57 @@
+uuid: 7e486501-5fa4-4d39-a89f-3e594269ddbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.civicrm_cv_ce_board_terms.add
+  module:
+    - civicrm_entity
+    - datetime
+id: civicrm_cv_ce_board_terms.civicrm_cv_ce_board_terms.add
+targetEntityType: civicrm_cv_ce_board_terms
+bundle: civicrm_cv_ce_board_terms
+mode: add
+content:
+  custom_26:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  custom_27:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  custom_28:
+    type: datetime_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  custom_29:
+    type: datetime_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  entity_id:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  custom_30: true
+  custom_31: true
+  custom_32: true
+  custom_33: true

@@ -1,0 +1,58 @@
+1. education record: add, edit, unchanged save, delete (admin)
+  [ok] add form for contact 28 opens -- HTTP 200
+  [ok] saving reports the new record and returns to the contact -- https://drupal-civi-composer-exp-d11.ddev.site/civicrm-contact/28 Status message Education History #196 has been created. Close message
+  [ok] the row holds what was entered -- {"entity_id":"28","school_7":"Browser Smoke University 1792222031","degree_8":"BA","field_of_study_9":"Analytical Engines","graduated_13":"1"}
+  [ok] the date-only end date is stored as entered -- 2021-06-15 00:00:00
+  [ok] edit form opens -- HTTP 200
+  [ok] edit saves a changed text field -- Difference Engines
+  [ok] edit saves two checked honors -- "\u0001cum_laude\u0001deans_list\u0001"
+  [ok] edit saves a float -- 3.75
+  [ok] dates: the new one stored, the old one unchanged -- 2017-09-01 00:00:00 / 2021-06-15 00:00:00
+  [ok] edit saves a multi-line memo -- "Line one\r\nLine two"
+  [ok] fields left alone keep their values -- {"school_7":"Browser Smoke University 1792222031","degree_8":"BA","graduated_13":"1"}
+  [ok] saving the edit form unchanged changes nothing -- []
+  [ok] unchecking every honor clears the field -- ""
+  [ok] emptying a text field clears it -- ""
+  [ok] emptying a date clears it -- ""
+  [ok] delete form opens -- HTTP 200
+  [ok] confirming deletes the row -- https://drupal-civi-composer-exp-d11.ddev.site/civicrm-contact/28 Status message The civicrm education history Education History #196 has been deleted. Close message
+
+2. education record with the parent chosen by autocomplete (admin)
+  [ok] add form without a parent opens -- HTTP 200
+  [ok] the autocomplete offers and fills the contact -- 'Erik Terrell (131)'
+  [ok] the record belongs to the chosen contact -- entity_id 131
+  [ok] a household is refused with a message -- Error message Education History does not apply to Terrell family.
+
+3. limits and required fields (admin)
+  [ok] a 6th skill (max 5) is refused with a message -- Error message Default Organization already has 5 Skills records, the most the group allows.
+  [ok] board term add form offers the required Board Member
+  [ok] a board term without its required member is refused
+  [ok] with the member chosen by autocomplete it saves -- board_member_26 131, term_start 2026-01-01 00:00:00
+  [ok] the date entered before the failed submit is kept -- 2026-01-01 00:00:00
+
+4. parents saved unchanged (admin)
+  [ok] Contact 28 saved unchanged through /civicrm-contact/28/edit changes nothing -- Status message Ms. Lashawnda Lee has been updated. Close message
+  [ok] Contact 47 saved unchanged through /civicrm-contact/47/edit changes nothing
+  [ok] Event 1 saved unchanged through /civicrm-event/1/edit changes nothing -- Status message Fall Fundraiser Dinner has been updated. Close message
+
+4b. clearing a contact's single-record values (admin, contact 28)
+  [ok] contact: every checkbox unchecked clears checkboxes_59 -- "\u0001events\u0001advocacy\u0001" -> ""
+  [ok] contact: every option deselected clears multi_select_60 -- "\u0001wed\u0001" -> ""
+  [ok] contact: text emptied clears text_56 -- "Profile text for contact 28" -> ""
+  [ok] contact: integer emptied clears integer_62 -- "262" -> ""
+  [ok] contact: date emptied clears date_68 -- "1994-09-27 00:00:00" -> ""
+  [ok] contact: the other values are untouched -- []
+
+5. a record edited by smoke_editor, with check_permissions on and off
+  [ok] smoke_editor's edit is saved (check_permissions off) -- "Edited by smoke_editor, check_permissions off" Status message Education History #198 has been updated. Close message
+  [ok] smoke_editor lands on contact 28 after saving (check_permissions off) -- https://drupal-civi-composer-exp-d11.ddev.site/civicrm-contact/28
+  [ok] smoke_editor's edit is saved (check_permissions on) -- "Edited by smoke_editor, check_permissions on" Status message Education History #198 has been updated. Close message
+  [ok] smoke_editor lands on contact 28 after saving (check_permissions on) -- https://drupal-civi-composer-exp-d11.ddev.site/civicrm-contact/28
+
+6. the contact page's add action (admin)
+  [ok] contact 28 links to adding its records -- Add Board Terms /civicrm-cv-ce-board-terms/add?entity_id=28; Add Education History /civicrm-cv-ce-education/add?entity_id=28; Add Professional Memberships History /civicrm-cv-ce-professiona-7cb000/add?entity_id=28; Add Skills /civicrm-cv-ce-skills/add?entity_id=28; Add Staff Vehicles /civicrm-cv-ce-vehicles/add?entity_id=28
+
+cleaned up 4 records
+  [ok] no errors or warnings logged -- 0 logged
+
+41 passed, 0 failed

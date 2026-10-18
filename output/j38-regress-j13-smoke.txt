@@ -1,0 +1,41 @@
+1. contact 84 in api4_native: core fields and every ce_profile_all field emptied
+  [ok] middle_name cleared -- null
+  [ok] job_title cleared -- null
+  [ok] birth_date cleared -- null
+  [ok] preferred_communication_method cleared -- null
+  [ok] ce_profile_all.text (String/Text) cleared -- null
+  [ok] ce_profile_all.select (String/Select) cleared -- null
+  [ok] ce_profile_all.radio (String/Radio) cleared -- null
+  [ok] ce_profile_all.checkboxes (String/CheckBox) cleared -- null
+  [ok] ce_profile_all.multiselect (String/Select) cleared -- null
+  [ok] ce_profile_all.autocomplete (String/Autocomplete-Select) cleared -- null
+  [ok] ce_profile_all.integer (Int/Text) cleared -- null
+  [ok] ce_profile_all.int_radio (Int/Radio) cleared -- null
+  [ok] ce_profile_all.float (Float/Text) cleared -- null
+  [ok] ce_profile_all.money (Money/Text) cleared -- null
+  [ok] ce_profile_all.memo (Memo/TextArea) cleared -- null
+  [ok] ce_profile_all.rich_text (Memo/RichTextEditor) cleared -- null
+  [ok] ce_profile_all.date (Date/Select Date) cleared -- null
+  [ok] ce_profile_all.datetime (Date/Select Date) cleared -- null
+  [ok] ce_profile_all.state (StateProvince/Select) cleared -- null
+  [ok] ce_profile_all.country (Country/Select) cleared -- null
+  [ok] ce_profile_all.countries (Country/Select) cleared -- []
+  [ok] ce_profile_all.link (Link/Link) cleared -- null
+  [ok] ce_profile_all.contact_ref (ContactReference/Autocomplete-Select) cleared -- null
+  [ok] ce_profile_all.event_ref (EntityReference/Autocomplete-Select) cleared -- null
+  [ok] ce_profile_all.states (StateProvince/Select) cleared -- []
+  [ok] ce_profile_all.hidden (control) kept -- "hidden-84"
+  [ok] name kept
+
+3. saved again, nothing changes
+  [ok] second save changes nothing -- []
+  [ok] contact restored
+  [ok] no record added outside api3 -- 0 removed
+
+2. an education record in api4_native
+  [ok] record 14 honors cleared -- null
+  [ok] record 14 end_date cleared -- null
+  [ok] record 14 notes cleared -- null
+  [ok] record 14 school kept -- "Springfield University"
+
+api4_native: 34 passed, 0 failed

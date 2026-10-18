@@ -1,0 +1,29 @@
+uuid: 66dafc0e-09ff-4c8d-8c28-6189a01d3690
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.ce_smoke_event_sessions
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: ce_smoke_event_sessions_event
+theme: olivero
+region: content
+weight: 20
+provider: null
+plugin: 'views_block:ce_smoke_event_sessions-block_event'
+settings:
+  id: 'views_block:ce_smoke_event_sessions-block_event'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/civicrm-event/*'

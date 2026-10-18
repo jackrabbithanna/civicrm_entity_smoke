@@ -1,0 +1,78 @@
+1. Views data: multi follows serialize
+  [ok] ce_education.honors (String/CheckBox, serialize 1) -- civicrm_entity_in_operator, multi true
+  [ok] ce_profile_all.checkboxes (String/CheckBox, serialize 1) -- civicrm_entity_in_operator, multi true
+  [ok] ce_profile_all.multiselect (String/Select, serialize 1) -- civicrm_entity_in_operator, multi true
+  [ok] ce_profile_all.countries (Country/Select, serialize 1) -- civicrm_entity_in_operator, multi true
+  [ok] ce_profile_all.states (StateProvince/Select, serialize 1) -- civicrm_entity_in_operator, multi true
+  [ok] ce_skills.languages (String/Select, serialize 1) -- civicrm_entity_in_operator, multi true
+  [--] 6 serialized fields; 81 others are not multi
+
+2. in / not in on contacts, against SQL
+  [ok] ce_education.honors in [cum_laude] -- 24 vs 24
+  [ok] ce_education.honors not in [cum_laude] -- 204 vs 204
+  [ok] ce_education.honors in [magna] -- 25 vs 25
+  [ok] ce_education.honors not in [magna] -- 205 vs 205
+  [ok] ce_education.honors in [summa] -- 26 vs 26
+  [ok] ce_education.honors not in [summa] -- 206 vs 206
+  [ok] ce_education.honors in [deans_list] -- 21 vs 21
+  [ok] ce_education.honors not in [deans_list] -- 206 vs 206
+  [ok] ce_education.honors in [cum_laude, magna] -- 38 vs 38
+  [ok] ce_profile_all.checkboxes in [volunteer] -- 25 vs 25
+  [ok] ce_profile_all.checkboxes not in [volunteer] -- 182 vs 182
+  [ok] ce_profile_all.checkboxes in [events] -- 23 vs 23
+  [ok] ce_profile_all.checkboxes not in [events] -- 184 vs 184
+  [ok] ce_profile_all.checkboxes in [advocacy] -- 22 vs 22
+  [ok] ce_profile_all.checkboxes not in [advocacy] -- 185 vs 185
+  [ok] ce_profile_all.checkboxes in [news] -- 22 vs 22
+  [ok] ce_profile_all.checkboxes not in [news] -- 185 vs 185
+  [ok] ce_profile_all.checkboxes in [volunteer, events] -- 41 vs 41
+  [ok] ce_profile_all.multiselect in [wed] -- 42 vs 42
+  [ok] ce_profile_all.multiselect not in [wed] -- 165 vs 165
+  [ok] ce_profile_all.multiselect in [tue] -- 35 vs 35
+  [ok] ce_profile_all.multiselect not in [tue] -- 172 vs 172
+  [ok] ce_profile_all.multiselect in [thu] -- 32 vs 32
+  [ok] ce_profile_all.multiselect not in [thu] -- 175 vs 175
+  [ok] ce_profile_all.multiselect in [mon] -- 32 vs 32
+  [ok] ce_profile_all.multiselect not in [mon] -- 175 vs 175
+  [ok] ce_profile_all.multiselect in [fri] -- 29 vs 29
+  [ok] ce_profile_all.multiselect not in [fri] -- 178 vs 178
+  [ok] ce_profile_all.multiselect in [wed, tue] -- 59 vs 59
+  [ok] ce_profile_all.countries in [1101] -- 30 vs 30
+  [ok] ce_profile_all.countries not in [1101] -- 177 vs 177
+  [ok] ce_profile_all.countries in [1226] -- 29 vs 29
+  [ok] ce_profile_all.countries not in [1226] -- 178 vs 178
+  [ok] ce_profile_all.countries in [1082] -- 25 vs 25
+  [ok] ce_profile_all.countries not in [1082] -- 182 vs 182
+  [ok] ce_profile_all.countries in [1039] -- 25 vs 25
+  [ok] ce_profile_all.countries not in [1039] -- 182 vs 182
+  [ok] ce_profile_all.countries in [1228] -- 24 vs 24
+  [ok] ce_profile_all.countries not in [1228] -- 183 vs 183
+  [ok] ce_profile_all.countries in [1076] -- 21 vs 21
+  [ok] ce_profile_all.countries not in [1076] -- 186 vs 186
+  [ok] ce_profile_all.countries in [1101, 1226] -- 52 vs 52
+  [ok] ce_profile_all.states in [1000] -- 31 vs 31
+  [ok] ce_profile_all.states not in [1000] -- 176 vs 176
+  [ok] ce_profile_all.states in [1002] -- 31 vs 31
+  [ok] ce_profile_all.states not in [1002] -- 176 vs 176
+  [ok] ce_profile_all.states in [1003] -- 27 vs 27
+  [ok] ce_profile_all.states not in [1003] -- 180 vs 180
+  [ok] ce_profile_all.states in [1001] -- 22 vs 22
+  [ok] ce_profile_all.states not in [1001] -- 185 vs 185
+  [ok] ce_profile_all.states in [1004] -- 16 vs 16
+  [ok] ce_profile_all.states not in [1004] -- 191 vs 191
+  [ok] ce_profile_all.states in [1000, 1002] -- 47 vs 47
+  [ok] ce_skills.languages in [es] -- 52 vs 52
+  [ok] ce_skills.languages not in [es] -- 196 vs 196
+  [ok] ce_skills.languages in [de] -- 49 vs 49
+  [ok] ce_skills.languages not in [de] -- 200 vs 200
+  [ok] ce_skills.languages in [ar] -- 48 vs 48
+  [ok] ce_skills.languages not in [ar] -- 199 vs 199
+  [ok] ce_skills.languages in [zh] -- 47 vs 47
+  [ok] ce_skills.languages not in [zh] -- 200 vs 200
+  [ok] ce_skills.languages in [fr] -- 43 vs 43
+  [ok] ce_skills.languages not in [fr] -- 202 vs 202
+  [ok] ce_skills.languages in [en] -- 39 vs 39
+  [ok] ce_skills.languages not in [en] -- 203 vs 203
+  [ok] ce_skills.languages in [es, de] -- 64 vs 64
+
+72 passed, 0 failed

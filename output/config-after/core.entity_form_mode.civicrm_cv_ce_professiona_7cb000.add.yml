@@ -1,0 +1,11 @@
+uuid: 2d4f4b48-3235-42e8-a3fb-1f5f376559d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+id: civicrm_cv_ce_professiona_7cb000.add
+label: Add
+description: null
+targetEntityType: civicrm_cv_ce_professiona_7cb000
+cache: true

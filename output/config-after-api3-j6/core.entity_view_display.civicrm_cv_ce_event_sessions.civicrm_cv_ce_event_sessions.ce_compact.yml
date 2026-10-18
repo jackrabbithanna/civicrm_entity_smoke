@@ -1,0 +1,57 @@
+uuid: 7ca8a678-797e-4273-b49e-1c977577680d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.civicrm_cv_ce_event_sessions.ce_compact
+  module:
+    - civicrm_entity
+    - datetime
+    - options
+id: civicrm_cv_ce_event_sessions.civicrm_cv_ce_event_sessions.ce_compact
+targetEntityType: civicrm_cv_ce_event_sessions
+bundle: civicrm_cv_ce_event_sessions
+mode: ce_compact
+content:
+  custom_40:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  custom_41:
+    type: datetime_custom
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'M j, Y g:i a'
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  custom_43:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  entity_id:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  custom_42: true
+  custom_44: true
+  custom_45: true
+  custom_46: true
+  custom_47: true
+  custom_48: true
+  custom_49: true
+  id: true

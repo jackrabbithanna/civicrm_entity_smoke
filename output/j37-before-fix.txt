@@ -1,0 +1,29 @@
+Mode: api4_native
+
+1. As saved
+  [ok] reverse__civicrm_address__contact_id: location_type is "default" -- "default"
+  [ok] reverse__civicrm_address__contact_id: is_primary is true -- true
+  [ok] reverse__civicrm_email__contact_id: location_type is "2" -- "2"
+  [ok] reverse__civicrm_phone__contact_id: location_type is "0" -- "0"
+  [ok] reverse__civicrm_phone__contact_id: phone_type is 2 -- 2
+
+2. The Views UI forms, in the browser (admin)
+  [FAIL] reverse__civicrm_address__contact_id: location_type shows "default" -- "0" (Any)
+  [ok] reverse__civicrm_address__contact_id: is_primary shows true -- true
+  [ok] reverse__civicrm_email__contact_id: location_type shows "2" -- "2" (Work)
+  [ok] reverse__civicrm_phone__contact_id: location_type shows "0" -- "0" (Any)
+  [ok] reverse__civicrm_phone__contact_id: phone_type shows 2 -- "2" (Mobile)
+  [ok] the View saves -- Status message The view J37 smoke has been saved.
+
+3. Applied unchanged and saved
+  [FAIL] reverse__civicrm_address__contact_id: location_type is still "default" -- "0"
+  [ok] reverse__civicrm_address__contact_id: is_primary is still true -- true
+  [ok] reverse__civicrm_email__contact_id: location_type is still "2" -- "2"
+  [ok] reverse__civicrm_phone__contact_id: location_type is still "0" -- "0"
+  [ok] reverse__civicrm_phone__contact_id: phone_type is still 2 -- 2
+
+Deleted View j37_smoke.
+
+J37: 14 passed, 2 failed
+  FAIL: reverse__civicrm_address__contact_id: location_type shows "default" ("0" (Any))
+  FAIL: reverse__civicrm_address__contact_id: location_type is still "default" ("0")

@@ -1,0 +1,216 @@
+== Enabling civicrm_entity_bundles
+ [success] Module civicrm_entity_bundles has been installed.
+== Enabling ds civicrm_entity_ds
+ [success] Module ds has been installed. (Permissions - Configure)
+ [success] Module civicrm_entity_ds has been installed.
+== Enabling field_group civicrm_entity_field_group
+ [success] Module field_group has been installed.
+ [success] Module civicrm_entity_field_group has been installed.
+== Enabling typed_data rules civicrm_entity_rules
+ [success] Module typed_data has been installed.
+ [success] Module rules has been installed. (Permissions - Configure)
+ [success] Module civicrm_entity_rules has been installed.
+== Enabling search_api search_api_db civicrm_entity_search_api
+ [success] Module search_api has been installed. (Permissions - Configure)
+ [success] Module search_api_db has been installed.
+ [success] Module civicrm_entity_search_api has been installed.
+== Enabling views_bulk_operations civicrm_entity_vbo
+ [success] Module views_bulk_operations has been installed.
+ [success] Module civicrm_entity_vbo has been installed.
+== Cache rebuild
+ [success] Cache rebuild complete.
+== Pending entity definition updates
+(end)
+== Submodule smoke checks
+api_backend: api4_native; record types under test: civicrm_cv_ce_education, civicrm_cv_ce_event_sessions
+
+1. Rules (civicrm_entity_rules)
+  [ok] condition civicrm_entity_contact_in_group is defined
+  [ok] condition civicrm_entity_drupal_user_exists is defined
+  [ok] condition civicrm_contact_id_drupal_user_exists is defined
+  [ok] action civicrm_entity_user_create is defined
+  [ok] action civicrm_entity_load_linked_user is defined
+  [ok] typed data filter FirstLast is defined
+  [ok] typed data filter firstdotlast is defined
+  [ok] typed data filter initialdotlast is defined
+  [ok] Rules event rules_entity_insert:civicrm_cv_ce_education exists
+  [ok] Rules event rules_entity_update:civicrm_cv_ce_education exists
+  [ok] Rules event rules_entity_delete:civicrm_cv_ce_education exists
+  [ok] reaction rules on the record type save
+  [ok] Drupal create, update, delete of a record each fire their rule once -- create: insert 1, update 0, delete 0; update: insert 0, update 1, delete 0; delete: insert 0, update 0, delete 1
+  [ok] CiviCRM (API4) create, update, delete of a record each fire their rule once -- create: insert 1, update 0, delete 0; update: insert 0, update 1, delete 0; delete: insert 0, update 0, delete 1
+  [ok] condition civicrm_entity_contact_in_group: contact 172 in group 2 is true -- true
+  [ok] condition civicrm_entity_contact_in_group: contact 1 in group 2 is false -- false
+  [ok] condition civicrm_entity_drupal_user_exists: contact 203 is true -- true
+  [ok] condition civicrm_contact_id_drupal_user_exists: contact 203 is true -- true
+  [ok] condition civicrm_entity_drupal_user_exists: contact 1 is false -- false
+  [ok] condition civicrm_contact_id_drupal_user_exists: contact 1 is false -- false
+  [ok] action civicrm_entity_load_linked_user finds user 1 for contact 203 -- uid 1
+  [FAIL] action civicrm_entity_user_create runs for contact 3 -- Drupal\Component\Plugin\Exception\ContextException: The provided context 'user_fetched' is not valid. @ ContextProviderTrait.php:56
+  [ok] civicrm_entity_user_create left a user linked to contact 3 -- uid 13 'ce_smoke_sub_rules_user', uf_match contact 3
+  [ok] typed data filter FirstLast names contact 28 -- LashawndaLee vs LashawndaLee
+
+2. Bundles (civicrm_entity_bundles)
+  [ok] civicrm_event has the bundle key
+  [ok] civicrm_activity has the bundle key
+  [ok] record types have no bundle key
+  [ok] civicrm_event bundles: the root plus one per event type -- 7 bundles, 6 event types: civicrm_event, conference, exhibition, fundraiser, meeting, performance
+  [ok] event 1 has the bundle of its event type -- fundraiser vs fundraiser
+  [ok] event 1 lists every session record under its bundle -- 6 vs 6 (Drupal\Core\Field\Entity\BaseFieldOverride, Drupal\civicrm_entity\Plugin\Field\MultiRecordCustomFieldItemList)
+  [ok] event 1 renders with the root display under its bundle -- 4322 bytes
+  [ok] creating an event by bundle sets its event type -- event_type_id 3
+  [ok] the event edit form uses the root form display -- 70 of 70 root components on the form
+  [ok] the event edit form follows the root edit form display -- title true, other root components shown: []
+  [ok] event add route takes a bundle and an add page exists -- /civicrm-event/add/{bundle}; add page /civicrm-event/add
+  [ok] Field UI routes of civicrm_event default to the root bundle -- /admin/structure/civicrm-entity/civicrm-event/fields bundle='civicrm_event'
+  [ok] an event session record saves and deletes under bundles -- id 20
+  [ok] activity 2 has the bundle of its activity type -- meeting vs meeting
+
+3. Display Suite (civicrm_entity_ds)
+  [ok] civicrm_cv_ce_education 1 renders the ds_2col layout of view mode ce_smoke_ds -- 694 bytes; fields custom_7, custom_8, entity_id
+  [ok] civicrm_contact 28 renders the ds_2col layout of view mode ce_smoke_ds -- 578 bytes; fields display_name, birth_date, contact_sub_type
+  [ok] civicrm_event 1 renders the ds_2col layout of view mode ce_smoke_ds (bundle fundraiser, layout on the root) -- 1494 bytes; fields title, custom_40, custom_41
+
+4. Field group (civicrm_entity_field_group)
+  [ok] civicrm_cv_ce_education 1 renders a fieldset group in view mode ce_smoke_fg -- 931 bytes; group of custom_7, custom_8
+  [ok] civicrm_contact 28 renders a fieldset group in view mode ce_smoke_fg -- 839 bytes; group of display_name, birth_date
+  [ok] civicrm_event 1 renders a fieldset group in view mode ce_smoke_fg (bundle fundraiser, group on the root) -- 1764 bytes; group of title, custom_40
+  [ok] the civicrm_cv_ce_education add form shows a fieldset group from its add form display -- children custom_7, custom_8
+  [ok] the event 1 edit form shows a fieldset group from the root form display (bundle fundraiser) -- children title, event_type_id
+
+5. Search API (civicrm_entity_search_api)
+  [ok] entity:civicrm_cv_ce_education uses the CiviCRM Entity datasource -- Drupal\civicrm_entity_search_api\Plugin\search_api\datasource\CivicrmEntity
+  [ok] default tracking (direct SQL on civicrm_value_education_his_4) lists every civicrm_cv_ce_education record -- 157 vs 157
+  [ok] an event datasource limited to bundle fundraiser tracks its events -- 2 vs 2
+  [ok] a DB server and an index over contacts and education records save -- contact_name, contact_schools, record_parent, record_parent_name, record_school
+  [ok] tracking: every contact and every education record -- contacts 207 (SQL 207, 207 not deleted); records 157 vs 157
+  [ok] indexing: everything tracked is indexed -- 364 indexed, 0 remaining of 364
+  [ok] search: records with school 'Coastal Arts Academy' -- 28 vs 28
+  [ok] search: contacts whose multi-record school list holds 'Coastal Arts Academy' -- 28 vs 28
+  [ok] a record created, renamed and deleted in Drupal is tracked, reindexed and removed -- tracked true, found 1, after rename old/new 0/1, after delete 0, tracker restored true
+  [ok] a record created and deleted through API4 is tracked, indexed and removed -- tracked true, found 1, after delete 0
+  [ok] contact 28 queued for reindexing after its records changed
+  [ok] a record's insert and delete, in Drupal and through API4, queue its parent, whose indexed school list follows -- queued/found per step: y y y y y y y y
+  [ok] renaming contact 28 in Drupal queues its civicrm_cv_ce_education records -- queued [47] vs [47]
+
+6. Views Bulk Operations (civicrm_entity_vbo)
+  [ok] action civicrm_contact_add_to_group is defined for civicrm_contact
+  [ok] a View of civicrm_cv_ce_education with a bulk form saves and renders the form -- 13403 bytes, 10 rows
+ [notice] CiviCRM Education History Education History #266 (id: 266) has been deleted in a bulk action from view ce_smoke_sub_vbo_education.
+  [ok] VBO deletes an education record -- record 266 rows left 0; [{"message":"Delete civicrm education history entities","type":"status","count":1}]
+  [ok] the add-to-group action lists the smoke group among its options -- 5 groups
+  [ok] VBO adds contact 28 to group 6 -- memberships 1; [{"message":"","type":"status","count":1}]
+ [error]  CiviCRM Entity api4 GroupContact.create failed: DB Error: constraint violation 
+ [error]  Could not add contact 28 to group 1006: DB Error: constraint violation 
+  [ok] VBO reports and logs a failed add to a group that does not exist -- ["Could not add Ms. Lashawnda Lee to group 1006."]; logged 1
+
+7. Site
+  [ok] no pending entity definition updates
+  [FAIL] no PHP or error-level watchdog entries since the start -- 1 entries
+      #3549 civicrm_entity/3: CiviCRM Entity api4 GroupContact.create failed: DB Error: constraint violation
+
+65 passed, 2 failed
+  - action civicrm_entity_user_create runs for contact 3 (Drupal\Component\Plugin\Exception\ContextException: The provided context 'user_fetched' is not valid. @ ContextProviderTrait.php:56)
+  - no PHP or error-level watchdog entries since the start (1 entries)
+
+Also run verify-smoke.php: the submodules must leave its 77 checks passing.
+== Base smoke checks
+1. record types: counts, loading, rendering
+  [ok] civicrm_cv_ce_education entity query count -- 157 vs 157 in civicrm_value_education_his_4
+  [ok] civicrm_cv_ce_education #1 loads with its parent
+  [ok] civicrm_cv_ce_education #1 renders in default -- 1858 bytes
+  [ok] civicrm_cv_ce_education #1 renders in ce_compact -- 407 bytes
+  [ok] civicrm_cv_ce_skills entity query count -- 213 vs 213 in civicrm_value_skills_5
+  [ok] civicrm_cv_ce_skills #1 loads with its parent
+  [ok] civicrm_cv_ce_skills #1 renders in default -- 1463 bytes
+  [ok] civicrm_cv_ce_skills #1 renders in ce_compact -- 383 bytes
+  [ok] civicrm_cv_ce_board_terms entity query count -- 61 vs 61 in civicrm_value_board_terms_6
+  [ok] civicrm_cv_ce_board_terms #1 loads with its parent
+  [ok] civicrm_cv_ce_board_terms #1 renders in default -- 1720 bytes
+  [ok] civicrm_cv_ce_board_terms #1 renders in ce_compact -- 391 bytes
+  [ok] civicrm_cv_ce_vehicles entity query count -- 20 vs 20 in civicrm_value_staff_vehicle_7
+  [ok] civicrm_cv_ce_vehicles #1 loads with its parent
+  [ok] civicrm_cv_ce_vehicles #1 renders in default -- 1388 bytes
+  [ok] civicrm_cv_ce_vehicles #1 renders in ce_compact -- 625 bytes
+  [ok] civicrm_cv_ce_event_sessions entity query count -- 13 vs 13 in civicrm_value_event_session_8
+  [ok] civicrm_cv_ce_event_sessions #1 loads with its parent
+  [ok] civicrm_cv_ce_event_sessions #1 renders in default -- 2219 bytes
+  [ok] civicrm_cv_ce_event_sessions #1 renders in ce_compact -- 735 bytes
+  [ok] civicrm_cv_ce_professiona_7cb000 entity query count -- 60 vs 60 in civicrm_value_professional__9
+  [ok] civicrm_cv_ce_professiona_7cb000 #1 loads with its parent
+  [ok] civicrm_cv_ce_professiona_7cb000 #1 renders in default -- 1229 bytes
+  [ok] civicrm_cv_ce_professiona_7cb000 #1 renders in ce_compact -- 426 bytes
+
+2. parent multi-record fields (contact 28, event 1, organization 47)
+  [ok] civicrm_contact 28 custom_7 (ce_education.school) lists every record -- 1 vs 1: Springfield University
+  [ok] civicrm_contact 28 custom_18 (ce_skills.skill) lists every record -- 5 vs 5: Python, Carpentry, Event Planning, Translation
+  [ok] civicrm_contact 28 custom_25 (ce_skills.endorsed_by) lists every record -- 3 vs 3: 120, 61, 105
+  [ok] civicrm_contact 47 custom_26 (ce_board_terms.member) lists every record -- 6 vs 6: 151, 46, 17, 27
+  [ok] civicrm_contact 47 custom_27 (ce_board_terms.role) lists every record -- 6 vs 6: chair, member, member, member
+  [ok] civicrm_event 1 custom_40 (ce_event_sessions.session_title) lists every record -- 6 vs 6: Opening Keynote, Panel: The Year Ahead, Workshop: Getting Started, Lightning Talks
+  [ok] contact 28 default display renders multi-record fields -- 9524 bytes
+
+3. single-record custom fields: Drupal value vs API4
+  [ok] custom_56 text -- ["Profile text for contact 28"] vs api4 ["Profile text for contact 28"]
+  [ok] custom_57 select -- ["small"] vs api4 ["small"]
+  [ok] custom_58 radio -- ["email"] vs api4 ["email"]
+  [ok] custom_59 checkboxes -- ["events","advocacy"] vs api4 ["events","advocacy"]
+  [ok] custom_60 multiselect -- ["wed"] vs api4 ["wed"]
+  [ok] custom_61 autocomplete -- ["education"] vs api4 ["education"]
+  [ok] custom_62 integer -- [262] vs api4 [262]
+  [ok] custom_63 int_radio -- [1] vs api4 [1]
+  [ok] custom_64 float -- ["49.763"] vs api4 [49.763]
+  [ok] custom_65 money -- ["4846.38"] vs api4 [4846.38]
+  [ok] custom_66 memo -- ["Line one for 28\r\nLine two"] vs api4 ["Line one for 28\r\nLine two"]
+  [ok] custom_67 rich_text -- ["<p>Rich <strong>text<\/strong> for contact 28.<\/p><ul><li>One<\/li><li>Two<\/li><\/ul>"] vs api4 ["<p>Rich <strong>text<\/strong> for contact 28.<\/p><ul><li>One<\/li><li>Two<\/li><\/ul>"]
+  [ok] custom_68 date -- ["1994-09-27"] vs api4 ["1994-09-27"]
+  [ok] custom_69 datetime -- ["2026-02-14 19:32"] vs api4 ["2026-02-14 19:32:00"]
+  [ok] custom_70 boolean_radio -- [true] vs api4 [true]
+  [ok] custom_71 boolean_toggle -- [true] vs api4 [true]
+  [ok] custom_72 state -- [1056] vs api4 [1056]
+  [ok] custom_73 country -- [1039] vs api4 [1039]
+  [ok] custom_74 countries -- [1039] vs api4 [1039]
+  [ok] custom_75 file -- [7] vs api4 [7]
+  [ok] custom_76 link -- ["https:\/\/example.org\/profile\/28"] vs api4 ["https:\/\/example.org\/profile\/28"]
+  [ok] custom_77 contact_ref -- [193] vs api4 [193]
+  [ok] custom_78 event_ref -- [2] vs api4 [2]
+  [ok] custom_79 hidden -- ["hidden-28"] vs api4 ["hidden-28"]
+  [ok] custom_89 states -- [1000] vs api4 [1000]
+
+4. views: totals vs the database
+  [ok] ce_smoke_education:page_1 -- 157 vs 157
+  [ok] ce_smoke_education:block_contact(28) -- 1 vs 1
+  [ok] ce_smoke_skills:page_1 -- 213 vs 213
+  [ok] ce_smoke_skills_summary:page_1 -- 70 vs 70
+  [ok] ce_smoke_board_terms:page_1 -- 61 vs 61
+  [ok] ce_smoke_contact_directory:page_1 -- 80 vs 80
+  [ok] ce_smoke_event_sessions:page_1 -- 13 vs 13
+  [ok] ce_smoke_event_sessions:block_event(1) -- 6 vs 6
+  [ok] ce_smoke_vehicles:page_1 -- 20 vs 20
+  [ok] ce_smoke_memberships_history:page_1 -- 60 vs 60
+
+5. writes through Drupal
+  [ok] new education record validates
+  [ok] create writes the CiviCRM row -- id 267
+  [ok] update writes the CiviCRM row
+  [ok] delete removes the CiviCRM row
+  [ok] contact single-record field saves through Drupal -- Changed by verify-smoke
+
+6. record constraints
+  [ok] 6th skill for contact 1 (max_multiple 5) is refused -- <em class="placeholder">Default Organization</em> already has <em class="placeholder">5</em> <em class="placeholder">Skills</em> records, the most the group allows.
+  [ok] education record (extends Individual) on organization 1 is refused -- <em class="placeholder">Education History</em> does not apply to <em class="placeholder">Default Organization</em>.
+  [ok] vehicle (extends Individual/Staff) on non-staff individual 20 is refused -- <em class="placeholder">Staff Vehicles</em> does not apply to <em class="placeholder">Dr. Teddy Terrell</em>.
+  [ok] 3rd vehicle for staff 7 (max_multiple 2) is refused -- <em class="placeholder">merriew63@infomail.co.in</em> already has <em class="placeholder">2</em> <em class="placeholder">Staff Vehicles</em> records, the most the group allows.
+
+7. forms use their form modes
+  [ok] civicrm_cv_ce_education add form uses form mode 'add' -- 6 fields: custom_11,custom_13,custom_7,custom_8,custom_9,entity_id
+  [ok] civicrm_cv_ce_education edit form uses form mode 'default' -- 11 fields: custom_10,custom_11,custom_12,custom_13,custom_14,custom_15,custom_16,custom_7,...
+  [ok] civicrm_contact edit form uses form mode 'edit' -- 30 fields: custom_1,custom_2,custom_3,custom_56,custom_57,custom_58,custom_59,custom_60,...
+
+78 passed, 0 failed
+ [notice] Message: ce-smoke-sub rules insert
+
+ [notice] Message: ce-smoke-sub rules update
+
+ [notice] Message: ce-smoke-sub rules delete
+

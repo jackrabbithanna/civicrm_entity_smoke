@@ -1,0 +1,11 @@
+uuid: c833da02-f2b6-4b56-9213-ddaa5be5ca55
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+id: civicrm_cv_ce_event_sessions.add
+label: Add
+description: null
+targetEntityType: civicrm_cv_ce_event_sessions
+cache: true

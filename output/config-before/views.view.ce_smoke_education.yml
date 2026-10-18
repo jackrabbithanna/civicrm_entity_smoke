@@ -1,0 +1,705 @@
+uuid: d0f733e1-ef91-41e8-be9a-d8d81b906724
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+    - datetime
+    - options
+    - user
+id: ce_smoke_education
+label: 'Smoke: Education records'
+module: views
+description: 'CiviCRM Entity 5.0.x multi-record custom field smoke test.'
+tag: ce_smoke
+base_table: civicrm_cv_ce_education
+base_field: id
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Education records'
+      fields:
+        id:
+          id: id
+          table: civicrm_cv_ce_education
+          field: id
+          entity_type: civicrm_cv_ce_education
+          entity_field: id
+          plugin_id: field
+          label: ID
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+        display_name:
+          id: display_name
+          table: civicrm_contact
+          field: display_name
+          relationship: contact
+          entity_type: civicrm_contact
+          entity_field: display_name
+          plugin_id: field
+          label: Contact
+          type: string
+          settings:
+            link_to_entity: true
+        school:
+          id: school
+          table: civicrm_cv_ce_education
+          field: school_7
+          entity_type: civicrm_cv_ce_education
+          entity_field: custom_7
+          plugin_id: field
+          label: School
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+        degree:
+          id: degree
+          table: civicrm_cv_ce_education
+          field: degree_8
+          entity_type: civicrm_cv_ce_education
+          entity_field: custom_8
+          plugin_id: field
+          label: Degree
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+        field_of_study:
+          id: field_of_study
+          table: civicrm_cv_ce_education
+          field: field_of_study_9
+          entity_type: civicrm_cv_ce_education
+          entity_field: custom_9
+          plugin_id: field
+          label: 'Field of Study'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+        start_date:
+          id: start_date
+          table: civicrm_cv_ce_education
+          field: start_date_10
+          entity_type: civicrm_cv_ce_education
+          entity_field: custom_10
+          plugin_id: field
+          label: 'Start Date'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'M j, Y'
+          group_column: value
+          group_columns: {  }
+        end_date:
+          id: end_date
+          table: civicrm_cv_ce_education
+          field: end_date_11
+          entity_type: civicrm_cv_ce_education
+          entity_field: custom_11
+          plugin_id: field
+          label: 'End Date'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'M j, Y'
+          group_column: value
+          group_columns: {  }
+        gpa:
+          id: gpa
+          table: civicrm_cv_ce_education
+          field: gpa_12
+          entity_type: civicrm_cv_ce_education
+          entity_field: custom_12
+          plugin_id: field
+          label: GPA
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ','
+            decimal_separator: .
+            scale: 2
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+        graduated:
+          id: graduated
+          table: civicrm_cv_ce_education
+          field: graduated_13
+          entity_type: civicrm_cv_ce_education
+          entity_field: custom_13
+          plugin_id: field
+          label: Graduated
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: yes-no
+            format_custom_false: ''
+            format_custom_true: ''
+          group_column: value
+          group_columns: {  }
+        operations:
+          id: operations
+          table: civicrm_cv_ce_education
+          field: operations
+          entity_type: civicrm_cv_ce_education
+          plugin_id: entity_operations
+          label: Operations
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 25
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: true
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access CiviCRM'
+      cache:
+        type: tag
+        options: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          plugin_id: text_custom
+          empty: true
+          content: 'No records match.'
+          tokenize: false
+      sorts:
+        end_date:
+          id: end_date
+          table: civicrm_cv_ce_education
+          field: end_date_11
+          entity_type: civicrm_cv_ce_education
+          entity_field: custom_11
+          plugin_id: datetime
+          order: DESC
+          exposed: false
+          granularity: second
+      filters:
+        school:
+          id: school
+          table: civicrm_cv_ce_education
+          field: school_7
+          entity_type: civicrm_cv_ce_education
+          entity_field: custom_7
+          plugin_id: string
+          operator: contains
+          value: ''
+          exposed: true
+          expose:
+            operator_id: school_op
+            label: 'School contains'
+            description: ''
+            use_operator: false
+            operator: school_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: school
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+        degree:
+          id: degree
+          table: civicrm_cv_ce_education
+          field: degree_8
+          entity_type: civicrm_cv_ce_education
+          entity_field: custom_8
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          exposed: true
+          expose:
+            operator_id: degree_op
+            label: Degree
+            description: ''
+            use_operator: false
+            operator: degree_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: degree
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+        graduated:
+          id: graduated
+          table: civicrm_cv_ce_education
+          field: graduated_13
+          entity_type: civicrm_cv_ce_education
+          entity_field: custom_13
+          plugin_id: boolean
+          operator: '='
+          value: All
+          exposed: true
+          expose:
+            operator_id: graduated_op
+            label: Graduated
+            description: ''
+            use_operator: false
+            operator: graduated_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: graduated
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+        contact_name:
+          id: contact_name
+          table: civicrm_contact
+          field: display_name
+          relationship: contact
+          entity_type: civicrm_contact
+          entity_field: display_name
+          plugin_id: string
+          operator: contains
+          value: ''
+          exposed: true
+          expose:
+            operator_id: contact_op
+            label: 'Contact name contains'
+            description: ''
+            use_operator: false
+            operator: contact_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: contact
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            id: id
+            display_name: display_name
+            school: school
+            degree: degree
+            field_of_study: field_of_study
+            start_date: start_date
+            end_date: end_date
+            gpa: gpa
+            graduated: graduated
+            operations: operations
+          default: end_date
+          info:
+            id:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            display_name:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            school:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            degree:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_of_study:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            start_date:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            end_date:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            gpa:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            graduated:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            operations:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          order: asc
+          empty_table: true
+          caption: ''
+          description: ''
+      row:
+        type: fields
+        options: {  }
+      relationships:
+        contact:
+          id: contact
+          table: civicrm_cv_ce_education
+          field: entity_id
+          admin_label: Contact
+          entity_type: civicrm_cv_ce_education
+          entity_field: entity_id
+          plugin_id: standard
+          required: true
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          plugin_id: result
+          empty: false
+          content: 'Displaying @start - @end of @total'
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  block_contact:
+    id: block_contact
+    display_title: 'Contact block'
+    display_plugin: block
+    position: 2
+    display_options:
+      title: 'Education history'
+      fields:
+        school:
+          id: school
+          table: civicrm_cv_ce_education
+          field: school_7
+          entity_type: civicrm_cv_ce_education
+          entity_field: custom_7
+          plugin_id: field
+          label: School
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+        degree:
+          id: degree
+          table: civicrm_cv_ce_education
+          field: degree_8
+          entity_type: civicrm_cv_ce_education
+          entity_field: custom_8
+          plugin_id: field
+          label: Degree
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+        field_of_study:
+          id: field_of_study
+          table: civicrm_cv_ce_education
+          field: field_of_study_9
+          entity_type: civicrm_cv_ce_education
+          entity_field: custom_9
+          plugin_id: field
+          label: 'Field of Study'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+        end_date:
+          id: end_date
+          table: civicrm_cv_ce_education
+          field: end_date_11
+          entity_type: civicrm_cv_ce_education
+          entity_field: custom_11
+          plugin_id: field
+          label: 'End Date'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'M j, Y'
+          group_column: value
+          group_columns: {  }
+        graduated:
+          id: graduated
+          table: civicrm_cv_ce_education
+          field: graduated_13
+          entity_type: civicrm_cv_ce_education
+          entity_field: custom_13
+          plugin_id: field
+          label: Graduated
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: yes-no
+            format_custom_false: ''
+            format_custom_true: ''
+          group_column: value
+          group_columns: {  }
+        operations:
+          id: operations
+          table: civicrm_cv_ce_education
+          field: operations
+          entity_type: civicrm_cv_ce_education
+          plugin_id: entity_operations
+          label: Operations
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 10
+      arguments:
+        entity_id:
+          id: entity_id
+          table: civicrm_cv_ce_education
+          field: entity_id
+          entity_type: civicrm_cv_ce_education
+          entity_field: entity_id
+          plugin_id: entity_target_id
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: raw
+          default_argument_options:
+            index: 1
+            use_alias: false
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: true
+          validate:
+            type: numeric
+            fail: empty
+          validate_options: {  }
+          break_phrase: false
+          not: false
+      filters: {  }
+      filter_groups:
+        operator: AND
+        groups: {  }
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            school: school
+            degree: degree
+            field_of_study: field_of_study
+            end_date: end_date
+            graduated: graduated
+            operations: operations
+          default: '-1'
+          info:
+            school:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            degree:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_of_study:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            end_date:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            graduated:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            operations:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          order: asc
+          empty_table: true
+          caption: ''
+          description: ''
+          class: ''
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        title: false
+        pager: false
+        style: false
+        row: false
+        relationships: false
+        fields: false
+        arguments: false
+        filters: false
+        filter_groups: false
+        header: false
+      relationships: {  }
+      header: {  }
+      display_extenders: {  }
+      block_description: 'Smoke: education records of the current contact'
+      block_hide_empty: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  page_1:
+    id: page_1
+    display_title: Page
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: smoke/education
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }

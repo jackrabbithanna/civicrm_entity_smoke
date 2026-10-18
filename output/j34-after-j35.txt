@@ -1,0 +1,189 @@
+Mode: api4_native
+
+1. Saved configuration
+  [ok] core.entity_form_display.civicrm_contact.civicrm_contact.edit
+  [ok] core.entity_form_display.civicrm_cv_ce_board_terms.civicrm_cv_ce_board_terms.add
+  [ok] core.entity_form_display.civicrm_cv_ce_board_terms.civicrm_cv_ce_board_terms.default
+  [ok] core.entity_form_display.civicrm_cv_ce_education.civicrm_cv_ce_education.add
+  [ok] core.entity_form_display.civicrm_cv_ce_education.civicrm_cv_ce_education.default
+  [ok] core.entity_form_display.civicrm_cv_ce_event_sessions.civicrm_cv_ce_event_sessions.add
+  [ok] core.entity_form_display.civicrm_cv_ce_event_sessions.civicrm_cv_ce_event_sessions.default
+  [ok] core.entity_form_display.civicrm_cv_ce_professiona_7cb000.civicrm_cv_ce_professiona_7cb000.add
+  [ok] core.entity_form_display.civicrm_cv_ce_professiona_7cb000.civicrm_cv_ce_professiona_7cb000.default
+  [ok] core.entity_form_display.civicrm_cv_ce_skills.civicrm_cv_ce_skills.add
+  [ok] core.entity_form_display.civicrm_cv_ce_skills.civicrm_cv_ce_skills.default
+  [ok] core.entity_form_display.civicrm_cv_ce_vehicles.civicrm_cv_ce_vehicles.add
+  [ok] core.entity_form_display.civicrm_cv_ce_vehicles.civicrm_cv_ce_vehicles.default
+  [ok] core.entity_view_display.civicrm_activity.civicrm_activity.default
+  [ok] core.entity_view_display.civicrm_contact.civicrm_contact.ce_summary
+  [ok] core.entity_view_display.civicrm_contact.civicrm_contact.default
+  [ok] core.entity_view_display.civicrm_cv_ce_board_terms.civicrm_cv_ce_board_terms.ce_compact
+  [ok] core.entity_view_display.civicrm_cv_ce_board_terms.civicrm_cv_ce_board_terms.default
+  [ok] core.entity_view_display.civicrm_cv_ce_education.civicrm_cv_ce_education.ce_compact
+  [ok] core.entity_view_display.civicrm_cv_ce_education.civicrm_cv_ce_education.default
+  [ok] core.entity_view_display.civicrm_cv_ce_event_sessions.civicrm_cv_ce_event_sessions.ce_compact
+  [ok] core.entity_view_display.civicrm_cv_ce_event_sessions.civicrm_cv_ce_event_sessions.default
+  [ok] core.entity_view_display.civicrm_cv_ce_professiona_7cb000.civicrm_cv_ce_professiona_7cb000.ce_compact
+  [ok] core.entity_view_display.civicrm_cv_ce_professiona_7cb000.civicrm_cv_ce_professiona_7cb000.default
+  [ok] core.entity_view_display.civicrm_cv_ce_skills.civicrm_cv_ce_skills.ce_compact
+  [ok] core.entity_view_display.civicrm_cv_ce_skills.civicrm_cv_ce_skills.default
+  [ok] core.entity_view_display.civicrm_cv_ce_vehicles.civicrm_cv_ce_vehicles.ce_compact
+  [ok] core.entity_view_display.civicrm_cv_ce_vehicles.civicrm_cv_ce_vehicles.default
+  [ok] core.entity_view_display.civicrm_event.civicrm_event.ce_summary
+  [ok] core.entity_view_display.civicrm_event.civicrm_event.default
+  [ok] views.view.archive
+  [ok] views.view.block_content
+  [ok] views.view.ce_smoke_board_terms
+  [ok] views.view.ce_smoke_contact_directory
+  [ok] views.view.ce_smoke_education
+  [ok] views.view.ce_smoke_event_sessions
+  [ok] views.view.ce_smoke_memberships_history
+  [ok] views.view.ce_smoke_skills
+  [ok] views.view.ce_smoke_skills_summary
+  [ok] views.view.ce_smoke_vehicles
+  [ok] views.view.content
+  [ok] views.view.content_recent
+  [ok] views.view.files
+  [ok] views.view.frontpage
+  [ok] views.view.glossary
+  [ok] views.view.taxonomy_term
+  [ok] views.view.user_admin_people
+  [ok] views.view.watchdog
+  [ok] views.view.who_s_new
+  [ok] views.view.who_s_online
+  [--] fixture: field-API options on a civicrm_entity_custom_file field, not counted: views.view.ce_smoke_contact_directory
+  [--] fixture: expose.reduce on a string filter, not counted: views.view.ce_smoke_education
+  [--] fixture: expose.reduce on a boolean filter, not counted: views.view.ce_smoke_education, views.view.ce_smoke_memberships_history, views.view.ce_smoke_skills
+
+2. New default displays
+  [ok] core.entity_form_display.civicrm_action_schedule.civicrm_action_schedule.default (new)
+  [ok] core.entity_view_display.civicrm_action_schedule.civicrm_action_schedule.default (new)
+  [ok] core.entity_form_display.civicrm_activity.civicrm_activity.default (new)
+  [ok] core.entity_view_display.civicrm_activity.civicrm_activity.default (new)
+  [ok] core.entity_form_display.civicrm_address.civicrm_address.default (new)
+  [ok] core.entity_view_display.civicrm_address.civicrm_address.default (new)
+  [ok] core.entity_form_display.civicrm_campaign.civicrm_campaign.default (new)
+  [ok] core.entity_view_display.civicrm_campaign.civicrm_campaign.default (new)
+  [ok] core.entity_form_display.civicrm_case.civicrm_case.default (new)
+  [ok] core.entity_view_display.civicrm_case.civicrm_case.default (new)
+  [ok] core.entity_form_display.civicrm_case_type.civicrm_case_type.default (new)
+  [ok] core.entity_view_display.civicrm_case_type.civicrm_case_type.default (new)
+  [ok] core.entity_form_display.civicrm_contact.civicrm_contact.default (new)
+  [ok] core.entity_view_display.civicrm_contact.civicrm_contact.default (new)
+  [ok] core.entity_form_display.civicrm_contribution.civicrm_contribution.default (new)
+  [ok] core.entity_view_display.civicrm_contribution.civicrm_contribution.default (new)
+  [ok] core.entity_form_display.civicrm_contribution_recur.civicrm_contribution_recur.default (new)
+  [ok] core.entity_view_display.civicrm_contribution_recur.civicrm_contribution_recur.default (new)
+  [ok] core.entity_form_display.civicrm_contribution_page.civicrm_contribution_page.default (new)
+  [ok] core.entity_view_display.civicrm_contribution_page.civicrm_contribution_page.default (new)
+  [ok] core.entity_form_display.civicrm_country.civicrm_country.default (new)
+  [ok] core.entity_view_display.civicrm_country.civicrm_country.default (new)
+  [ok] core.entity_form_display.civicrm_email.civicrm_email.default (new)
+  [ok] core.entity_view_display.civicrm_email.civicrm_email.default (new)
+  [ok] core.entity_form_display.civicrm_entity_tag.civicrm_entity_tag.default (new)
+  [ok] core.entity_view_display.civicrm_entity_tag.civicrm_entity_tag.default (new)
+  [ok] core.entity_form_display.civicrm_entity_financial_trxn.civicrm_entity_financial_trxn.default (new)
+  [ok] core.entity_view_display.civicrm_entity_financial_trxn.civicrm_entity_financial_trxn.default (new)
+  [ok] core.entity_form_display.civicrm_financial_account.civicrm_financial_account.default (new)
+  [ok] core.entity_view_display.civicrm_financial_account.civicrm_financial_account.default (new)
+  [ok] core.entity_form_display.civicrm_financial_trxn.civicrm_financial_trxn.default (new)
+  [ok] core.entity_view_display.civicrm_financial_trxn.civicrm_financial_trxn.default (new)
+  [ok] core.entity_form_display.civicrm_financial_type.civicrm_financial_type.default (new)
+  [ok] core.entity_view_display.civicrm_financial_type.civicrm_financial_type.default (new)
+  [ok] core.entity_form_display.civicrm_event.civicrm_event.default (new)
+  [ok] core.entity_view_display.civicrm_event.civicrm_event.default (new)
+  [ok] core.entity_form_display.civicrm_group.civicrm_group.default (new)
+  [ok] core.entity_view_display.civicrm_group.civicrm_group.default (new)
+  [ok] core.entity_form_display.civicrm_group_contact.civicrm_group_contact.default (new)
+  [ok] core.entity_view_display.civicrm_group_contact.civicrm_group_contact.default (new)
+  [ok] core.entity_form_display.civicrm_grant.civicrm_grant.default (new)
+  [ok] core.entity_view_display.civicrm_grant.civicrm_grant.default (new)
+  [ok] core.entity_form_display.civicrm_im.civicrm_im.default (new)
+  [ok] core.entity_view_display.civicrm_im.civicrm_im.default (new)
+  [ok] core.entity_form_display.civicrm_line_item.civicrm_line_item.default (new)
+  [ok] core.entity_view_display.civicrm_line_item.civicrm_line_item.default (new)
+  [ok] core.entity_form_display.civicrm_loc_block.civicrm_loc_block.default (new)
+  [ok] core.entity_view_display.civicrm_loc_block.civicrm_loc_block.default (new)
+  [ok] core.entity_form_display.civicrm_membership.civicrm_membership.default (new)
+  [ok] core.entity_view_display.civicrm_membership.civicrm_membership.default (new)
+  [ok] core.entity_form_display.civicrm_membership_payment.civicrm_membership_payment.default (new)
+  [ok] core.entity_view_display.civicrm_membership_payment.civicrm_membership_payment.default (new)
+  [ok] core.entity_form_display.civicrm_membership_type.civicrm_membership_type.default (new)
+  [ok] core.entity_view_display.civicrm_membership_type.civicrm_membership_type.default (new)
+  [ok] core.entity_form_display.civicrm_note.civicrm_note.default (new)
+  [ok] core.entity_view_display.civicrm_note.civicrm_note.default (new)
+  [ok] core.entity_form_display.civicrm_participant.civicrm_participant.default (new)
+  [ok] core.entity_view_display.civicrm_participant.civicrm_participant.default (new)
+  [ok] core.entity_form_display.civicrm_participant_status_type.civicrm_participant_status_type.default (new)
+  [ok] core.entity_view_display.civicrm_participant_status_type.civicrm_participant_status_type.default (new)
+  [ok] core.entity_form_display.civicrm_participant_payment.civicrm_participant_payment.default (new)
+  [ok] core.entity_view_display.civicrm_participant_payment.civicrm_participant_payment.default (new)
+  [ok] core.entity_form_display.civicrm_payment_processor.civicrm_payment_processor.default (new)
+  [ok] core.entity_view_display.civicrm_payment_processor.civicrm_payment_processor.default (new)
+  [ok] core.entity_form_display.civicrm_payment_processor_type.civicrm_payment_processor_type.default (new)
+  [ok] core.entity_view_display.civicrm_payment_processor_type.civicrm_payment_processor_type.default (new)
+  [ok] core.entity_form_display.civicrm_phone.civicrm_phone.default (new)
+  [ok] core.entity_view_display.civicrm_phone.civicrm_phone.default (new)
+  [ok] core.entity_form_display.civicrm_pledge.civicrm_pledge.default (new)
+  [ok] core.entity_view_display.civicrm_pledge.civicrm_pledge.default (new)
+  [ok] core.entity_form_display.civicrm_pledge_payment.civicrm_pledge_payment.default (new)
+  [ok] core.entity_view_display.civicrm_pledge_payment.civicrm_pledge_payment.default (new)
+  [ok] core.entity_form_display.civicrm_price_set.civicrm_price_set.default (new)
+  [ok] core.entity_view_display.civicrm_price_set.civicrm_price_set.default (new)
+  [ok] core.entity_form_display.civicrm_price_field.civicrm_price_field.default (new)
+  [ok] core.entity_view_display.civicrm_price_field.civicrm_price_field.default (new)
+  [ok] core.entity_form_display.civicrm_price_field_value.civicrm_price_field_value.default (new)
+  [ok] core.entity_view_display.civicrm_price_field_value.civicrm_price_field_value.default (new)
+  [ok] core.entity_form_display.civicrm_recurring_entity.civicrm_recurring_entity.default (new)
+  [ok] core.entity_view_display.civicrm_recurring_entity.civicrm_recurring_entity.default (new)
+  [ok] core.entity_form_display.civicrm_relationship.civicrm_relationship.default (new)
+  [ok] core.entity_view_display.civicrm_relationship.civicrm_relationship.default (new)
+  [ok] core.entity_form_display.civicrm_relationship_type.civicrm_relationship_type.default (new)
+  [ok] core.entity_view_display.civicrm_relationship_type.civicrm_relationship_type.default (new)
+  [ok] core.entity_form_display.civicrm_survey.civicrm_survey.default (new)
+  [ok] core.entity_view_display.civicrm_survey.civicrm_survey.default (new)
+  [ok] core.entity_form_display.civicrm_state_province.civicrm_state_province.default (new)
+  [ok] core.entity_view_display.civicrm_state_province.civicrm_state_province.default (new)
+  [ok] core.entity_form_display.civicrm_tag.civicrm_tag.default (new)
+  [ok] core.entity_view_display.civicrm_tag.civicrm_tag.default (new)
+  [ok] core.entity_form_display.civicrm_custom_field.civicrm_custom_field.default (new)
+  [ok] core.entity_view_display.civicrm_custom_field.civicrm_custom_field.default (new)
+  [ok] core.entity_form_display.civicrm_custom_group.civicrm_custom_group.default (new)
+  [ok] core.entity_view_display.civicrm_custom_group.civicrm_custom_group.default (new)
+  [ok] core.entity_form_display.civicrm_website.civicrm_website.default (new)
+  [ok] core.entity_view_display.civicrm_website.civicrm_website.default (new)
+  [ok] core.entity_form_display.civicrm_mailing.civicrm_mailing.default (new)
+  [ok] core.entity_view_display.civicrm_mailing.civicrm_mailing.default (new)
+  [ok] core.entity_form_display.civicrm_mailing_job.civicrm_mailing_job.default (new)
+  [ok] core.entity_view_display.civicrm_mailing_job.civicrm_mailing_job.default (new)
+  [ok] core.entity_form_display.civicrm_option_value.civicrm_option_value.default (new)
+  [ok] core.entity_view_display.civicrm_option_value.civicrm_option_value.default (new)
+  [ok] core.entity_form_display.civicrm_contribution_soft.civicrm_contribution_soft.default (new)
+  [ok] core.entity_view_display.civicrm_contribution_soft.civicrm_contribution_soft.default (new)
+  [ok] core.entity_form_display.civicrm_pcp.civicrm_pcp.default (new)
+  [ok] core.entity_view_display.civicrm_pcp.civicrm_pcp.default (new)
+  [ok] core.entity_form_display.civicrm_cv_ce_board_terms.civicrm_cv_ce_board_terms.default (new)
+  [ok] core.entity_view_display.civicrm_cv_ce_board_terms.civicrm_cv_ce_board_terms.default (new)
+  [ok] core.entity_form_display.civicrm_cv_ce_education.civicrm_cv_ce_education.default (new)
+  [ok] core.entity_view_display.civicrm_cv_ce_education.civicrm_cv_ce_education.default (new)
+  [ok] core.entity_form_display.civicrm_cv_ce_event_sessions.civicrm_cv_ce_event_sessions.default (new)
+  [ok] core.entity_view_display.civicrm_cv_ce_event_sessions.civicrm_cv_ce_event_sessions.default (new)
+  [ok] core.entity_form_display.civicrm_cv_ce_professiona_7cb000.civicrm_cv_ce_professiona_7cb000.default (new)
+  [ok] core.entity_view_display.civicrm_cv_ce_professiona_7cb000.civicrm_cv_ce_professiona_7cb000.default (new)
+  [ok] core.entity_form_display.civicrm_cv_ce_skills.civicrm_cv_ce_skills.default (new)
+  [ok] core.entity_view_display.civicrm_cv_ce_skills.civicrm_cv_ce_skills.default (new)
+  [ok] core.entity_form_display.civicrm_cv_ce_vehicles.civicrm_cv_ce_vehicles.default (new)
+  [ok] core.entity_view_display.civicrm_cv_ce_vehicles.civicrm_cv_ce_vehicles.default (new)
+
+3. Row counts
+  [ok] civicrm_activity.details settings.rows -- 8 vs 8
+  [ok] civicrm_activity.details has no top-level rows
+  [ok] civicrm_event.summary settings.rows -- 4 vs 4
+  [ok] civicrm_event.summary has no top-level rows
+  [ok] civicrm_contribution.custom_5 (Known_areas_of_interest, note_rows 4) settings.rows -- 4 vs 4
+  [ok] civicrm_cv_ce_education.custom_15 (notes, note_rows NULL) settings.rows -- 4 vs 4
+  [ok] civicrm_contact.custom_66 (memo, note_rows NULL) settings.rows -- 4 vs 4
+  [ok] civicrm_event.custom_85 (parking_info, note_rows NULL) settings.rows -- 4 vs 4
+  [ok] event form: summary textarea has 4 rows -- 4
+
+177 passed, 0 failed

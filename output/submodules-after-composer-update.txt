@@ -1,0 +1,6 @@
+ [success] Cache rebuild complete.
+ [error]  CiviCRM Entity api4 GroupContact.create failed: DB Error: constraint violation 
+ [error]  Could not add contact 28 to group 1009: DB Error: constraint violation 
+  [ok] no PHP or error-level watchdog entries since the start -- 0 entries
+67 passed, 0 failed
+78 passed, 0 failed

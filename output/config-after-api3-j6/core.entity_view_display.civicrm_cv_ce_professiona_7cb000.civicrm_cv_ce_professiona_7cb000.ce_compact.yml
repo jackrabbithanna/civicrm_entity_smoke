@@ -1,0 +1,43 @@
+uuid: 5ebba19e-b189-4acd-9d72-967625a4998e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.civicrm_cv_ce_professiona_7cb000.ce_compact
+  module:
+    - civicrm_entity
+    - options
+id: civicrm_cv_ce_professiona_7cb000.civicrm_cv_ce_professiona_7cb000.ce_compact
+targetEntityType: civicrm_cv_ce_professiona_7cb000
+bundle: civicrm_cv_ce_professiona_7cb000
+mode: ce_compact
+content:
+  custom_50:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  custom_54:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  entity_id:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  custom_51: true
+  custom_52: true
+  custom_53: true
+  id: true

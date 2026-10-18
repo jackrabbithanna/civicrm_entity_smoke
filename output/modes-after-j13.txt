@@ -1,0 +1,259 @@
+ [success] Configuration successfully exported to /var/www/html/scripts/smoke/output/config-before.
+
+################ api4_native -> auto
+ [success] Cache rebuild complete.
+== config-rewrite --from=api4_native --apply
+exit 0; 39 lines in scripts/smoke/output/rewrite-api4_native-auto.txt
+Rewrote 0 field reference(s).
++--------------------------------------+
+| Snapshot ID                          |
++--------------------------------------+
+| 81085390-0e9d-447c-b7ef-ab3cc052ec3d |
++--------------------------------------+
+ [success] Cache rebuild complete.
+api_backend: auto
+
+1. record types and entity definitions
+  [ok] record types defined -- 6 defined, 6 groups
+  [ok] record types installed as defined -- 6 installed
+  [ok] no entity definition updates pending
+
+2. status report
+  [--] civicrm_entity_api_backend [info] CiviCRM Entity API backend: Field names and types come from API3 getfields. Run drush civicrm-entity:api-audit for the per-entity report.
+
+3. the parent's multi-record fields (contact 28, School)
+  [ok] custom_7 is a read-only list
+  [ok] custom_7 lists every record -- 1 vs 1: Springfield University
+
+4. Views
+  [ok] ce_smoke_board_terms (civicrm_cv_ce_board_terms, enabled) has no broken handlers
+  [ok] ce_smoke_contact_directory (civicrm_contact, enabled) has no broken handlers
+  [ok] ce_smoke_education (civicrm_cv_ce_education, enabled) has no broken handlers
+  [ok] ce_smoke_event_sessions (civicrm_cv_ce_event_sessions, enabled) has no broken handlers
+  [ok] ce_smoke_memberships_history (civicrm_cv_ce_professiona_7cb000, enabled) has no broken handlers
+  [ok] ce_smoke_skills (civicrm_contact, enabled) has no broken handlers
+  [ok] ce_smoke_skills_summary (civicrm_cv_ce_skills, enabled) has no broken handlers
+  [ok] ce_smoke_vehicles (civicrm_cv_ce_vehicles, enabled) has no broken handlers
+
+5. pages as admin
+  [ok] GET /civicrm-contact/28 -- HTTP 200
+  [ok] GET /civicrm-contact/28/edit -- HTTP 200
+  [ok] GET /civicrm-contact/47 -- HTTP 200
+  [ok] GET /civicrm-event/1 -- HTTP 200
+  [ok] GET /civicrm-event/1/edit -- HTTP 200
+  [ok] GET /smoke/education -- HTTP 200
+  [ok] GET /smoke/skills -- HTTP 200
+  [ok] GET /smoke/skills/summary -- HTTP 200
+  [ok] GET /smoke/board-terms -- HTTP 200
+  [ok] GET /smoke/directory -- HTTP 200
+  [ok] GET /smoke/directory/cards -- HTTP 200
+  [ok] GET /smoke/event-sessions -- HTTP 200
+  [ok] GET /smoke/vehicles -- HTTP 200
+  [ok] GET /smoke/memberships-history -- HTTP 200
+  [ok] GET /admin/structure/civicrm-entity/settings -- HTTP 200
+  [ok] GET /admin/reports/status -- HTTP 200
+  [ok] GET /civicrm-cv-ce-education/47 -- HTTP 200
+  [ok] GET /civicrm-cv-ce-education/47/edit -- HTTP 200
+  [ok] GET /civicrm-cv-ce-education/add?entity_id=28 -- HTTP 200
+  [ok] GET /civicrm-cv-ce-skills/1 -- HTTP 200
+  [ok] GET /civicrm-cv-ce-event-sessions/1 -- HTTP 200
+  [ok] GET /admin/structure/civicrm-entity/civicrm-cv-ce-education -- HTTP 200
+
+6. writes through Drupal
+  [ok] a contact single-record value saves
+  [ok] the contact save leaves the group's other values alone
+  [ok] the contact save adds no multi-record records
+  [ok] a new record validates
+  [ok] record create -- id 199
+  [ok] record update
+  [ok] record delete
+  [ok] no education records added or lost -- 157 before
+
+7. errors logged
+  [ok] no errors logged -- 0 errors
+
+auto: 44 passed, 0 failed
+== j2-smoke
+54 passed, 0 failed
+== j31-smoke
+72 passed, 0 failed
+== j4-smoke
+142 passed, 0 failed
+== j13-smoke
+ [warning] Drush command terminated abnormally.
+[31mFailed to run drush --uri=https://drupal-civi-composer-exp-d11.ddev.site php:script scripts/smoke/j13-smoke.php: exit status 1[0m
+  [FAIL] ce_profile_all.autocomplete (String/Autocomplete-Select) cleared -- "housing"
+auto: 33 passed, 1 failed
+== verify-smoke
+78 passed, 0 failed
+== browser-smoke
+1. education record: add, edit, unchanged save, delete (admin)
+
+2. education record with the parent chosen by autocomplete (admin)
+
+3. limits and required fields (admin)
+
+4. parents saved unchanged (admin)
+
+4b. clearing a contact's single-record values (admin, contact 28)
+
+5. a record edited by smoke_editor, with check_permissions on and off
+
+6. the contact page's add action (admin)
+
+cleaned up 4 records
+
+41 passed, 0 failed
+
+################ auto -> api3
+ [success] Cache rebuild complete.
+== config-rewrite --from=auto --apply
+exit 0; 1 lines in scripts/smoke/output/rewrite-auto-api3.txt
+No configuration is affected by auto -> api3.
+ [success] Cache rebuild complete.
+api_backend: api3
+
+1. record types and entity definitions
+  [ok] record types defined -- 0 defined, 6 groups
+  [ok] record types installed as defined -- 0 installed
+  [ok] no entity definition updates pending
+
+2. status report
+  [--] civicrm_entity_api_backend [info] CiviCRM Entity API backend: Field names and types come from API3 getfields. Run drush civicrm-entity:api-audit for the per-entity report.
+  [--] civicrm_entity_custom_record_orphans [warning] CiviCRM Entity custom record types: These name the records of a multi-record custom group that is disabled, deleted or has no fields, or whose records have no entity type in the selected API backend mode: record types exist in auto and api4_native only. They are kept, and work again when the group or the mode returns: core.entity_f...
+
+3. the parent's multi-record fields (contact 28, School)
+  [ok] custom_7 holds one value, as in 4.0.x
+  [--] custom_7: ["Springfield University"] (1 records)
+
+4. Views
+  [ok] ce_smoke_board_terms (civicrm_cv_ce_board_terms, enabled) has no broken handlers -- default:field:role, default:field:term_start, default:field:term_end, default:field:stipend, default:field:country, default:field:state, ...
+  [ok] ce_smoke_contact_directory (civicrm_contact, enabled) has no broken handlers
+  [ok] ce_smoke_education (civicrm_cv_ce_education, enabled) has no broken handlers -- default:field:id, default:field:school, default:field:degree, default:field:field_of_study, default:field:start_date, default:field:end_date, ...
+  [ok] ce_smoke_event_sessions (civicrm_cv_ce_event_sessions, enabled) has no broken handlers -- default:field:session_title, default:field:starts_at, default:field:duration, default:field:room, default:field:capacity, default:field:fee, ...
+  [ok] ce_smoke_memberships_history (civicrm_cv_ce_professiona_7cb000, enabled) has no broken handlers -- default:field:association, default:field:member_since, default:field:annual_dues, default:field:currently_active, default:field:level, default:filter:active, ...
+  [FAIL] ce_smoke_skills (civicrm_contact, enabled) has no broken handlers -- default:field:skill, default:field:proficiency, default:field:years_experience, default:field:certified, default:field:cert_url, default:field:last_used, ...
+  [ok] ce_smoke_skills_summary (civicrm_cv_ce_skills, enabled) has no broken handlers -- default:field:skill_count, default:field:years_total, default:relationship:contact, page_1:field:skill_count, page_1:field:years_total, page_1:relationship:contact
+  [ok] ce_smoke_vehicles (civicrm_cv_ce_vehicles, enabled) has no broken handlers -- default:sort:entity_id, page_1:sort:entity_id
+
+5. pages as admin
+  [ok] GET /civicrm-contact/28 -- HTTP 200
+  [ok] GET /civicrm-contact/28/edit -- HTTP 200
+  [ok] GET /civicrm-contact/47 -- HTTP 200
+  [ok] GET /civicrm-event/1 -- HTTP 200
+  [ok] GET /civicrm-event/1/edit -- HTTP 200
+  [FAIL] GET /smoke/education -- HTTP 500, error on page
+  [FAIL] GET /smoke/skills -- HTTP 500, error on page
+  [FAIL] GET /smoke/skills/summary -- HTTP 500, error on page
+  [FAIL] GET /smoke/board-terms -- HTTP 500, error on page
+  [ok] GET /smoke/directory -- HTTP 200
+  [ok] GET /smoke/directory/cards -- HTTP 200
+  [FAIL] GET /smoke/event-sessions -- HTTP 500, error on page
+  [FAIL] GET /smoke/vehicles -- HTTP 500, error on page
+  [FAIL] GET /smoke/memberships-history -- HTTP 500, error on page
+  [ok] GET /admin/structure/civicrm-entity/settings -- HTTP 200
+  [ok] GET /admin/reports/status -- HTTP 200
+
+6. writes through Drupal
+  [ok] a contact single-record value saves
+  [ok] the contact save leaves the group's other values alone
+  [--] I3, kept by decision: the save added ce_education +1; ce_skills +1 multi-record records
+  [ok] no education records added or lost -- 157 before
+
+7. errors logged
+  [FAIL] no errors logged -- 7 errors
+    6x php: InvalidArgumentException: A valid cache entry key is required. Use getAll() to get all table data. in Drupal\views\ViewsData->get() (line 141 of /var/www/html/web/core/modules/views/src/ViewsData.php).
+    1x php: Drupal\Component\Plugin\Exception\PluginNotFoundException: The "entity:civicrm_cv_ce_vehicles" plugin does not exist. Valid plugin IDs for Drupal\views\Plugin\ViewsPluginManager are: entity:node, node_rss, entity:user, entity_reference, entity:block_content, entity:file, entity:menu_link_content,...
+
+api3: 23 passed, 9 failed
+== j2-smoke
+6 passed, 0 failed
+== j31-smoke
+72 passed, 0 failed
+== j4-smoke
+142 passed, 0 failed
+== j13-smoke
+api3: 30 passed, 0 failed
+
+################ api3 -> api4_native
+ [success] Cache rebuild complete.
+== config-rewrite --from=api3 --apply
+exit 0; 1 lines in scripts/smoke/output/rewrite-api3-api4_native.txt
+No configuration is affected by api3 -> api4_native.
+ [success] Cache rebuild complete.
+api_backend: api4_native
+
+1. record types and entity definitions
+  [ok] record types defined -- 6 defined, 6 groups
+  [ok] record types installed as defined -- 6 installed
+  [ok] no entity definition updates pending
+
+2. status report
+  [--] civicrm_entity_api_backend [info] CiviCRM Entity API backend: Field names and types come from API4 getFields. Run drush civicrm-entity:api-audit for the per-entity report.
+  [--] civicrm_entity_api4_native [info] CiviCRM Entity schema identity: API4 native mode presents API4 field names and types directly, using API4 metadata as the live schema. This is what a new installation of CiviCRM Entity is configured with; a site upgraded from an earlier release runs api3 instead unless an administrator changed it. The cost of the mode is that a...
+
+3. the parent's multi-record fields (contact 28, School)
+  [ok] custom_7 is a read-only list
+  [ok] custom_7 lists every record -- 1 vs 1: Springfield University
+
+4. Views
+  [ok] ce_smoke_board_terms (civicrm_cv_ce_board_terms, enabled) has no broken handlers
+  [ok] ce_smoke_contact_directory (civicrm_contact, enabled) has no broken handlers
+  [ok] ce_smoke_education (civicrm_cv_ce_education, enabled) has no broken handlers
+  [ok] ce_smoke_event_sessions (civicrm_cv_ce_event_sessions, enabled) has no broken handlers
+  [ok] ce_smoke_memberships_history (civicrm_cv_ce_professiona_7cb000, enabled) has no broken handlers
+  [ok] ce_smoke_skills (civicrm_contact, enabled) has no broken handlers
+  [ok] ce_smoke_skills_summary (civicrm_cv_ce_skills, enabled) has no broken handlers
+  [ok] ce_smoke_vehicles (civicrm_cv_ce_vehicles, enabled) has no broken handlers
+
+5. pages as admin
+  [ok] GET /civicrm-contact/28 -- HTTP 200
+  [ok] GET /civicrm-contact/28/edit -- HTTP 200
+  [ok] GET /civicrm-contact/47 -- HTTP 200
+  [ok] GET /civicrm-event/1 -- HTTP 200
+  [ok] GET /civicrm-event/1/edit -- HTTP 200
+  [ok] GET /smoke/education -- HTTP 200
+  [ok] GET /smoke/skills -- HTTP 200
+  [ok] GET /smoke/skills/summary -- HTTP 200
+  [ok] GET /smoke/board-terms -- HTTP 200
+  [ok] GET /smoke/directory -- HTTP 200
+  [ok] GET /smoke/directory/cards -- HTTP 200
+  [ok] GET /smoke/event-sessions -- HTTP 200
+  [ok] GET /smoke/vehicles -- HTTP 200
+  [ok] GET /smoke/memberships-history -- HTTP 200
+  [ok] GET /admin/structure/civicrm-entity/settings -- HTTP 200
+  [ok] GET /admin/reports/status -- HTTP 200
+  [ok] GET /civicrm-cv-ce-education/47 -- HTTP 200
+  [ok] GET /civicrm-cv-ce-education/47/edit -- HTTP 200
+  [ok] GET /civicrm-cv-ce-education/add?entity_id=28 -- HTTP 200
+  [ok] GET /civicrm-cv-ce-skills/1 -- HTTP 200
+  [ok] GET /civicrm-cv-ce-event-sessions/1 -- HTTP 200
+  [ok] GET /admin/structure/civicrm-entity/civicrm-cv-ce-education -- HTTP 200
+
+6. writes through Drupal
+  [ok] a contact single-record value saves
+  [ok] the contact save leaves the group's other values alone
+  [ok] the contact save adds no multi-record records
+  [ok] a new record validates
+  [ok] record create -- id 205
+  [ok] record update
+  [ok] record delete
+  [ok] no education records added or lost -- 157 before
+
+7. errors logged
+  [ok] no errors logged -- 0 errors
+
+api4_native: 44 passed, 0 failed
+== j2-smoke
+322 passed, 0 failed
+== j31-smoke
+72 passed, 0 failed
+== j4-smoke
+142 passed, 0 failed
+== j13-smoke
+api4_native: 34 passed, 0 failed
+== verify-smoke
+78 passed, 0 failed
+ [success] Configuration successfully exported to /var/www/html/scripts/smoke/output/config-after.
+
+== configuration changed by the round trip

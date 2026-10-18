@@ -1,0 +1,14 @@
+uuid: 2616ad83-c429-4bd3-a785-6afc41793630
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.smoke_contact_viewer
+  module:
+    - user
+id: user_add_role_action.smoke_contact_viewer
+label: 'Add the smoke_contact_viewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: smoke_contact_viewer

@@ -1,0 +1,65 @@
+uuid: 1be3d297-f1c3-41a0-a3af-6a7e2829cae1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.civicrm_cv_ce_education.add
+  module:
+    - civicrm_entity
+    - datetime
+id: civicrm_cv_ce_education.civicrm_cv_ce_education.add
+targetEntityType: civicrm_cv_ce_education
+bundle: civicrm_cv_ce_education
+mode: add
+content:
+  custom_11:
+    type: datetime_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  custom_13:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  custom_7:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  custom_8:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  custom_9:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  entity_id:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  custom_10: true
+  custom_12: true
+  custom_14: true
+  custom_15: true
+  custom_16: true

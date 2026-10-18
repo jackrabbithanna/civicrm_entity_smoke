@@ -1,0 +1,11 @@
+uuid: c37c660a-986b-4fdc-a8ce-daea011a04ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+id: civicrm_cv_ce_skills.add
+label: Add
+description: null
+targetEntityType: civicrm_cv_ce_skills
+cache: true

@@ -1,0 +1,50 @@
+uuid: 919cd9e6-9bff-43e5-ba92-35d5847adee5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.civicrm_cv_ce_skills.add
+  module:
+    - civicrm_entity
+id: civicrm_cv_ce_skills.civicrm_cv_ce_skills.add
+targetEntityType: civicrm_cv_ce_skills
+bundle: civicrm_cv_ce_skills
+mode: add
+content:
+  custom_18:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  custom_19:
+    type: options_buttons
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  custom_21:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  entity_id:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  custom_20: true
+  custom_22: true
+  custom_23: true
+  custom_24: true
+  custom_25: true

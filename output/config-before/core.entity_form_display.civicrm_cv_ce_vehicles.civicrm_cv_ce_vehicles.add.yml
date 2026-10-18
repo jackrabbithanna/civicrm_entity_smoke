@@ -1,0 +1,50 @@
+uuid: e4bb5dbb-eb41-4936-9366-dd6d6dba8059
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.civicrm_cv_ce_vehicles.add
+  module:
+    - civicrm_entity
+id: civicrm_cv_ce_vehicles.civicrm_cv_ce_vehicles.add
+targetEntityType: civicrm_cv_ce_vehicles
+bundle: civicrm_cv_ce_vehicles
+mode: add
+content:
+  custom_34:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  custom_35:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  custom_36:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  entity_id:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  custom_37: true
+  custom_38: true
+  custom_39: true

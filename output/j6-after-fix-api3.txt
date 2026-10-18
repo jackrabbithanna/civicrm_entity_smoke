@@ -1,0 +1,22 @@
+Mode: api3
+filter_format: 'basic_html'
+
+1. J6: no format chosen
+  [ok] the status report has an entry for it
+  [ok] it names the fallback format -- Rich text from CiviCRM, such as event descriptions, is shown with its HTML tags: no text format is chosen for it, and the fallback format, Plain text, escapes HTML. Choose one on the settings form.
+  [ok] civicrm_entity_install() chooses Basic HTML -- "basic_html"
+  [ok] then the status report has no entry
+
+2. J39: Basic HTML, CKEditor 5
+  [ok] event 1: markup Basic HTML does not allow is edited without CKEditor
+  [ok] event 1: with a note saying so
+  api3: not saved (J40)
+  [ok] event 1: markup Basic HTML allows keeps CKEditor, with no note
+
+3. Other formats
+  [ok] full_html: CKEditor stays
+  [ok] plain_text: no editor, and no note
+
+Restored filter_format 'basic_html' and the values.
+
+J6/J39: 9 passed, 0 failed

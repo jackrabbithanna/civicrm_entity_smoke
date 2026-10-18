@@ -1,0 +1,330 @@
+uuid: 9d1f388a-a385-48b6-b492-0c2f014a99cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+    - datetime
+    - options
+    - user
+id: ce_smoke_memberships_history
+label: 'Smoke: Professional memberships (hashed type ID)'
+module: views
+description: 'CiviCRM Entity 5.0.x multi-record custom field smoke test.'
+tag: ce_smoke
+base_table: civicrm_cv_ce_professiona_7cb000
+base_field: id
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Professional memberships history'
+      fields:
+        display_name:
+          id: display_name
+          table: civicrm_contact
+          field: display_name
+          relationship: contact
+          entity_type: civicrm_contact
+          entity_field: display_name
+          plugin_id: field
+          label: Contact
+          type: string
+          settings:
+            link_to_entity: true
+        association:
+          id: association
+          table: civicrm_cv_ce_professiona_7cb000
+          field: association_50
+          entity_type: civicrm_cv_ce_professiona_7cb000
+          entity_field: custom_50
+          plugin_id: field
+          label: Association
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+        member_since:
+          id: member_since
+          table: civicrm_cv_ce_professiona_7cb000
+          field: member_since_51
+          entity_type: civicrm_cv_ce_professiona_7cb000
+          entity_field: custom_51
+          plugin_id: field
+          label: 'Member Since'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'M j, Y'
+          group_column: value
+          group_columns: {  }
+        annual_dues:
+          id: annual_dues
+          table: civicrm_cv_ce_professiona_7cb000
+          field: annual_dues_52
+          entity_type: civicrm_cv_ce_professiona_7cb000
+          entity_field: custom_52
+          plugin_id: field
+          label: 'Annual Dues'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ','
+            decimal_separator: .
+            scale: 2
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+        currently_active:
+          id: currently_active
+          table: civicrm_cv_ce_professiona_7cb000
+          field: currently_active_53
+          entity_type: civicrm_cv_ce_professiona_7cb000
+          entity_field: custom_53
+          plugin_id: field
+          label: 'Currently Active'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: yes-no
+            format_custom_false: ''
+            format_custom_true: ''
+          group_column: value
+          group_columns: {  }
+        level:
+          id: level
+          table: civicrm_cv_ce_professiona_7cb000
+          field: level_54
+          entity_type: civicrm_cv_ce_professiona_7cb000
+          entity_field: custom_54
+          plugin_id: field
+          label: Level
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 25
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: true
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access CiviCRM'
+      cache:
+        type: tag
+        options: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          plugin_id: text_custom
+          empty: true
+          content: 'No records match.'
+          tokenize: false
+      sorts:
+        member_since:
+          id: member_since
+          table: civicrm_cv_ce_professiona_7cb000
+          field: member_since_51
+          entity_type: civicrm_cv_ce_professiona_7cb000
+          entity_field: custom_51
+          plugin_id: datetime
+          order: ASC
+          granularity: day
+      filters:
+        active:
+          id: active
+          table: civicrm_cv_ce_professiona_7cb000
+          field: currently_active_53
+          entity_type: civicrm_cv_ce_professiona_7cb000
+          entity_field: custom_53
+          plugin_id: boolean
+          operator: '='
+          value: All
+          exposed: true
+          expose:
+            operator_id: active_op
+            label: 'Currently active'
+            description: ''
+            use_operator: false
+            operator: active_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: active
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+        level:
+          id: level
+          table: civicrm_cv_ce_professiona_7cb000
+          field: level_54
+          entity_type: civicrm_cv_ce_professiona_7cb000
+          entity_field: custom_54
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          exposed: true
+          expose:
+            operator_id: level_op
+            label: Level
+            description: ''
+            use_operator: false
+            operator: level_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: level
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            display_name: display_name
+            association: association
+            member_since: member_since
+            annual_dues: annual_dues
+            currently_active: currently_active
+            level: level
+          default: '-1'
+          info:
+            display_name:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            association:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            member_since:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            annual_dues:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            currently_active:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            level:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          order: asc
+          empty_table: true
+          caption: ''
+          description: ''
+      row:
+        type: fields
+        options: {  }
+      relationships:
+        contact:
+          id: contact
+          table: civicrm_cv_ce_professiona_7cb000
+          field: entity_id
+          admin_label: Contact
+          entity_type: civicrm_cv_ce_professiona_7cb000
+          entity_field: entity_id
+          plugin_id: standard
+          required: true
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          plugin_id: result
+          empty: false
+          content: 'Displaying @start - @end of @total'
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  page_1:
+    id: page_1
+    display_title: Page
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: smoke/memberships-history
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }

@@ -1,0 +1,29 @@
+uuid: 9ad3b27c-06a3-4f8e-8338-2a2cf80349df
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.ce_smoke_education
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: ce_smoke_education_contact
+theme: olivero
+region: content
+weight: 20
+provider: null
+plugin: 'views_block:ce_smoke_education-block_contact'
+settings:
+  id: 'views_block:ce_smoke_education-block_contact'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/civicrm-contact/*'

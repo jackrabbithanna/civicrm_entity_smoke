@@ -1,0 +1,194 @@
+uuid: 36da253d-1c84-4ea3-b6b1-8d2b1786f970
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.civicrm_contact.ce_summary
+  module:
+    - civicrm_entity
+    - options
+id: civicrm_contact.civicrm_contact.ce_summary
+targetEntityType: civicrm_contact
+bundle: civicrm_contact
+mode: ce_summary
+content:
+  contact_type:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  custom_18:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  custom_57:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  custom_58:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  custom_7:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  custom_73:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  custom_77:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  display_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  address_billing: true
+  address_primary: true
+  addressee_custom: true
+  addressee_display: true
+  addressee_id: true
+  api_key: true
+  birth_date: true
+  communication_style_id: true
+  contact_sub_type: true
+  created_date: true
+  custom_1: true
+  custom_10: true
+  custom_11: true
+  custom_12: true
+  custom_13: true
+  custom_14: true
+  custom_15: true
+  custom_16: true
+  custom_19: true
+  custom_2: true
+  custom_20: true
+  custom_21: true
+  custom_22: true
+  custom_23: true
+  custom_24: true
+  custom_25: true
+  custom_26: true
+  custom_27: true
+  custom_28: true
+  custom_29: true
+  custom_3: true
+  custom_30: true
+  custom_31: true
+  custom_32: true
+  custom_33: true
+  custom_34: true
+  custom_35: true
+  custom_36: true
+  custom_37: true
+  custom_38: true
+  custom_39: true
+  custom_50: true
+  custom_51: true
+  custom_52: true
+  custom_53: true
+  custom_54: true
+  custom_56: true
+  custom_59: true
+  custom_60: true
+  custom_61: true
+  custom_62: true
+  custom_63: true
+  custom_64: true
+  custom_65: true
+  custom_66: true
+  custom_67: true
+  custom_68: true
+  custom_69: true
+  custom_70: true
+  custom_71: true
+  custom_72: true
+  custom_74: true
+  custom_75: true
+  custom_76: true
+  custom_78: true
+  custom_79: true
+  custom_8: true
+  custom_9: true
+  deceased_date: true
+  do_not_email: true
+  do_not_mail: true
+  do_not_phone: true
+  do_not_sms: true
+  do_not_trade: true
+  email_billing: true
+  email_greeting_custom: true
+  email_greeting_display: true
+  email_greeting_id: true
+  email_primary: true
+  employer_id: true
+  external_identifier: true
+  first_name: true
+  formal_title: true
+  gender_id: true
+  hash: true
+  household_name: true
+  id: true
+  im_billing: true
+  im_primary: true
+  image_URL: true
+  is_deceased: true
+  is_deleted: true
+  is_opt_out: true
+  job_title: true
+  last_name: true
+  legal_identifier: true
+  legal_name: true
+  middle_name: true
+  modified_date: true
+  nick_name: true
+  organization_name: true
+  phone_billing: true
+  phone_primary: true
+  postal_greeting_custom: true
+  postal_greeting_display: true
+  postal_greeting_id: true
+  preferred_communication_method: true
+  preferred_language: true
+  preferred_mail_format: true
+  prefix_id: true
+  primary_contact_id: true
+  sic_code: true
+  sort_name: true
+  source: true
+  suffix_id: true
+  user_unique_id: true

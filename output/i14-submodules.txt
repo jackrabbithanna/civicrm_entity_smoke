@@ -1,0 +1,11 @@
+ [notice] Message: ce-smoke-sub rules insert
+
+ [notice] Message: ce-smoke-sub rules update
+
+ [notice] Message: ce-smoke-sub rules delete
+
+== bundles enabled: 1
+67 passed, 0 failed
+  [ok] civicrm_contact edit form uses form mode 'edit' -- 30 fields: custom_1,custom_2,custom_3,custom_56,custom_57,custom_58,custom_59,custom_60,...
+
+78 passed, 0 failed

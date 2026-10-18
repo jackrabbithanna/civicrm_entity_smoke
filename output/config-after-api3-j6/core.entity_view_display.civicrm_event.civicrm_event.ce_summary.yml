@@ -1,0 +1,139 @@
+uuid: c67cda36-a2c0-46f5-9fe6-39c92cffda18
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.civicrm_event.ce_summary
+  module:
+    - civicrm_entity
+    - datetime
+    - options
+id: civicrm_event.civicrm_event.ce_summary
+targetEntityType: civicrm_event
+bundle: civicrm_event
+mode: ce_summary
+content:
+  custom_40:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  custom_84:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  custom_88:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  start_date:
+    type: datetime_custom
+    label: inline
+    settings:
+      timezone_override: ''
+      date_format: 'M j, Y g:i a'
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  allow_same_participant_emails: true
+  allow_selfcancelxfer: true
+  approval_req_text: true
+  bcc_confirm: true
+  cc_confirm: true
+  confirm_email_text: true
+  confirm_footer_text: true
+  confirm_from_email: true
+  confirm_from_name: true
+  confirm_text: true
+  confirm_title: true
+  created_date: true
+  created_id: true
+  currency: true
+  custom_41: true
+  custom_42: true
+  custom_43: true
+  custom_44: true
+  custom_45: true
+  custom_46: true
+  custom_47: true
+  custom_48: true
+  custom_49: true
+  custom_85: true
+  custom_86: true
+  custom_87: true
+  dedupe_rule_group_id: true
+  default_discount_fee_id: true
+  default_fee_id: true
+  default_role_id: true
+  description: true
+  end_date: true
+  event_full_text: true
+  event_type_id: true
+  expiration_time: true
+  fee_label: true
+  financial_type_id: true
+  footer_text: true
+  has_waitlist: true
+  id: true
+  initial_amount_help_text: true
+  initial_amount_label: true
+  intro_text: true
+  is_active: true
+  is_billing_required: true
+  is_confirm_enabled: true
+  is_email_confirm: true
+  is_map: true
+  is_monetary: true
+  is_multiple_registrations: true
+  is_online_registration: true
+  is_partial_payment: true
+  is_pay_later: true
+  is_public: true
+  is_share: true
+  is_show_calendar_links: true
+  is_show_location: true
+  is_template: true
+  loc_block_id: true
+  max_additional_participants: true
+  max_participants: true
+  min_initial_amount: true
+  parent_event_id: true
+  participant_listing_id: true
+  pay_later_receipt: true
+  pay_later_text: true
+  payment_processor: true
+  registration_end_date: true
+  registration_link_text: true
+  registration_start_date: true
+  requires_approval: true
+  selfcancelxfer_time: true
+  slot_label_id: true
+  summary: true
+  template_id: true
+  template_title: true
+  thankyou_footer_text: true
+  thankyou_text: true
+  thankyou_title: true
+  waitlist_text: true

@@ -1,0 +1,348 @@
+{
+    "uuid": "1da0eab8-a9b1-4dd3-a344-40b6f7daed09",
+    "langcode": "en",
+    "status": true,
+    "dependencies": {
+        "config": [
+            "core.entity_form_mode.civicrm_contact.edit"
+        ],
+        "module": [
+            "civicrm_entity",
+            "datetime",
+            "text"
+        ]
+    },
+    "id": "civicrm_contact.civicrm_contact.edit",
+    "targetEntityType": "civicrm_contact",
+    "bundle": "civicrm_contact",
+    "mode": "edit",
+    "content": {
+        "custom_1": {
+            "type": "options_buttons",
+            "weight": 4,
+            "region": "content",
+            "settings": [],
+            "third_party_settings": []
+        },
+        "custom_2": {
+            "type": "options_select",
+            "weight": 5,
+            "region": "content",
+            "settings": [],
+            "third_party_settings": []
+        },
+        "custom_3": {
+            "type": "datetime_default",
+            "weight": 6,
+            "region": "content",
+            "settings": [],
+            "third_party_settings": []
+        },
+        "custom_56": {
+            "type": "string_textfield",
+            "weight": 7,
+            "region": "content",
+            "settings": {
+                "size": 60,
+                "placeholder": ""
+            },
+            "third_party_settings": []
+        },
+        "custom_57": {
+            "type": "options_select",
+            "weight": 8,
+            "region": "content",
+            "settings": [],
+            "third_party_settings": []
+        },
+        "custom_58": {
+            "type": "options_buttons",
+            "weight": 9,
+            "region": "content",
+            "settings": [],
+            "third_party_settings": []
+        },
+        "custom_59": {
+            "type": "options_buttons",
+            "weight": 10,
+            "region": "content",
+            "settings": [],
+            "third_party_settings": []
+        },
+        "custom_60": {
+            "type": "options_select",
+            "weight": 11,
+            "region": "content",
+            "settings": [],
+            "third_party_settings": []
+        },
+        "custom_61": {
+            "type": "string_textfield",
+            "weight": 12,
+            "region": "content",
+            "settings": {
+                "size": 60,
+                "placeholder": ""
+            },
+            "third_party_settings": []
+        },
+        "custom_62": {
+            "type": "number",
+            "weight": 13,
+            "region": "content",
+            "settings": {
+                "placeholder": ""
+            },
+            "third_party_settings": []
+        },
+        "custom_63": {
+            "type": "options_buttons",
+            "weight": 14,
+            "region": "content",
+            "settings": [],
+            "third_party_settings": []
+        },
+        "custom_64": {
+            "type": "number",
+            "weight": 15,
+            "region": "content",
+            "settings": {
+                "placeholder": ""
+            },
+            "third_party_settings": []
+        },
+        "custom_65": {
+            "type": "number",
+            "weight": 16,
+            "region": "content",
+            "settings": {
+                "placeholder": ""
+            },
+            "third_party_settings": []
+        },
+        "custom_66": {
+            "type": "string_textarea",
+            "weight": 17,
+            "region": "content",
+            "settings": {
+                "rows": 4,
+                "placeholder": ""
+            },
+            "third_party_settings": []
+        },
+        "custom_67": {
+            "type": "text_textarea",
+            "weight": 18,
+            "region": "content",
+            "settings": {
+                "rows": 5,
+                "placeholder": ""
+            },
+            "third_party_settings": []
+        },
+        "custom_68": {
+            "type": "datetime_default",
+            "weight": 19,
+            "region": "content",
+            "settings": [],
+            "third_party_settings": []
+        },
+        "custom_69": {
+            "type": "datetime_default",
+            "weight": 20,
+            "region": "content",
+            "settings": [],
+            "third_party_settings": []
+        },
+        "custom_70": {
+            "type": "boolean_checkbox",
+            "weight": 21,
+            "region": "content",
+            "settings": {
+                "display_label": true
+            },
+            "third_party_settings": []
+        },
+        "custom_71": {
+            "type": "boolean_checkbox",
+            "weight": 22,
+            "region": "content",
+            "settings": {
+                "display_label": true
+            },
+            "third_party_settings": []
+        },
+        "custom_72": {
+            "type": "options_select",
+            "weight": 23,
+            "region": "content",
+            "settings": [],
+            "third_party_settings": []
+        },
+        "custom_73": {
+            "type": "options_select",
+            "weight": 24,
+            "region": "content",
+            "settings": [],
+            "third_party_settings": []
+        },
+        "custom_74": {
+            "type": "options_select",
+            "weight": 25,
+            "region": "content",
+            "settings": [],
+            "third_party_settings": []
+        },
+        "custom_75": {
+            "type": "number",
+            "weight": 26,
+            "region": "content",
+            "settings": {
+                "placeholder": ""
+            },
+            "third_party_settings": []
+        },
+        "custom_76": {
+            "type": "string_textfield",
+            "weight": 27,
+            "region": "content",
+            "settings": {
+                "size": 60,
+                "placeholder": ""
+            },
+            "third_party_settings": []
+        },
+        "custom_77": {
+            "type": "entity_reference_autocomplete",
+            "weight": 28,
+            "region": "content",
+            "settings": {
+                "match_operator": "CONTAINS",
+                "match_limit": 10,
+                "size": 60,
+                "placeholder": ""
+            },
+            "third_party_settings": []
+        },
+        "custom_78": {
+            "type": "entity_reference_autocomplete",
+            "weight": 29,
+            "region": "content",
+            "settings": {
+                "match_operator": "CONTAINS",
+                "match_limit": 10,
+                "size": 60,
+                "placeholder": ""
+            },
+            "third_party_settings": []
+        },
+        "custom_79": {
+            "type": "string_textfield",
+            "weight": 30,
+            "region": "content",
+            "settings": {
+                "size": 60,
+                "placeholder": ""
+            },
+            "third_party_settings": []
+        },
+        "first_name": {
+            "type": "string_textfield",
+            "weight": 0,
+            "region": "content",
+            "settings": {
+                "size": 60,
+                "placeholder": ""
+            },
+            "third_party_settings": []
+        },
+        "household_name": {
+            "type": "string_textfield",
+            "weight": 3,
+            "region": "content",
+            "settings": {
+                "size": 60,
+                "placeholder": ""
+            },
+            "third_party_settings": []
+        },
+        "last_name": {
+            "type": "string_textfield",
+            "weight": 1,
+            "region": "content",
+            "settings": {
+                "size": 60,
+                "placeholder": ""
+            },
+            "third_party_settings": []
+        },
+        "organization_name": {
+            "type": "string_textfield",
+            "weight": 2,
+            "region": "content",
+            "settings": {
+                "size": 60,
+                "placeholder": ""
+            },
+            "third_party_settings": []
+        }
+    },
+    "hidden": {
+        "address_billing": true,
+        "address_primary": true,
+        "addressee_custom": true,
+        "addressee_display": true,
+        "addressee_id": true,
+        "api_key": true,
+        "birth_date": true,
+        "communication_style_id": true,
+        "contact_sub_type": true,
+        "contact_type": true,
+        "created_date": true,
+        "deceased_date": true,
+        "display_name": true,
+        "do_not_email": true,
+        "do_not_mail": true,
+        "do_not_phone": true,
+        "do_not_sms": true,
+        "do_not_trade": true,
+        "email_billing": true,
+        "email_greeting_custom": true,
+        "email_greeting_display": true,
+        "email_greeting_id": true,
+        "email_primary": true,
+        "employer_id": true,
+        "external_identifier": true,
+        "formal_title": true,
+        "gender_id": true,
+        "hash": true,
+        "im_billing": true,
+        "im_primary": true,
+        "image_URL": true,
+        "is_deceased": true,
+        "is_deleted": true,
+        "is_opt_out": true,
+        "job_title": true,
+        "legal_identifier": true,
+        "legal_name": true,
+        "middle_name": true,
+        "modified_date": true,
+        "nick_name": true,
+        "path": true,
+        "phone_billing": true,
+        "phone_primary": true,
+        "postal_greeting_custom": true,
+        "postal_greeting_display": true,
+        "postal_greeting_id": true,
+        "preferred_communication_method": true,
+        "preferred_language": true,
+        "preferred_mail_format": true,
+        "prefix_id": true,
+        "primary_contact_id": true,
+        "sic_code": true,
+        "sort_name": true,
+        "source": true,
+        "suffix_id": true,
+        "user_unique_id": true
+    }
+}

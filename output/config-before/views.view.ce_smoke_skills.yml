@@ -1,0 +1,444 @@
+uuid: 2e68057a-2b5c-45b9-986b-600e95922ac2
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+    - datetime
+    - options
+    - user
+id: ce_smoke_skills
+label: 'Smoke: Skills by contact'
+module: views
+description: 'CiviCRM Entity 5.0.x multi-record custom field smoke test.'
+tag: ce_smoke
+base_table: civicrm_contact
+base_field: id
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Skills by contact'
+      fields:
+        display_name:
+          id: display_name
+          table: civicrm_contact
+          field: display_name
+          entity_type: civicrm_contact
+          entity_field: display_name
+          plugin_id: field
+          label: Contact
+          type: string
+          settings:
+            link_to_entity: true
+        contact_type:
+          id: contact_type
+          table: civicrm_contact
+          field: contact_type
+          entity_type: civicrm_contact
+          entity_field: contact_type
+          plugin_id: field
+          label: Type
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+        skill:
+          id: skill
+          table: civicrm_cv_ce_skills
+          field: skill_18
+          relationship: skills
+          entity_type: civicrm_cv_ce_skills
+          entity_field: custom_18
+          plugin_id: field
+          label: Skill
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+        proficiency:
+          id: proficiency
+          table: civicrm_cv_ce_skills
+          field: proficiency_19
+          relationship: skills
+          entity_type: civicrm_cv_ce_skills
+          entity_field: custom_19
+          plugin_id: field
+          label: Proficiency
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+        years_experience:
+          id: years_experience
+          table: civicrm_cv_ce_skills
+          field: years_of_experience_20
+          relationship: skills
+          entity_type: civicrm_cv_ce_skills
+          entity_field: custom_20
+          plugin_id: field
+          label: 'Years of Experience'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+        certified:
+          id: certified
+          table: civicrm_cv_ce_skills
+          field: certified_21
+          relationship: skills
+          entity_type: civicrm_cv_ce_skills
+          entity_field: custom_21
+          plugin_id: field
+          label: Certified
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: yes-no
+            format_custom_false: ''
+            format_custom_true: ''
+          group_column: value
+          group_columns: {  }
+        cert_url:
+          id: cert_url
+          table: civicrm_cv_ce_skills
+          field: certificate_url_22
+          relationship: skills
+          entity_type: civicrm_cv_ce_skills
+          entity_field: custom_22
+          plugin_id: field
+          label: 'Certificate URL'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+        last_used:
+          id: last_used
+          table: civicrm_cv_ce_skills
+          field: last_used_24
+          relationship: skills
+          entity_type: civicrm_cv_ce_skills
+          entity_field: custom_24
+          plugin_id: field
+          label: 'Last Used'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'M j, Y g:i a'
+          group_column: value
+          group_columns: {  }
+        endorser:
+          id: endorser
+          table: civicrm_contact
+          field: display_name
+          relationship: endorser
+          entity_type: civicrm_contact
+          entity_field: display_name
+          plugin_id: field
+          label: 'Endorsed by'
+          type: string
+          settings:
+            link_to_entity: true
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 25
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: true
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access CiviCRM'
+      cache:
+        type: tag
+        options: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          plugin_id: text_custom
+          empty: true
+          content: 'No records match.'
+          tokenize: false
+      sorts:
+        sort_name:
+          id: sort_name
+          table: civicrm_contact
+          field: sort_name
+          entity_type: civicrm_contact
+          entity_field: sort_name
+          plugin_id: standard
+          order: ASC
+        proficiency:
+          id: proficiency
+          table: civicrm_cv_ce_skills
+          field: proficiency_19
+          relationship: skills
+          entity_type: civicrm_cv_ce_skills
+          entity_field: custom_19
+          plugin_id: standard
+          order: DESC
+      filters:
+        proficiency:
+          id: proficiency
+          table: civicrm_cv_ce_skills
+          field: proficiency_19
+          relationship: skills
+          entity_type: civicrm_cv_ce_skills
+          entity_field: custom_19
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          exposed: true
+          expose:
+            operator_id: proficiency_op
+            label: Proficiency
+            description: ''
+            use_operator: false
+            operator: proficiency_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: proficiency
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+        contact_type:
+          id: contact_type
+          table: civicrm_contact
+          field: contact_type
+          entity_type: civicrm_contact
+          entity_field: contact_type
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          exposed: true
+          expose:
+            operator_id: contact_type_op
+            label: 'Contact type'
+            description: ''
+            use_operator: false
+            operator: contact_type_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: contact_type
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+        certified:
+          id: certified
+          table: civicrm_cv_ce_skills
+          field: certified_21
+          relationship: skills
+          entity_type: civicrm_cv_ce_skills
+          entity_field: custom_21
+          plugin_id: boolean
+          operator: '='
+          value: All
+          exposed: true
+          expose:
+            operator_id: certified_op
+            label: Certified
+            description: ''
+            use_operator: false
+            operator: certified_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: certified
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            display_name: display_name
+            contact_type: contact_type
+            skill: skill
+            proficiency: proficiency
+            years_experience: years_experience
+            certified: certified
+            cert_url: cert_url
+            last_used: last_used
+            endorser: endorser
+          default: '-1'
+          info:
+            display_name:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            contact_type:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            skill:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            proficiency:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            years_experience:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            certified:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            cert_url:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            last_used:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            endorser:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          order: asc
+          empty_table: true
+          caption: ''
+          description: ''
+      row:
+        type: fields
+        options: {  }
+      relationships:
+        skills:
+          id: skills
+          table: civicrm_contact
+          field: reverse__civicrm_cv_ce_skills__entity_id
+          admin_label: Skills
+          entity_type: civicrm_contact
+          plugin_id: civicrm_entity_reverse
+          required: true
+        endorser:
+          id: endorser
+          table: civicrm_cv_ce_skills
+          field: endorsed_by_25
+          relationship: skills
+          admin_label: Endorser
+          entity_type: civicrm_cv_ce_skills
+          entity_field: custom_25
+          plugin_id: standard
+          required: false
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          plugin_id: result
+          empty: false
+          content: 'Displaying @start - @end of @total'
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  page_1:
+    id: page_1
+    display_title: Page
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: smoke/skills
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }

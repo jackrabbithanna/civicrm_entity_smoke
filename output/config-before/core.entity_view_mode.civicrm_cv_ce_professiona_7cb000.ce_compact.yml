@@ -1,0 +1,11 @@
+uuid: a83c6c15-839c-429c-8ef6-5e501817d968
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+id: civicrm_cv_ce_professiona_7cb000.ce_compact
+label: Compact
+description: null
+targetEntityType: civicrm_cv_ce_professiona_7cb000
+cache: true

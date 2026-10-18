@@ -1,0 +1,110 @@
+uuid: 702f3058-8254-4071-a26d-440fe1d84162
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+    - datetime
+    - options
+    - text
+id: civicrm_activity.civicrm_activity.default
+targetEntityType: civicrm_activity
+bundle: civicrm_activity
+mode: default
+content:
+  activity_date_time:
+    type: datetime_custom
+    label: inline
+    settings:
+      timezone_override: ''
+      date_format: 'M j, Y g:i a'
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  activity_type_id:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  custom_80:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  custom_81:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  custom_82:
+    type: datetime_custom
+    label: inline
+    settings:
+      timezone_override: ''
+      date_format: 'M j, Y'
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  custom_83:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  details:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  status_id:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  subject:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  assignee_contact_id: true
+  created_date: true
+  duration: true
+  engagement_level: true
+  id: true
+  is_auto: true
+  is_current_revision: true
+  is_deleted: true
+  is_star: true
+  is_test: true
+  location: true
+  medium_id: true
+  modified_date: true
+  original_id: true
+  parent_id: true
+  phone_id: true
+  phone_number: true
+  priority_id: true
+  relationship_id: true
+  result: true
+  source_contact_id: true
+  source_record_id: true
+  target_contact_id: true
+  weight: true

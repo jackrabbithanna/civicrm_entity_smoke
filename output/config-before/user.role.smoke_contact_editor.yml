@@ -1,0 +1,16 @@
+uuid: 53400dac-700e-4ec2-a73a-d39a75f3052e
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm
+id: smoke_contact_editor
+label: smoke_contact_editor
+weight: 5
+is_admin: false
+permissions:
+  - 'access CiviCRM'
+  - 'delete contacts'
+  - 'edit all contacts'
+  - 'edit all events'
+  - 'view all contacts'

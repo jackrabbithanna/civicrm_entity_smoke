@@ -1,0 +1,11 @@
+uuid: 1467a73d-b407-4a42-a075-30105d352af4
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+id: civicrm_cv_ce_board_terms.add
+label: Add
+description: null
+targetEntityType: civicrm_cv_ce_board_terms
+cache: true

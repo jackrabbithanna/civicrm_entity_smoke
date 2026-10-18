@@ -1,0 +1,114 @@
+api_backend: api4_native; record types under test: civicrm_cv_ce_education, civicrm_cv_ce_event_sessions
+
+1. Rules (civicrm_entity_rules)
+  [ok] condition civicrm_entity_contact_in_group is defined
+  [ok] condition civicrm_entity_drupal_user_exists is defined
+  [ok] condition civicrm_contact_id_drupal_user_exists is defined
+  [ok] action civicrm_entity_user_create is defined
+  [ok] action civicrm_entity_load_linked_user is defined
+  [ok] typed data filter FirstLast is defined
+  [ok] typed data filter firstdotlast is defined
+  [ok] typed data filter initialdotlast is defined
+  [ok] Rules event rules_entity_insert:civicrm_cv_ce_education exists
+  [ok] Rules event rules_entity_update:civicrm_cv_ce_education exists
+  [ok] Rules event rules_entity_delete:civicrm_cv_ce_education exists
+  [ok] reaction rules on the record type save
+  [ok] Drupal create, update, delete of a record each fire their rule once -- create: insert 1, update 0, delete 0; update: insert 0, update 1, delete 0; delete: insert 0, update 0, delete 1
+  [ok] CiviCRM (API4) create, update, delete of a record each fire their rule once -- create: insert 1, update 0, delete 0; update: insert 0, update 1, delete 0; delete: insert 0, update 0, delete 1
+  [ok] condition civicrm_entity_contact_in_group: contact 172 in group 2 is true -- true
+  [ok] condition civicrm_entity_contact_in_group: contact 1 in group 2 is false -- false
+  [ok] condition civicrm_entity_drupal_user_exists: contact 203 is true -- true
+  [ok] condition civicrm_contact_id_drupal_user_exists: contact 203 is true -- true
+  [ok] condition civicrm_entity_drupal_user_exists: contact 1 is false -- false
+  [ok] condition civicrm_contact_id_drupal_user_exists: contact 1 is false -- false
+  [ok] action civicrm_entity_load_linked_user finds user 1 for contact 203 -- uid 1
+  [FAIL] action civicrm_entity_user_create runs for contact 3 -- Drupal\Component\Plugin\Exception\ContextException: The provided context 'civicrm_user' is not valid. @ ContextProviderTrait.php:56
+  [ok] civicrm_entity_user_create left a user linked to contact 3 -- uid 12 'ce_smoke_sub_rules_user', uf_match contact 3
+  [FAIL] typed data filter FirstLast names contact 28 -- (cannot filter) vs LashawndaLee
+
+2. Bundles (civicrm_entity_bundles)
+  [ok] civicrm_event has the bundle key
+  [ok] civicrm_activity has the bundle key
+  [ok] record types have no bundle key
+  [ok] civicrm_event bundles: the root plus one per event type -- 7 bundles, 6 event types: civicrm_event, conference, exhibition, fundraiser, meeting, performance
+  [ok] event 1 has the bundle of its event type -- fundraiser vs fundraiser
+  [ok] event 1 lists every session record under its bundle -- 6 vs 6 (Drupal\Core\Field\Entity\BaseFieldOverride, Drupal\civicrm_entity\Plugin\Field\MultiRecordCustomFieldItemList)
+  [ok] event 1 renders with the root display under its bundle -- 4322 bytes
+  [ok] creating an event by bundle sets its event type -- event_type_id 3
+  [ok] the event edit form uses the root form display -- 70 of 70 root components on the form
+  [ok] event add route takes a bundle and an add page exists -- /civicrm-event/add/{bundle}; add page /civicrm-event/add
+  [ok] Field UI routes of civicrm_event default to the root bundle -- /admin/structure/civicrm-entity/civicrm-event/fields bundle='civicrm_event'
+  [ok] an event session record saves and deletes under bundles -- id 19
+  [ok] activity 2 has the bundle of its activity type -- meeting vs meeting
+
+3. Display Suite (civicrm_entity_ds)
+  [ok] civicrm_cv_ce_education 1 renders the ds_2col layout of view mode ce_smoke_ds -- 694 bytes; fields custom_7, custom_8, entity_id
+  [ok] civicrm_contact 28 renders the ds_2col layout of view mode ce_smoke_ds -- 578 bytes; fields display_name, birth_date, contact_sub_type
+  [ok] civicrm_event 1 renders the ds_2col layout of view mode ce_smoke_ds (bundle fundraiser, layout on the root) -- 1494 bytes; fields title, custom_40, custom_41
+
+4. Field group (civicrm_entity_field_group)
+  [ok] civicrm_cv_ce_education 1 renders a fieldset group in view mode ce_smoke_fg -- 931 bytes; group of custom_7, custom_8
+  [ok] civicrm_contact 28 renders a fieldset group in view mode ce_smoke_fg -- 839 bytes; group of display_name, birth_date
+  [ok] civicrm_event 1 renders a fieldset group in view mode ce_smoke_fg (bundle fundraiser, group on the root) -- 1764 bytes; group of title, custom_40
+  [ok] the civicrm_cv_ce_education add form shows a fieldset group from its add form display -- children custom_7, custom_8
+  [ok] the event 1 edit form shows a fieldset group from the root form display (bundle fundraiser) -- children title, event_type_id
+
+5. Search API (civicrm_entity_search_api)
+  [ok] entity:civicrm_cv_ce_education uses the CiviCRM Entity datasource -- Drupal\civicrm_entity_search_api\Plugin\search_api\datasource\CivicrmEntity
+  [ok] default tracking (direct SQL on civicrm_value_education_his_4) lists every civicrm_cv_ce_education record -- 157 vs 157
+  [FAIL] an event datasource limited to bundle fundraiser tracks its events -- Drupal\Core\Database\DatabaseExceptionWrapper: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'bundle' in 'WHERE': SELECT "base_table"."id" AS "id" @ ExceptionHandler.php:96
+  [ok] a DB server and an index over contacts and education records save -- contact_name, contact_schools, record_parent, record_parent_name, record_school
+  [ok] tracking: every contact and every education record -- contacts 207 (SQL 207, 207 not deleted); records 157 vs 157
+  [ok] indexing: everything tracked is indexed -- 364 indexed, 0 remaining of 364
+  [ok] search: records with school 'Coastal Arts Academy' -- 28 vs 28
+  [ok] search: contacts whose multi-record school list holds 'Coastal Arts Academy' -- 28 vs 28
+  [ok] a record created, renamed and deleted in Drupal is tracked, reindexed and removed -- tracked true, found 1, after rename old/new 0/1, after delete 0, tracker restored true
+  [ok] a record created and deleted through API4 is tracked, indexed and removed -- tracked true, found 1, after delete 0
+  [ok] contact 28 queued for reindexing after its records changed
+  [ok] a record's insert and delete, in Drupal and through API4, queue its parent, whose indexed school list follows -- queued/found per step: y y y y y y y y
+  [ok] renaming contact 28 in Drupal queues its civicrm_cv_ce_education records -- queued [47] vs [47]
+
+6. Views Bulk Operations (civicrm_entity_vbo)
+  [ok] action civicrm_contact_add_to_group is defined for civicrm_contact
+  [ok] a View of civicrm_cv_ce_education with a bulk form saves and renders the form -- 13403 bytes, 10 rows
+ [notice] CiviCRM Education History Education History #249 (id: 249) has been deleted in a bulk action from view ce_smoke_sub_vbo_education.
+  [ok] VBO deletes an education record -- record 249 rows left 0; [{"message":"Delete civicrm education history entities","type":"status","count":1}]
+  [ok] the add-to-group action lists the smoke group among its options -- 5 groups
+  [ok] VBO adds contact 28 to group 5 -- memberships 1; [{"message":"","type":"status","count":1}]
+
+7. Site
+  [ok] no pending entity definition updates
+  [ok] no PHP or error-level watchdog entries since the start -- 0 entries
+
+62 passed, 3 failed
+  - action civicrm_entity_user_create runs for contact 3 (Drupal\Component\Plugin\Exception\ContextException: The provided context 'civicrm_user' is not valid. @ ContextProviderTrait.php:56)
+  - typed data filter FirstLast names contact 28 ((cannot filter) vs LashawndaLee)
+  - an event datasource limited to bundle fundraiser tracks its events (Drupal\Core\Database\DatabaseExceptionWrapper: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'bundle' in 'WHERE': SELECT "base_table"."id" AS "id" @ ExceptionHandler.php:96)
+
+Also run verify-smoke.php: the submodules must leave its 77 checks passing.
+ [notice] Message: User with username ce_smoke_sub_rules_user has been created.
+
+ [notice] Message: ce-smoke-sub rules insert
+
+ [notice] Message: ce-smoke-sub rules update
+
+ [notice] Message: ce-smoke-sub rules delete
+
+ [notice] Message: ce-smoke-sub rules insert
+
+ [notice] Message: ce-smoke-sub rules delete
+
+ [notice] Message: ce-smoke-sub rules insert
+
+ [notice] Message: ce-smoke-sub rules delete
+
+ [notice] Message: ce-smoke-sub rules insert
+
+ [notice] Message: ce-smoke-sub rules delete
+
+ [notice] Message: ce-smoke-sub rules insert
+
+ [notice] Message: ce-smoke-sub rules delete
+
+ [notice] Message: Added: Ms. Lashawnda Lee to group: CE smoke: VBO
+

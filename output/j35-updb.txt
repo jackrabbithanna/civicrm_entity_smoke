@@ -1,0 +1,8 @@
+== updatedb:status
+civicrm_entity-post-5005_cast_views_plugin_options
+== updb
+>  [notice] Update started: civicrm_entity_post_update_5005_cast_views_plugin_options
+>  [notice] Update completed: civicrm_entity_post_update_5005_cast_views_plugin_options
+ [success] Finished performing updates.
+== status after
+ [success] No database updates required.

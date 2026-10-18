@@ -1,0 +1,71 @@
+1. contact 84 in api4_native: core fields and every ce_profile_all field emptied
+  [FAIL] middle_name cleared -- "O"
+  [FAIL] job_title cleared -- "Smoke job_title"
+  [FAIL] birth_date cleared -- "1955-12-28"
+  [FAIL] preferred_communication_method cleared -- ["1","2"]
+  [FAIL] ce_profile_all.text (String/Text) cleared -- "Profile text for contact 84"
+  [FAIL] ce_profile_all.select (String/Select) cleared -- "medium"
+  [FAIL] ce_profile_all.radio (String/Radio) cleared -- "mail"
+  [FAIL] ce_profile_all.checkboxes (String/CheckBox) cleared -- ["volunteer","events","advocacy"]
+  [FAIL] ce_profile_all.multiselect (String/Select) cleared -- ["thu"]
+  [FAIL] ce_profile_all.autocomplete (String/Autocomplete-Select) cleared -- "housing"
+  [FAIL] ce_profile_all.integer (Int/Text) cleared -- 87
+  [FAIL] ce_profile_all.int_radio (Int/Radio) cleared -- 2
+  [FAIL] ce_profile_all.float (Float/Text) cleared -- 56.944
+  [FAIL] ce_profile_all.money (Money/Text) cleared -- 3519.75
+  [FAIL] ce_profile_all.memo (Memo/TextArea) cleared -- "Line one for 84\nLine two"
+  [FAIL] ce_profile_all.rich_text (Memo/RichTextEditor) cleared -- "<p>Rich <strong>text<\/strong> for contact 84.<\/p><ul><li>One<\/li><li>Two<\/li><\/ul>"
+  [FAIL] ce_profile_all.date (Date/Select Date) cleared -- "2026-06-28"
+  [FAIL] ce_profile_all.datetime (Date/Select Date) cleared -- "2026-02-02 01:05:00"
+  [FAIL] ce_profile_all.state (StateProvince/Select) cleared -- 1050
+  [FAIL] ce_profile_all.country (Country/Select) cleared -- 1228
+  [FAIL] ce_profile_all.countries (Country/Select) cleared -- [1039,1228]
+  [FAIL] ce_profile_all.link (Link/Link) cleared -- "https:\/\/example.org\/profile\/84"
+  [FAIL] ce_profile_all.contact_ref (ContactReference/Autocomplete-Select) cleared -- 11
+  [FAIL] ce_profile_all.event_ref (EntityReference/Autocomplete-Select) cleared -- 3
+  [FAIL] ce_profile_all.states (StateProvince/Select) cleared -- [1000]
+  [ok] ce_profile_all.hidden (control) kept -- "hidden-84"
+  [ok] name kept
+
+3. saved again, nothing changes
+  [ok] second save changes nothing
+  [ok] contact restored
+  [ok] no record added outside api3 -- 0 removed
+
+2. an education record in api4_native
+  [FAIL] record 14 honors cleared -- ["cum_laude"]
+  [FAIL] record 14 end_date cleared -- "2020-05-20"
+  [FAIL] record 14 notes cleared -- "Record 3 for contact 11.\nSecond line of notes."
+  [ok] record 14 school kept -- "Springfield University"
+
+api4_native: 6 passed, 28 failed
+  - middle_name cleared ("O")
+  - job_title cleared ("Smoke job_title")
+  - birth_date cleared ("1955-12-28")
+  - preferred_communication_method cleared (["1","2"])
+  - ce_profile_all.text (String/Text) cleared ("Profile text for contact 84")
+  - ce_profile_all.select (String/Select) cleared ("medium")
+  - ce_profile_all.radio (String/Radio) cleared ("mail")
+  - ce_profile_all.checkboxes (String/CheckBox) cleared (["volunteer","events","advocacy"])
+  - ce_profile_all.multiselect (String/Select) cleared (["thu"])
+  - ce_profile_all.autocomplete (String/Autocomplete-Select) cleared ("housing")
+  - ce_profile_all.integer (Int/Text) cleared (87)
+  - ce_profile_all.int_radio (Int/Radio) cleared (2)
+  - ce_profile_all.float (Float/Text) cleared (56.944)
+  - ce_profile_all.money (Money/Text) cleared (3519.75)
+  - ce_profile_all.memo (Memo/TextArea) cleared ("Line one for 84\nLine two")
+  - ce_profile_all.rich_text (Memo/RichTextEditor) cleared ("<p>Rich <strong>text<\/strong> for contact 84.<\/p><ul><li>One<\/li><li>Two<\/li><\/ul>")
+  - ce_profile_all.date (Date/Select Date) cleared ("2026-06-28")
+  - ce_profile_all.datetime (Date/Select Date) cleared ("2026-02-02 01:05:00")
+  - ce_profile_all.state (StateProvince/Select) cleared (1050)
+  - ce_profile_all.country (Country/Select) cleared (1228)
+  - ce_profile_all.countries (Country/Select) cleared ([1039,1228])
+  - ce_profile_all.link (Link/Link) cleared ("https:\/\/example.org\/profile\/84")
+  - ce_profile_all.contact_ref (ContactReference/Autocomplete-Select) cleared (11)
+  - ce_profile_all.event_ref (EntityReference/Autocomplete-Select) cleared (3)
+  - ce_profile_all.states (StateProvince/Select) cleared ([1000])
+  - record 14 honors cleared (["cum_laude"])
+  - record 14 end_date cleared ("2020-05-20")
+  - record 14 notes cleared ("Record 3 for contact 11.\nSecond line of notes.")
+ [warning] Drush command terminated abnormally.
+[31mFailed to run drush --uri=https://drupal-civi-composer-exp-d11.ddev.site php:script scripts/smoke/j13-smoke.php: exit status 1[0m

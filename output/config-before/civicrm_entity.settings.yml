@@ -1,0 +1,73 @@
+_core:
+  default_config_hash: 7uxMjlrAdt2dtmZrssWugPhgE9DLijCxW7GTG2HR-F0
+filter_format: basic_html
+api_backend: api4_native
+check_permissions: false
+enabled_entity_types:
+  - civicrm_contact
+  - civicrm_event
+  - civicrm_activity
+  - civicrm_participant
+  - civicrm_contribution
+  - civicrm_membership
+  - civicrm_address
+  - civicrm_email
+  - civicrm_phone
+disable_hooks: false
+enable_links_per_type:
+  civicrm_contact:
+    values:
+      view: view
+      add: add
+      edit: edit
+      delete: delete
+  civicrm_event:
+    values:
+      view: view
+      add: add
+      edit: edit
+      delete: delete
+  civicrm_activity:
+    values:
+      view: view
+      add: add
+      edit: edit
+      delete: delete
+  civicrm_participant:
+    values:
+      view: view
+      add: add
+      edit: edit
+      delete: delete
+  civicrm_contribution:
+    values:
+      view: view
+      add: add
+      edit: edit
+      delete: delete
+  civicrm_membership:
+    values:
+      view: view
+      add: add
+      edit: edit
+      delete: delete
+  civicrm_address:
+    values:
+      view: view
+      add: add
+      edit: edit
+      delete: delete
+  civicrm_email:
+    values:
+      view: view
+      add: add
+      edit: edit
+      delete: delete
+  civicrm_phone:
+    values:
+      view: view
+      add: add
+      edit: edit
+      delete: delete
+disable_links: false
+disable_hooks_per_type: {  }

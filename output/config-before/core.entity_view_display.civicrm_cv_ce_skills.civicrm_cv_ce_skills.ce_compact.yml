@@ -1,0 +1,46 @@
+uuid: b4f26aae-0de7-4c40-95fb-84eda89423f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.civicrm_cv_ce_skills.ce_compact
+  module:
+    - civicrm_entity
+    - options
+id: civicrm_cv_ce_skills.civicrm_cv_ce_skills.ce_compact
+targetEntityType: civicrm_cv_ce_skills
+bundle: civicrm_cv_ce_skills
+mode: ce_compact
+content:
+  custom_18:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  custom_19:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  entity_id:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  custom_20: true
+  custom_21: true
+  custom_22: true
+  custom_23: true
+  custom_24: true
+  custom_25: true
+  id: true

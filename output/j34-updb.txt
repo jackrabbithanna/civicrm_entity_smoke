@@ -1,0 +1,21 @@
+== first updb (inject had failed: 5004 ran on the untouched site)
+   Update completed: civicrm_entity_post_update_5004_text_area_widget_settings; then 'No database updates required.'
+== inject
+Injected custom_66.rows and custom_67 into core.entity_form_display.civicrm_contact.civicrm_contact.edit; 5004 marked pending.
+== updatedb:status
+civicrm_entity-post-5004_text_area_widget_settings
+== updb
+ [warning] CiviCRM: System: The settings file  
+>  [notice] Update started: civicrm_entity_post_update_5004_text_area_widget_settings
+>  [notice] Updated the text area settings of: core.entity_form_display.civicrm_contact.civicrm_contact.edit.
+>  [notice] Update completed: civicrm_entity_post_update_5004_text_area_widget_settings
+ [success] Finished performing updates.
+== check
+  [ok] custom_66 has no top-level rows
+  [ok] custom_66 settings.rows still 4
+  [ok] custom_67 has no top-level rows
+  [ok] custom_67 settings.rows cast to int 5
+Restored core.entity_form_display.civicrm_contact.civicrm_contact.edit.
+4 passed, 0 failed
+== status after
+ [success] No database updates required.

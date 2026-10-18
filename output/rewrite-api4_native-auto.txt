@@ -1,0 +1,39 @@
++---------------------------------------------------------------------+-----------------+----------+-----------------+------------------+
+| Configuration                                                       | Entity type     | Location | From            | To               |
++---------------------------------------------------------------------+-----------------+----------+-----------------+------------------+
+| core.entity_view_display.civicrm_contact.civicrm_contact.ce_summary | civicrm_contact | hidden   | address_billing | (no counterpart) |
+| core.entity_view_display.civicrm_contact.civicrm_contact.ce_summary | civicrm_contact | hidden   | address_primary | (no counterpart) |
+| core.entity_view_display.civicrm_contact.civicrm_contact.ce_summary | civicrm_contact | hidden   | email_billing   | (no counterpart) |
+| core.entity_view_display.civicrm_contact.civicrm_contact.ce_summary | civicrm_contact | hidden   | email_primary   | (no counterpart) |
+| core.entity_view_display.civicrm_contact.civicrm_contact.ce_summary | civicrm_contact | hidden   | im_billing      | (no counterpart) |
+| core.entity_view_display.civicrm_contact.civicrm_contact.ce_summary | civicrm_contact | hidden   | im_primary      | (no counterpart) |
+| core.entity_view_display.civicrm_contact.civicrm_contact.ce_summary | civicrm_contact | hidden   | phone_billing   | (no counterpart) |
+| core.entity_view_display.civicrm_contact.civicrm_contact.ce_summary | civicrm_contact | hidden   | phone_primary   | (no counterpart) |
+| core.entity_view_display.civicrm_contact.civicrm_contact.default    | civicrm_contact | hidden   | address_billing | (no counterpart) |
+| core.entity_view_display.civicrm_contact.civicrm_contact.default    | civicrm_contact | hidden   | address_primary | (no counterpart) |
+| core.entity_view_display.civicrm_contact.civicrm_contact.default    | civicrm_contact | hidden   | email_billing   | (no counterpart) |
+| core.entity_view_display.civicrm_contact.civicrm_contact.default    | civicrm_contact | hidden   | email_primary   | (no counterpart) |
+| core.entity_view_display.civicrm_contact.civicrm_contact.default    | civicrm_contact | hidden   | im_billing      | (no counterpart) |
+| core.entity_view_display.civicrm_contact.civicrm_contact.default    | civicrm_contact | hidden   | im_primary      | (no counterpart) |
+| core.entity_view_display.civicrm_contact.civicrm_contact.default    | civicrm_contact | hidden   | phone_billing   | (no counterpart) |
+| core.entity_view_display.civicrm_contact.civicrm_contact.default    | civicrm_contact | hidden   | phone_primary   | (no counterpart) |
+| core.entity_view_display.civicrm_event.civicrm_event.ce_summary     | civicrm_event   | hidden   | template_id     | (no counterpart) |
+| core.entity_view_display.civicrm_event.civicrm_event.default        | civicrm_event   | hidden   | template_id     | (no counterpart) |
+| core.entity_form_display.civicrm_contact.civicrm_contact.edit       | civicrm_contact | hidden   | address_billing | (no counterpart) |
+| core.entity_form_display.civicrm_contact.civicrm_contact.edit       | civicrm_contact | hidden   | address_primary | (no counterpart) |
+| core.entity_form_display.civicrm_contact.civicrm_contact.edit       | civicrm_contact | hidden   | email_billing   | (no counterpart) |
+| core.entity_form_display.civicrm_contact.civicrm_contact.edit       | civicrm_contact | hidden   | email_primary   | (no counterpart) |
+| core.entity_form_display.civicrm_contact.civicrm_contact.edit       | civicrm_contact | hidden   | im_billing      | (no counterpart) |
+| core.entity_form_display.civicrm_contact.civicrm_contact.edit       | civicrm_contact | hidden   | im_primary      | (no counterpart) |
+| core.entity_form_display.civicrm_contact.civicrm_contact.edit       | civicrm_contact | hidden   | phone_billing   | (no counterpart) |
+| core.entity_form_display.civicrm_contact.civicrm_contact.edit       | civicrm_contact | hidden   | phone_primary   | (no counterpart) |
++---------------------------------------------------------------------+-----------------+----------+-----------------+------------------+
+
+api4_native -> auto: 0 rename(s) across 5 configuration object(s).
+26 entry/entries name a field auto does not have. These are reported but never removed: dropping a display component or a Views handler changes what the page shows, which is your call, not this command's.
+Rewrote 0 field reference(s).
++--------------------------------------+
+| Snapshot ID                          |
++--------------------------------------+
+| fc286464-aabe-4504-a449-3df3c95e07d3 |
++--------------------------------------+

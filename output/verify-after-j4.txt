@@ -1,0 +1,92 @@
+1. record types: counts, loading, rendering
+  [ok] civicrm_cv_ce_education entity query count -- 157 vs 157 in civicrm_value_education_his_4
+  [ok] civicrm_cv_ce_education #1 loads with its parent
+  [ok] civicrm_cv_ce_education #1 renders in default -- 1858 bytes
+  [ok] civicrm_cv_ce_education #1 renders in ce_compact -- 407 bytes
+  [ok] civicrm_cv_ce_skills entity query count -- 213 vs 213 in civicrm_value_skills_5
+  [ok] civicrm_cv_ce_skills #1 loads with its parent
+  [ok] civicrm_cv_ce_skills #1 renders in default -- 1463 bytes
+  [ok] civicrm_cv_ce_skills #1 renders in ce_compact -- 383 bytes
+  [ok] civicrm_cv_ce_board_terms entity query count -- 61 vs 61 in civicrm_value_board_terms_6
+  [ok] civicrm_cv_ce_board_terms #1 loads with its parent
+  [ok] civicrm_cv_ce_board_terms #1 renders in default -- 1720 bytes
+  [ok] civicrm_cv_ce_board_terms #1 renders in ce_compact -- 391 bytes
+  [ok] civicrm_cv_ce_vehicles entity query count -- 20 vs 20 in civicrm_value_staff_vehicle_7
+  [ok] civicrm_cv_ce_vehicles #1 loads with its parent
+  [ok] civicrm_cv_ce_vehicles #1 renders in default -- 1388 bytes
+  [ok] civicrm_cv_ce_vehicles #1 renders in ce_compact -- 625 bytes
+  [ok] civicrm_cv_ce_event_sessions entity query count -- 13 vs 13 in civicrm_value_event_session_8
+  [ok] civicrm_cv_ce_event_sessions #1 loads with its parent
+  [ok] civicrm_cv_ce_event_sessions #1 renders in default -- 2219 bytes
+  [ok] civicrm_cv_ce_event_sessions #1 renders in ce_compact -- 735 bytes
+  [ok] civicrm_cv_ce_professiona_7cb000 entity query count -- 60 vs 60 in civicrm_value_professional__9
+  [ok] civicrm_cv_ce_professiona_7cb000 #1 loads with its parent
+  [ok] civicrm_cv_ce_professiona_7cb000 #1 renders in default -- 1229 bytes
+  [ok] civicrm_cv_ce_professiona_7cb000 #1 renders in ce_compact -- 426 bytes
+
+2. parent multi-record fields (contact 28, event 1, organization 47)
+  [ok] civicrm_contact 28 custom_7 (ce_education.school) lists every record -- 1 vs 1: Springfield University
+  [ok] civicrm_contact 28 custom_18 (ce_skills.skill) lists every record -- 5 vs 5: Python, Carpentry, Event Planning, Translation
+  [ok] civicrm_contact 28 custom_25 (ce_skills.endorsed_by) lists every record -- 3 vs 3: 120, 61, 105
+  [ok] civicrm_contact 47 custom_26 (ce_board_terms.member) lists every record -- 6 vs 6: 151, 46, 17, 27
+  [ok] civicrm_contact 47 custom_27 (ce_board_terms.role) lists every record -- 6 vs 6: chair, member, member, member
+  [ok] civicrm_event 1 custom_40 (ce_event_sessions.session_title) lists every record -- 6 vs 6: Opening Keynote, Panel: The Year Ahead, Workshop: Getting Started, Lightning Talks
+  [ok] contact 28 default display renders multi-record fields -- 9498 bytes
+
+3. single-record custom fields: Drupal value vs API4
+  [ok] custom_56 text -- ["Profile text for contact 28"] vs api4 ["Profile text for contact 28"]
+  [ok] custom_57 select -- ["small"] vs api4 ["small"]
+  [ok] custom_58 radio -- ["email"] vs api4 ["email"]
+  [ok] custom_59 checkboxes -- ["events","advocacy"] vs api4 ["events","advocacy"]
+  [ok] custom_60 multiselect -- ["thu","wed","fri"] vs api4 ["thu","wed","fri"]
+  [ok] custom_61 autocomplete -- ["education"] vs api4 ["education"]
+  [ok] custom_62 integer -- [262] vs api4 [262]
+  [ok] custom_63 int_radio -- [1] vs api4 [1]
+  [ok] custom_64 float -- ["49.763"] vs api4 [49.763]
+  [ok] custom_65 money -- ["4846.38"] vs api4 [4846.38]
+  [ok] custom_66 memo -- ["Line one for 28\nLine two"] vs api4 ["Line one for 28\nLine two"]
+  [ok] custom_67 rich_text -- ["<p>Rich <strong>text<\/strong> for contact 28.<\/p><ul><li>One<\/li><li>Two<\/li><\/ul>"] vs api4 ["<p>Rich <strong>text<\/strong> for contact 28.<\/p><ul><li>One<\/li><li>Two<\/li><\/ul>"]
+  [ok] custom_68 date -- ["1994-09-27"] vs api4 ["1994-09-27"]
+  [ok] custom_69 datetime -- ["2026-02-14 19:32"] vs api4 ["2026-02-14 19:32:00"]
+  [ok] custom_70 boolean_radio -- [true] vs api4 [true]
+  [ok] custom_71 boolean_toggle -- [true] vs api4 [true]
+  [ok] custom_72 state -- [1056] vs api4 [1056]
+  [ok] custom_73 country -- [1039] vs api4 [1039]
+  [ok] custom_74 countries -- [1039,1226] vs api4 [1039,1226]
+  [ok] custom_75 file -- [7] vs api4 [7]
+  [ok] custom_76 link -- ["https:\/\/example.org\/profile\/28"] vs api4 ["https:\/\/example.org\/profile\/28"]
+  [ok] custom_77 contact_ref -- [193] vs api4 [193]
+  [ok] custom_78 event_ref -- [2] vs api4 [2]
+  [ok] custom_79 hidden -- ["hidden-28"] vs api4 ["hidden-28"]
+
+4. views: totals vs the database
+  [ok] ce_smoke_education:page_1 -- 157 vs 157
+  [ok] ce_smoke_education:block_contact(28) -- 1 vs 1
+  [ok] ce_smoke_skills:page_1 -- 213 vs 213
+  [ok] ce_smoke_skills_summary:page_1 -- 70 vs 70
+  [ok] ce_smoke_board_terms:page_1 -- 61 vs 61
+  [ok] ce_smoke_contact_directory:page_1 -- 80 vs 80
+  [ok] ce_smoke_event_sessions:page_1 -- 13 vs 13
+  [ok] ce_smoke_event_sessions:block_event(1) -- 6 vs 6
+  [ok] ce_smoke_vehicles:page_1 -- 20 vs 20
+  [ok] ce_smoke_memberships_history:page_1 -- 60 vs 60
+
+5. writes through Drupal
+  [ok] new education record validates
+  [ok] create writes the CiviCRM row -- id 161
+  [ok] update writes the CiviCRM row
+  [ok] delete removes the CiviCRM row
+  [ok] contact single-record field saves through Drupal -- Changed by verify-smoke
+
+6. record constraints
+  [ok] 6th skill for contact 1 (max_multiple 5) is refused -- <em class="placeholder">Default Organization</em> already has <em class="placeholder">5</em> <em class="placeholder">Skills</em> records, the most the group allows.
+  [ok] education record (extends Individual) on organization 1 is refused -- <em class="placeholder">Education History</em> does not apply to <em class="placeholder">Default Organization</em>.
+  [ok] vehicle (extends Individual/Staff) on non-staff individual 20 is refused -- <em class="placeholder">Staff Vehicles</em> does not apply to <em class="placeholder">Dr. Teddy Terrell</em>.
+  [ok] 3rd vehicle for staff 7 (max_multiple 2) is refused -- <em class="placeholder">merriew63@infomail.co.in</em> already has <em class="placeholder">2</em> <em class="placeholder">Staff Vehicles</em> records, the most the group allows.
+
+7. forms use their form modes
+  [ok] civicrm_cv_ce_education add form uses form mode 'add' -- 6 fields: custom_11,custom_13,custom_7,custom_8,custom_9,entity_id
+  [ok] civicrm_cv_ce_education edit form uses form mode 'default' -- 11 fields: custom_10,custom_11,custom_12,custom_13,custom_14,custom_15,custom_16,custom_7,...
+  [ok] civicrm_contact edit form uses form mode 'edit' -- 29 fields: custom_1,custom_2,custom_3,custom_56,custom_57,custom_58,custom_59,custom_60,...
+
+77 passed, 0 failed

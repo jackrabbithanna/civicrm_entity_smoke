@@ -1,0 +1,37 @@
+Mode: api4_native
+programmatic, no row: contact 93, stored null
+browser, no row: contact 94, stored null
+browser, emptied: contact 10, stored ["1","1"]
+browser, Yes: contact 12, stored ["1","1"]
+browser, No: contact 8, stored ["0","0"]
+  [ok] boolean_radio emptied through API4 for contact 10
+
+1. The default contact form
+  [ok] no saved default contact form display
+  [ok] custom_70 widget -- 'options_buttons' vs 'options_buttons'
+  [ok] custom_71 widget -- 'boolean_checkbox' vs 'boolean_checkbox'
+  [ok] is_deceased widget -- 'boolean_checkbox' vs 'boolean_checkbox'
+  [ok] the saved edit form keeps the checkbox for custom_70
+
+2. The default form, saved unchanged (programmatic, admin)
+  [ok] the form saves -- []
+  [ok] boolean_radio stays empty -- ["NULL","0"]
+  [ok] boolean_toggle stores 0, as CiviCRM's advcheckbox does -- ["NULL","0"]
+
+3. The saved edit form, in the browser (admin)
+  [ok] no row: contact 94's checkbox is unticked
+  [ok] no row: unchanged save leaves boolean_radio empty -- ["NULL","0"] Status message Sherman Wilson has been updated. Close message
+  [ok] emptied: contact 10's checkbox is unticked
+  [ok] emptied: unchanged save leaves boolean_radio empty -- ["NULL","1"] Status message Ms. Iris Robertson has been updated. Close message
+  [ok] emptied: ticked, it stores 1 -- ["1","1"] Status message Ms. Iris Robertson has been updated. Close message
+  [ok] Yes: contact 12's checkbox is ticked
+  [ok] Yes: unticked, it stores 0 -- ["0","1"] Status message Dr. Miguel Ivanov Jr. has been updated. Close message
+  [ok] No: contact 8's unchanged save keeps 0 -- ["0","0"] Status message Eleonor Barkley has been updated. Close message
+
+17 passed, 0 failed
+ [notice] Message: /Dr. Maria Grant III [1]/ has been updated.
+
+[1] https://drupal-civi-composer-exp-d11.ddev.site/civicrm-contact/93
+
+
+restored 5 contacts

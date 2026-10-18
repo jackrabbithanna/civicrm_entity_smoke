@@ -1,0 +1,13 @@
+uuid: b85c5564-5572-4057-a194-d3826e9ccee8
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm
+id: smoke_contact_viewer
+label: smoke_contact_viewer
+weight: 4
+is_admin: false
+permissions:
+  - 'access CiviCRM'
+  - 'view all contacts'

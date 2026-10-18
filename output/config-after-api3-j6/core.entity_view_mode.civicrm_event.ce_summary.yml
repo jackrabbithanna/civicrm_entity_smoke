@@ -1,0 +1,11 @@
+uuid: 872a9c50-14e3-46fb-9f66-d90e7ff1e835
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+id: civicrm_event.ce_summary
+label: 'Smoke summary'
+description: null
+targetEntityType: civicrm_event
+cache: true

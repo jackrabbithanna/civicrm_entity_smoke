@@ -1,0 +1,675 @@
+uuid: b7ddd133-f426-4c82-8a8f-089443c2eee8
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+    - datetime
+    - options
+    - user
+id: ce_smoke_event_sessions
+label: 'Smoke: Event sessions'
+module: views
+description: 'CiviCRM Entity 5.0.x multi-record custom field smoke test.'
+tag: ce_smoke
+base_table: civicrm_cv_ce_event_sessions
+base_field: id
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Event sessions'
+      fields:
+        event:
+          id: event
+          table: civicrm_event
+          field: title
+          relationship: event
+          entity_type: civicrm_event
+          entity_field: title
+          plugin_id: field
+          label: Event
+          exclude: true
+          type: string
+          settings:
+            link_to_entity: true
+        session_title:
+          id: session_title
+          table: civicrm_cv_ce_event_sessions
+          field: session_title_40
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: custom_40
+          plugin_id: field
+          label: 'Session Title'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+        starts_at:
+          id: starts_at
+          table: civicrm_cv_ce_event_sessions
+          field: starts_at_41
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: custom_41
+          plugin_id: field
+          label: 'Starts At'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'M j, Y g:i a'
+          group_column: value
+          group_columns: {  }
+        duration:
+          id: duration
+          table: civicrm_cv_ce_event_sessions
+          field: duration_minutes__42
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: custom_42
+          plugin_id: field
+          label: 'Duration (minutes)'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+        room:
+          id: room
+          table: civicrm_cv_ce_event_sessions
+          field: room_43
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: custom_43
+          plugin_id: field
+          label: Room
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+        capacity:
+          id: capacity
+          table: civicrm_cv_ce_event_sessions
+          field: capacity_45
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: custom_45
+          plugin_id: field
+          label: Capacity
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+        fee:
+          id: fee
+          table: civicrm_cv_ce_event_sessions
+          field: session_fee_46
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: custom_46
+          plugin_id: field
+          label: 'Session Fee'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ','
+            decimal_separator: .
+            scale: 2
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+        speaker:
+          id: speaker
+          table: civicrm_contact
+          field: display_name
+          relationship: speaker
+          entity_type: civicrm_contact
+          entity_field: display_name
+          plugin_id: field
+          label: Speaker
+          type: string
+          settings:
+            link_to_entity: true
+        activity:
+          id: activity
+          table: civicrm_activity
+          field: subject
+          relationship: activity
+          entity_type: civicrm_activity
+          entity_field: subject
+          plugin_id: field
+          label: 'Related activity'
+          type: string
+          settings:
+            link_to_entity: true
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 50
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: true
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access CiviCRM'
+      cache:
+        type: tag
+        options: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          plugin_id: text_custom
+          empty: true
+          content: 'No records match.'
+          tokenize: false
+      sorts:
+        starts_at:
+          id: starts_at
+          table: civicrm_cv_ce_event_sessions
+          field: starts_at_41
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: custom_41
+          plugin_id: datetime
+          order: ASC
+          granularity: minute
+      filters:
+        room:
+          id: room
+          table: civicrm_cv_ce_event_sessions
+          field: room_43
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: custom_43
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          exposed: true
+          expose:
+            operator_id: room_op
+            label: Room
+            description: ''
+            use_operator: false
+            operator: room_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: room
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: table
+        options:
+          grouping:
+            -
+              field: event
+              rendered: true
+              rendered_strip: false
+          row_class: ''
+          default_row_class: true
+          columns:
+            event: event
+            session_title: session_title
+            starts_at: starts_at
+            duration: duration
+            room: room
+            capacity: capacity
+            fee: fee
+            speaker: speaker
+            activity: activity
+          default: '-1'
+          info:
+            event:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            session_title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            starts_at:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            duration:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            room:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            capacity:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            fee:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            speaker:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            activity:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          order: asc
+          empty_table: true
+          caption: ''
+          description: ''
+      row:
+        type: fields
+        options: {  }
+      relationships:
+        event:
+          id: event
+          table: civicrm_cv_ce_event_sessions
+          field: entity_id
+          admin_label: Event
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: entity_id
+          plugin_id: standard
+          required: true
+        speaker:
+          id: speaker
+          table: civicrm_cv_ce_event_sessions
+          field: speaker_44
+          admin_label: Speaker
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: custom_44
+          plugin_id: standard
+          required: false
+        activity:
+          id: activity
+          table: civicrm_cv_ce_event_sessions
+          field: related_activity_49
+          admin_label: 'Related activity'
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: custom_49
+          plugin_id: standard
+          required: false
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          plugin_id: result
+          empty: false
+          content: 'Displaying @start - @end of @total'
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  block_event:
+    id: block_event
+    display_title: 'Event block'
+    display_plugin: block
+    position: 2
+    display_options:
+      title: Sessions
+      fields:
+        session_title:
+          id: session_title
+          table: civicrm_cv_ce_event_sessions
+          field: session_title_40
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: custom_40
+          plugin_id: field
+          label: 'Session Title'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+        starts_at:
+          id: starts_at
+          table: civicrm_cv_ce_event_sessions
+          field: starts_at_41
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: custom_41
+          plugin_id: field
+          label: 'Starts At'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'M j, Y g:i a'
+          group_column: value
+          group_columns: {  }
+        duration:
+          id: duration
+          table: civicrm_cv_ce_event_sessions
+          field: duration_minutes__42
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: custom_42
+          plugin_id: field
+          label: 'Duration (minutes)'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+        room:
+          id: room
+          table: civicrm_cv_ce_event_sessions
+          field: room_43
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: custom_43
+          plugin_id: field
+          label: Room
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+        capacity:
+          id: capacity
+          table: civicrm_cv_ce_event_sessions
+          field: capacity_45
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: custom_45
+          plugin_id: field
+          label: Capacity
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+        fee:
+          id: fee
+          table: civicrm_cv_ce_event_sessions
+          field: session_fee_46
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: custom_46
+          plugin_id: field
+          label: 'Session Fee'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ','
+            decimal_separator: .
+            scale: 2
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+        speaker:
+          id: speaker
+          table: civicrm_contact
+          field: display_name
+          relationship: speaker
+          entity_type: civicrm_contact
+          entity_field: display_name
+          plugin_id: field
+          label: Speaker
+          type: string
+          settings:
+            link_to_entity: true
+        activity:
+          id: activity
+          table: civicrm_activity
+          field: subject
+          relationship: activity
+          entity_type: civicrm_activity
+          entity_field: subject
+          plugin_id: field
+          label: 'Related activity'
+          type: string
+          settings:
+            link_to_entity: true
+      pager:
+        type: none
+        options:
+          offset: 0
+      arguments:
+        entity_id:
+          id: entity_id
+          table: civicrm_cv_ce_event_sessions
+          field: entity_id
+          entity_type: civicrm_cv_ce_event_sessions
+          entity_field: entity_id
+          plugin_id: entity_target_id
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: raw
+          default_argument_options:
+            index: 1
+            use_alias: false
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: true
+          validate:
+            type: numeric
+            fail: empty
+          validate_options: {  }
+          break_phrase: false
+          not: false
+      filters: {  }
+      filter_groups:
+        operator: AND
+        groups: {  }
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            session_title: session_title
+            starts_at: starts_at
+            duration: duration
+            room: room
+            capacity: capacity
+            fee: fee
+            speaker: speaker
+            activity: activity
+          default: '-1'
+          info:
+            session_title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            starts_at:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            duration:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            room:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            capacity:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            fee:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            speaker:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            activity:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          order: asc
+          empty_table: true
+          caption: ''
+          description: ''
+          class: ''
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        arguments: false
+        filters: false
+        filter_groups: false
+        header: false
+      header: {  }
+      display_extenders: {  }
+      block_description: 'Smoke: sessions of the current event'
+      block_hide_empty: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  page_1:
+    id: page_1
+    display_title: Page
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: smoke/event-sessions
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }

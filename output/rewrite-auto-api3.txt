@@ -1,0 +1,1 @@
+No configuration is affected by auto -> api3.

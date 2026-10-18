@@ -1,0 +1,417 @@
+Mode: api4_native
+Set aside 12 saved default displays.
+
+1. Components of the new default displays
+  [ok] civicrm_cv_ce_board_terms: no saved default display
+  [FAIL] civicrm_cv_ce_board_terms.custom_26 (entity_reference, ContactReference) formatter -- NULL vs 'entity_reference_label'
+  [FAIL] civicrm_cv_ce_board_terms.custom_26 (entity_reference, ContactReference) widget -- NULL vs 'entity_reference_autocomplete'
+  [ok] civicrm_cv_ce_board_terms.custom_27 (list_string, String) formatter -- 'list_default' vs 'list_default'
+  [ok] civicrm_cv_ce_board_terms.custom_27 (list_string, String) widget -- 'options_select' vs 'options_select'
+  [ok] civicrm_cv_ce_board_terms.custom_28 (datetime, Date) formatter -- 'datetime_default' vs 'datetime_default'
+  [ok] civicrm_cv_ce_board_terms.custom_28 (datetime, Date) widget -- 'datetime_default' vs 'datetime_default'
+  [ok] civicrm_cv_ce_board_terms.custom_29 (datetime, Date) formatter -- 'datetime_default' vs 'datetime_default'
+  [ok] civicrm_cv_ce_board_terms.custom_29 (datetime, Date) widget -- 'datetime_default' vs 'datetime_default'
+  [FAIL] civicrm_cv_ce_board_terms.custom_30 (float, Money) formatter -- NULL vs 'number_decimal'
+  [FAIL] civicrm_cv_ce_board_terms.custom_30 (float, Money) widget -- NULL vs 'number'
+  [FAIL] civicrm_cv_ce_board_terms.custom_31 (list_integer, Country) formatter -- 'number_integer' vs 'list_default'
+  [ok] civicrm_cv_ce_board_terms.custom_31 (list_integer, Country) widget -- 'options_select' vs 'options_select'
+  [FAIL] civicrm_cv_ce_board_terms.custom_32 (list_integer, StateProvince) formatter -- 'number_integer' vs 'list_default'
+  [ok] civicrm_cv_ce_board_terms.custom_32 (list_integer, StateProvince) widget -- 'options_select' vs 'options_select'
+  [ok] civicrm_cv_ce_board_terms.custom_33 (text_long, Memo) formatter -- 'text_default' vs 'text_default'
+  [ok] civicrm_cv_ce_board_terms.custom_33 (text_long, Memo) widget -- 'civicrm_entity_textarea' vs 'civicrm_entity_textarea'
+  [ok] civicrm_cv_ce_board_terms.entity_id (entity_reference, base) formatter -- 'entity_reference_label' vs 'entity_reference_label'
+  [ok] civicrm_cv_ce_board_terms.entity_id (entity_reference, base) widget -- 'entity_reference_autocomplete' vs 'entity_reference_autocomplete'
+  [ok] civicrm_cv_ce_education: no saved default display
+  [FAIL] civicrm_cv_ce_education.custom_7 (string, String) formatter -- 'text_default' vs 'string'
+  [ok] civicrm_cv_ce_education.custom_7 (string, String) widget -- 'string_textfield' vs 'string_textfield'
+  [ok] civicrm_cv_ce_education.custom_8 (list_string, String) formatter -- 'list_default' vs 'list_default'
+  [ok] civicrm_cv_ce_education.custom_8 (list_string, String) widget -- 'options_select' vs 'options_select'
+  [FAIL] civicrm_cv_ce_education.custom_9 (string, String) formatter -- 'text_default' vs 'string'
+  [ok] civicrm_cv_ce_education.custom_9 (string, String) widget -- 'string_textfield' vs 'string_textfield'
+  [ok] civicrm_cv_ce_education.custom_10 (datetime, Date) formatter -- 'datetime_default' vs 'datetime_default'
+  [ok] civicrm_cv_ce_education.custom_10 (datetime, Date) widget -- 'datetime_default' vs 'datetime_default'
+  [ok] civicrm_cv_ce_education.custom_11 (datetime, Date) formatter -- 'datetime_default' vs 'datetime_default'
+  [ok] civicrm_cv_ce_education.custom_11 (datetime, Date) widget -- 'datetime_default' vs 'datetime_default'
+  [FAIL] civicrm_cv_ce_education.custom_12 (float, Float) formatter -- NULL vs 'number_decimal'
+  [FAIL] civicrm_cv_ce_education.custom_12 (float, Float) widget -- NULL vs 'number'
+  [FAIL] civicrm_cv_ce_education.custom_13 (boolean, Boolean) formatter -- NULL vs 'boolean'
+  [ok] civicrm_cv_ce_education.custom_13 (boolean, Boolean) widget -- 'boolean_checkbox' vs 'boolean_checkbox'
+  [ok] civicrm_cv_ce_education.custom_14 (list_string, String) formatter -- 'list_default' vs 'list_default'
+  [ok] civicrm_cv_ce_education.custom_14 (list_string, String) widget -- 'options_select' vs 'options_select'
+  [ok] civicrm_cv_ce_education.custom_15 (string_long, Memo) formatter -- 'basic_string' vs 'basic_string'
+  [ok] civicrm_cv_ce_education.custom_15 (string_long, Memo) widget -- 'string_textarea' vs 'string_textarea'
+  [--] civicrm_cv_ce_education.custom_16 (integer, File): File, not J3's; formatter 'number_integer', widget 'number'
+  [ok] civicrm_cv_ce_education.entity_id (entity_reference, base) formatter -- 'entity_reference_label' vs 'entity_reference_label'
+  [ok] civicrm_cv_ce_education.entity_id (entity_reference, base) widget -- 'entity_reference_autocomplete' vs 'entity_reference_autocomplete'
+  [ok] civicrm_cv_ce_event_sessions: no saved default display
+  [FAIL] civicrm_cv_ce_event_sessions.custom_40 (string, String) formatter -- 'text_default' vs 'string'
+  [ok] civicrm_cv_ce_event_sessions.custom_40 (string, String) widget -- 'string_textfield' vs 'string_textfield'
+  [ok] civicrm_cv_ce_event_sessions.custom_41 (datetime, Date) formatter -- 'datetime_default' vs 'datetime_default'
+  [ok] civicrm_cv_ce_event_sessions.custom_41 (datetime, Date) widget -- 'datetime_default' vs 'datetime_default'
+  [ok] civicrm_cv_ce_event_sessions.custom_42 (integer, Int) formatter -- 'number_integer' vs 'number_integer'
+  [ok] civicrm_cv_ce_event_sessions.custom_42 (integer, Int) widget -- 'number' vs 'number'
+  [ok] civicrm_cv_ce_event_sessions.custom_43 (list_string, String) formatter -- 'list_default' vs 'list_default'
+  [ok] civicrm_cv_ce_event_sessions.custom_43 (list_string, String) widget -- 'options_select' vs 'options_select'
+  [FAIL] civicrm_cv_ce_event_sessions.custom_44 (entity_reference, ContactReference) formatter -- NULL vs 'entity_reference_label'
+  [FAIL] civicrm_cv_ce_event_sessions.custom_44 (entity_reference, ContactReference) widget -- NULL vs 'entity_reference_autocomplete'
+  [ok] civicrm_cv_ce_event_sessions.custom_45 (integer, Int) formatter -- 'number_integer' vs 'number_integer'
+  [ok] civicrm_cv_ce_event_sessions.custom_45 (integer, Int) widget -- 'number' vs 'number'
+  [FAIL] civicrm_cv_ce_event_sessions.custom_46 (float, Money) formatter -- NULL vs 'number_decimal'
+  [FAIL] civicrm_cv_ce_event_sessions.custom_46 (float, Money) widget -- NULL vs 'number'
+  [FAIL] civicrm_cv_ce_event_sessions.custom_47 (string, Link) formatter -- 'text_default' vs 'string'
+  [ok] civicrm_cv_ce_event_sessions.custom_47 (string, Link) widget -- 'string_textfield' vs 'string_textfield'
+  [ok] civicrm_cv_ce_event_sessions.custom_48 (text_long, Memo) formatter -- 'text_default' vs 'text_default'
+  [ok] civicrm_cv_ce_event_sessions.custom_48 (text_long, Memo) widget -- 'civicrm_entity_textarea' vs 'civicrm_entity_textarea'
+  [FAIL] civicrm_cv_ce_event_sessions.custom_49 (entity_reference, EntityReference) formatter -- NULL vs 'entity_reference_label'
+  [FAIL] civicrm_cv_ce_event_sessions.custom_49 (entity_reference, EntityReference) widget -- NULL vs 'entity_reference_autocomplete'
+  [ok] civicrm_cv_ce_event_sessions.entity_id (entity_reference, base) formatter -- 'entity_reference_label' vs 'entity_reference_label'
+  [ok] civicrm_cv_ce_event_sessions.entity_id (entity_reference, base) widget -- 'entity_reference_autocomplete' vs 'entity_reference_autocomplete'
+  [ok] civicrm_cv_ce_professiona_7cb000: no saved default display
+  [FAIL] civicrm_cv_ce_professiona_7cb000.custom_50 (string, String) formatter -- 'text_default' vs 'string'
+  [ok] civicrm_cv_ce_professiona_7cb000.custom_50 (string, String) widget -- 'string_textfield' vs 'string_textfield'
+  [ok] civicrm_cv_ce_professiona_7cb000.custom_51 (datetime, Date) formatter -- 'datetime_default' vs 'datetime_default'
+  [ok] civicrm_cv_ce_professiona_7cb000.custom_51 (datetime, Date) widget -- 'datetime_default' vs 'datetime_default'
+  [FAIL] civicrm_cv_ce_professiona_7cb000.custom_52 (float, Money) formatter -- NULL vs 'number_decimal'
+  [FAIL] civicrm_cv_ce_professiona_7cb000.custom_52 (float, Money) widget -- NULL vs 'number'
+  [FAIL] civicrm_cv_ce_professiona_7cb000.custom_53 (boolean, Boolean) formatter -- NULL vs 'boolean'
+  [ok] civicrm_cv_ce_professiona_7cb000.custom_53 (boolean, Boolean) widget -- 'boolean_checkbox' vs 'boolean_checkbox'
+  [FAIL] civicrm_cv_ce_professiona_7cb000.custom_54 (list_integer, Int) formatter -- 'number_integer' vs 'list_default'
+  [ok] civicrm_cv_ce_professiona_7cb000.custom_54 (list_integer, Int) widget -- 'options_select' vs 'options_select'
+  [ok] civicrm_cv_ce_professiona_7cb000.entity_id (entity_reference, base) formatter -- 'entity_reference_label' vs 'entity_reference_label'
+  [ok] civicrm_cv_ce_professiona_7cb000.entity_id (entity_reference, base) widget -- 'entity_reference_autocomplete' vs 'entity_reference_autocomplete'
+  [ok] civicrm_cv_ce_skills: no saved default display
+  [FAIL] civicrm_cv_ce_skills.custom_18 (string, String) formatter -- 'text_default' vs 'string'
+  [ok] civicrm_cv_ce_skills.custom_18 (string, String) widget -- 'string_textfield' vs 'string_textfield'
+  [FAIL] civicrm_cv_ce_skills.custom_19 (list_integer, Int) formatter -- 'number_integer' vs 'list_default'
+  [ok] civicrm_cv_ce_skills.custom_19 (list_integer, Int) widget -- 'options_select' vs 'options_select'
+  [ok] civicrm_cv_ce_skills.custom_20 (integer, Int) formatter -- 'number_integer' vs 'number_integer'
+  [ok] civicrm_cv_ce_skills.custom_20 (integer, Int) widget -- 'number' vs 'number'
+  [FAIL] civicrm_cv_ce_skills.custom_21 (boolean, Boolean) formatter -- NULL vs 'boolean'
+  [ok] civicrm_cv_ce_skills.custom_21 (boolean, Boolean) widget -- 'boolean_checkbox' vs 'boolean_checkbox'
+  [FAIL] civicrm_cv_ce_skills.custom_22 (string, Link) formatter -- 'text_default' vs 'string'
+  [ok] civicrm_cv_ce_skills.custom_22 (string, Link) widget -- 'string_textfield' vs 'string_textfield'
+  [ok] civicrm_cv_ce_skills.custom_23 (list_string, String) formatter -- 'list_default' vs 'list_default'
+  [ok] civicrm_cv_ce_skills.custom_23 (list_string, String) widget -- 'options_select' vs 'options_select'
+  [ok] civicrm_cv_ce_skills.custom_24 (datetime, Date) formatter -- 'datetime_default' vs 'datetime_default'
+  [ok] civicrm_cv_ce_skills.custom_24 (datetime, Date) widget -- 'datetime_default' vs 'datetime_default'
+  [FAIL] civicrm_cv_ce_skills.custom_25 (entity_reference, ContactReference) formatter -- NULL vs 'entity_reference_label'
+  [FAIL] civicrm_cv_ce_skills.custom_25 (entity_reference, ContactReference) widget -- NULL vs 'entity_reference_autocomplete'
+  [ok] civicrm_cv_ce_skills.entity_id (entity_reference, base) formatter -- 'entity_reference_label' vs 'entity_reference_label'
+  [ok] civicrm_cv_ce_skills.entity_id (entity_reference, base) widget -- 'entity_reference_autocomplete' vs 'entity_reference_autocomplete'
+  [ok] civicrm_cv_ce_vehicles: no saved default display
+  [FAIL] civicrm_cv_ce_vehicles.custom_34 (string, String) formatter -- 'text_default' vs 'string'
+  [ok] civicrm_cv_ce_vehicles.custom_34 (string, String) widget -- 'string_textfield' vs 'string_textfield'
+  [ok] civicrm_cv_ce_vehicles.custom_35 (integer, Int) formatter -- 'number_integer' vs 'number_integer'
+  [ok] civicrm_cv_ce_vehicles.custom_35 (integer, Int) widget -- 'number' vs 'number'
+  [FAIL] civicrm_cv_ce_vehicles.custom_36 (string, String) formatter -- 'text_default' vs 'string'
+  [ok] civicrm_cv_ce_vehicles.custom_36 (string, String) widget -- 'string_textfield' vs 'string_textfield'
+  [ok] civicrm_cv_ce_vehicles.custom_37 (list_string, String) formatter -- 'list_default' vs 'list_default'
+  [ok] civicrm_cv_ce_vehicles.custom_37 (list_string, String) widget -- 'options_select' vs 'options_select'
+  [FAIL] civicrm_cv_ce_vehicles.custom_38 (boolean, Boolean) formatter -- NULL vs 'boolean'
+  [ok] civicrm_cv_ce_vehicles.custom_38 (boolean, Boolean) widget -- 'boolean_checkbox' vs 'boolean_checkbox'
+  [ok] civicrm_cv_ce_vehicles.custom_39 (datetime, Date) formatter -- 'datetime_default' vs 'datetime_default'
+  [ok] civicrm_cv_ce_vehicles.custom_39 (datetime, Date) widget -- 'datetime_default' vs 'datetime_default'
+  [ok] civicrm_cv_ce_vehicles.entity_id (entity_reference, base) formatter -- 'entity_reference_label' vs 'entity_reference_label'
+  [ok] civicrm_cv_ce_vehicles.entity_id (entity_reference, base) widget -- 'entity_reference_autocomplete' vs 'entity_reference_autocomplete'
+
+2. Rendered records
+  [FAIL] civicrm_cv_ce_board_terms #1 custom_26 shows Winford Smith II -- not rendered
+  [ok] civicrm_cv_ce_board_terms #1 custom_27 shows Chair -- missing  in: Role Chair
+  [ok] civicrm_cv_ce_board_terms #1 custom_28 is shown
+  [ok] civicrm_cv_ce_board_terms #1 custom_29 is shown
+  [FAIL] civicrm_cv_ce_board_terms #2 custom_30 shows 500.00 -- not rendered
+  [ok] civicrm_cv_ce_board_terms #1 custom_31 shows United States -- missing  in: United States
+  [ok] civicrm_cv_ce_board_terms #1 custom_32 shows United States Minor Outlying Islands -- missing  in: United States Minor Outlying Islands
+  [ok] civicrm_cv_ce_board_terms #1 custom_33 is shown
+  [ok] civicrm_cv_ce_board_terms #1 entity_id shows Default Organization -- missing  in: Belongs to Default Organization
+  [ok] civicrm_cv_ce_education #1 custom_7 shows Hillcrest University -- missing  in: Hillcrest University
+  [ok] civicrm_cv_ce_education #1 custom_8 shows Bachelor of Science -- missing  in: Degree Bachelor of Science
+  [ok] civicrm_cv_ce_education #1 custom_9 shows Nursing -- missing  in: Nursing
+  [ok] civicrm_cv_ce_education #1 custom_10 is shown
+  [ok] civicrm_cv_ce_education #2 custom_11 is shown
+  [FAIL] civicrm_cv_ce_education #1 custom_12 shows 3.69 -- not rendered
+  [FAIL] civicrm_cv_ce_education #2 custom_13 shows Yes -- not rendered
+  [ok] civicrm_cv_ce_education #2 custom_14 shows Cum Laude, Magna Cum Laude -- missing  in: Honors Cum Laude Magna Cum Laude
+  [ok] civicrm_cv_ce_education #1 custom_15 is shown
+  [ok] civicrm_cv_ce_education #1 entity_id shows prenticea@notmail.info -- missing  in: Belongs to prenticea@notmail.info
+  [ok] civicrm_cv_ce_event_sessions #1 custom_40 shows Opening Keynote -- missing  in: Opening Keynote
+  [ok] civicrm_cv_ce_event_sessions #1 custom_41 is shown
+  [ok] civicrm_cv_ce_event_sessions #1 custom_42 shows 60 -- missing  in: 60
+  [ok] civicrm_cv_ce_event_sessions #1 custom_43 shows Main Hall -- missing  in: Room Main Hall
+  [FAIL] civicrm_cv_ce_event_sessions #1 custom_44 shows Felisha Roberts -- not rendered
+  [ok] civicrm_cv_ce_event_sessions #1 custom_45 shows 250 -- missing  in: 250
+  [FAIL] civicrm_cv_ce_event_sessions #1 custom_46 shows 15.00 -- not rendered
+  [ok] civicrm_cv_ce_event_sessions #1 custom_47 shows https://slides.example.org/event-1/session-1 -- missing  in: https://slides.example.org/event-1/session-1
+  [ok] civicrm_cv_ce_event_sessions #1 custom_48 is shown
+  [FAIL] civicrm_cv_ce_event_sessions #1 custom_49 shows Subject for Phone Call -- not rendered
+  [ok] civicrm_cv_ce_event_sessions #1 entity_id shows Fall Fundraiser Dinner -- missing  in: Belongs to Fall Fundraiser Dinner
+  [ok] civicrm_cv_ce_professiona_7cb000 #1 custom_50 shows Association of Fundraising Professionals -- missing  in: Association of Fundraising Professionals
+  [ok] civicrm_cv_ce_professiona_7cb000 #1 custom_51 is shown
+  [FAIL] civicrm_cv_ce_professiona_7cb000 #1 custom_52 shows 120.00 -- not rendered
+  [FAIL] civicrm_cv_ce_professiona_7cb000 #1 custom_53 shows Yes -- not rendered
+  [ok] civicrm_cv_ce_professiona_7cb000 #1 custom_54 shows Silver -- missing  in: Silver
+  [ok] civicrm_cv_ce_professiona_7cb000 #1 entity_id shows Rebekah Nielsen -- missing  in: Belongs to Rebekah Nielsen
+  [ok] civicrm_cv_ce_skills #1 custom_18 shows Python -- missing  in: Python
+  [ok] civicrm_cv_ce_skills #1 custom_19 shows Competent -- missing  in: Competent
+  [ok] civicrm_cv_ce_skills #1 custom_20 shows 19 -- missing  in: 19
+  [FAIL] civicrm_cv_ce_skills #8 custom_21 shows Yes -- not rendered
+  [ok] civicrm_cv_ce_skills #8 custom_22 shows https://certs.example.org/graphic-design/29 -- missing  in: https://certs.example.org/graphic-design/29
+  [ok] civicrm_cv_ce_skills #1 custom_23 shows English -- missing  in: Languages Used English
+  [ok] civicrm_cv_ce_skills #1 custom_24 is shown
+  [FAIL] civicrm_cv_ce_skills #3 custom_25 shows Mrs. Junko Prentice-McReynolds -- not rendered
+  [ok] civicrm_cv_ce_skills #1 entity_id shows Ms. Lashawnda Lee -- missing  in: Belongs to Ms. Lashawnda Lee
+  [ok] civicrm_cv_ce_vehicles #1 custom_34 shows Honda -- missing  in: Honda
+  [ok] civicrm_cv_ce_vehicles #1 custom_35 shows 2012 -- missing  in: 2012
+  [ok] civicrm_cv_ce_vehicles #1 custom_36 shows 30344D9 -- missing  in: 30344D9
+  [ok] civicrm_cv_ce_vehicles #1 custom_37 shows Red -- missing  in: Color Red
+  [FAIL] civicrm_cv_ce_vehicles #1 custom_38 shows Yes -- not rendered
+  [ok] civicrm_cv_ce_vehicles #1 custom_39 is shown
+  [ok] civicrm_cv_ce_vehicles #1 entity_id shows merriew63@infomail.co.in -- missing  in: Belongs to merriew63@infomail.co.in
+
+3. Edit forms
+  [FAIL] civicrm_cv_ce_board_terms #1 custom_26 has a widget
+  [ok] civicrm_cv_ce_board_terms #1 custom_27 widget holds the value -- array (
+  0 => 'chair',
+) vs array (
+  0 => 'chair',
+)
+  [ok] civicrm_cv_ce_board_terms #1 custom_28 widget holds the value -- true vs true
+  [ok] civicrm_cv_ce_board_terms #1 custom_29 widget holds the value -- true vs true
+  [FAIL] civicrm_cv_ce_board_terms #2 custom_30 has a widget
+  [ok] civicrm_cv_ce_board_terms #1 custom_31 widget holds the value -- array (
+  0 => '1228',
+) vs array (
+  0 => '1228',
+)
+  [ok] civicrm_cv_ce_board_terms #1 custom_32 widget holds the value -- array (
+  0 => '1056',
+) vs array (
+  0 => '1056',
+)
+  [ok] civicrm_cv_ce_board_terms #1 custom_33 widget holds the value -- true vs true
+  [ok] civicrm_cv_ce_board_terms #1 entity_id widget holds the value -- 1 vs 1
+  [ok] civicrm_cv_ce_education #1 custom_7 widget holds the value -- 'Hillcrest University' vs 'Hillcrest University'
+  [ok] civicrm_cv_ce_education #1 custom_8 widget holds the value -- array (
+  0 => 'BS',
+) vs array (
+  0 => 'BS',
+)
+  [ok] civicrm_cv_ce_education #1 custom_9 widget holds the value -- 'Nursing' vs 'Nursing'
+  [ok] civicrm_cv_ce_education #1 custom_10 widget holds the value -- true vs true
+  [ok] civicrm_cv_ce_education #2 custom_11 widget holds the value -- true vs true
+  [FAIL] civicrm_cv_ce_education #1 custom_12 has a widget
+  [ok] civicrm_cv_ce_education #2 custom_13 widget holds the value -- true vs true
+  [ok] civicrm_cv_ce_education #2 custom_14 widget holds the value -- array (
+  0 => 'cum_laude',
+  1 => 'magna',
+) vs array (
+  0 => 'cum_laude',
+  1 => 'magna',
+)
+  [ok] civicrm_cv_ce_education #1 custom_15 widget holds the value -- true vs true
+  [ok] civicrm_cv_ce_education #1 entity_id widget holds the value -- 3 vs 3
+  [ok] civicrm_cv_ce_event_sessions #1 custom_40 widget holds the value -- 'Opening Keynote' vs 'Opening Keynote'
+  [ok] civicrm_cv_ce_event_sessions #1 custom_41 widget holds the value -- true vs true
+  [ok] civicrm_cv_ce_event_sessions #1 custom_42 widget holds the value -- '60' vs '60'
+  [ok] civicrm_cv_ce_event_sessions #1 custom_43 widget holds the value -- array (
+  0 => 'main_hall',
+) vs array (
+  0 => 'main_hall',
+)
+  [FAIL] civicrm_cv_ce_event_sessions #1 custom_44 has a widget
+  [ok] civicrm_cv_ce_event_sessions #1 custom_45 widget holds the value -- '250' vs '250'
+  [FAIL] civicrm_cv_ce_event_sessions #1 custom_46 has a widget
+  [ok] civicrm_cv_ce_event_sessions #1 custom_47 widget holds the value -- 'https://slides.example.org/event-1/session-1' vs 'https://slides.example.org/event-1/session-1'
+  [ok] civicrm_cv_ce_event_sessions #1 custom_48 widget holds the value -- true vs true
+  [FAIL] civicrm_cv_ce_event_sessions #1 custom_49 has a widget
+  [ok] civicrm_cv_ce_event_sessions #1 entity_id widget holds the value -- 1 vs 1
+  [ok] civicrm_cv_ce_professiona_7cb000 #1 custom_50 widget holds the value -- 'Association of Fundraising Professionals' vs 'Association of Fundraising Professionals'
+  [ok] civicrm_cv_ce_professiona_7cb000 #1 custom_51 widget holds the value -- true vs true
+  [FAIL] civicrm_cv_ce_professiona_7cb000 #1 custom_52 has a widget
+  [ok] civicrm_cv_ce_professiona_7cb000 #1 custom_53 widget holds the value -- true vs true
+  [ok] civicrm_cv_ce_professiona_7cb000 #1 custom_54 widget holds the value -- array (
+  0 => '2',
+) vs array (
+  0 => '2',
+)
+  [ok] civicrm_cv_ce_professiona_7cb000 #1 entity_id widget holds the value -- 54 vs 54
+  [ok] civicrm_cv_ce_skills #1 custom_18 widget holds the value -- 'Python' vs 'Python'
+  [ok] civicrm_cv_ce_skills #1 custom_19 widget holds the value -- array (
+  0 => '3',
+) vs array (
+  0 => '3',
+)
+  [ok] civicrm_cv_ce_skills #1 custom_20 widget holds the value -- '19' vs '19'
+  [ok] civicrm_cv_ce_skills #8 custom_21 widget holds the value -- true vs true
+  [ok] civicrm_cv_ce_skills #8 custom_22 widget holds the value -- 'https://certs.example.org/graphic-design/29' vs 'https://certs.example.org/graphic-design/29'
+  [ok] civicrm_cv_ce_skills #1 custom_23 widget holds the value -- array (
+  0 => 'en',
+) vs array (
+  0 => 'en',
+)
+  [ok] civicrm_cv_ce_skills #1 custom_24 widget holds the value -- true vs true
+  [FAIL] civicrm_cv_ce_skills #3 custom_25 has a widget
+  [ok] civicrm_cv_ce_skills #1 entity_id widget holds the value -- 28 vs 28
+  [ok] civicrm_cv_ce_vehicles #1 custom_34 widget holds the value -- 'Honda' vs 'Honda'
+  [ok] civicrm_cv_ce_vehicles #1 custom_35 widget holds the value -- '2012' vs '2012'
+  [ok] civicrm_cv_ce_vehicles #1 custom_36 widget holds the value -- '30344D9' vs '30344D9'
+  [ok] civicrm_cv_ce_vehicles #1 custom_37 widget holds the value -- array (
+  0 => 'red',
+) vs array (
+  0 => 'red',
+)
+  [ok] civicrm_cv_ce_vehicles #1 custom_38 widget holds the value -- true vs true
+  [ok] civicrm_cv_ce_vehicles #1 custom_39 widget holds the value -- true vs true
+  [ok] civicrm_cv_ce_vehicles #1 entity_id widget holds the value -- 7 vs 7
+
+4. Record lists
+  [FAIL] civicrm_cv_ce_board_terms #1 list: custom_26 shows Winford Smith II -- got: 109
+  [FAIL] civicrm_cv_ce_board_terms #1 list: custom_27 shows Chair -- got: chair
+  [ok] civicrm_cv_ce_board_terms #1 list: custom_28 is shown
+  [ok] civicrm_cv_ce_education #1 list: custom_7 shows Hillcrest University -- got: Hillcrest University
+  [FAIL] civicrm_cv_ce_education #1 list: custom_8 shows Bachelor of Science -- got: BS
+  [ok] civicrm_cv_ce_education #1 list: custom_9 shows Nursing -- got: Nursing
+  [ok] civicrm_cv_ce_event_sessions #1 list: custom_40 shows Opening Keynote -- got: Opening Keynote
+  [ok] civicrm_cv_ce_event_sessions #1 list: custom_41 is shown
+  [ok] civicrm_cv_ce_event_sessions #1 list: custom_42 shows 60 -- got: 60
+  [ok] civicrm_cv_ce_professiona_7cb000 #1 list: custom_50 shows Association of Fundraising Professionals -- got: Association of Fundraising Professionals
+  [ok] civicrm_cv_ce_professiona_7cb000 #1 list: custom_51 is shown
+  [FAIL] civicrm_cv_ce_professiona_7cb000 #1 list: custom_52 shows 120.00 -- got: 120
+  [ok] civicrm_cv_ce_skills #1 list: custom_18 shows Python -- got: Python
+  [FAIL] civicrm_cv_ce_skills #1 list: custom_19 shows Competent -- got: 3
+  [ok] civicrm_cv_ce_skills #1 list: custom_20 shows 19 -- got: 19
+  [ok] civicrm_cv_ce_vehicles #1 list: custom_34 shows Honda -- got: Honda
+  [ok] civicrm_cv_ce_vehicles #1 list: custom_35 shows 2012 -- got: 2012
+  [ok] civicrm_cv_ce_vehicles #1 list: custom_36 shows 30344D9 -- got: 30344D9
+
+5. Pages and forms in the browser (admin)
+event session #1
+  [ok] page opens -- HTTP 200
+  [FAIL] page shows the speaker -- Felisha Roberts
+  [FAIL] page shows the fee -- 15.00
+  [FAIL] page shows the related activity -- Subject for Phone Call
+  [ok] edit form opens -- HTTP 200
+  [FAIL] speaker autocomplete holds the speaker -- NULL
+  [FAIL] fee field holds the fee -- NULL
+  [FAIL] activity autocomplete holds the activity -- NULL
+  [ok] unchanged save changes nothing --  Status message Event Sessions #1 has been updated. Close message
+  [FAIL] autocomplete offers Merrie Wattson -- NULL
+  [FAIL] autocomplete offers activity Subject for Interview -- NULL
+  [FAIL] edited speaker is stored -- '159' vs 11 Status message Event Sessions #1 has been updated. Close message
+  [FAIL] edited activity is stored -- '42' vs 
+  [FAIL] edited fee is stored -- '15.00'
+board term #1
+  [ok] page opens -- HTTP 200
+  [FAIL] page shows the board member -- Winford Smith II
+  [FAIL] page shows the stipend -- 0.00
+  [ok] page shows the country -- United States
+  [ok] page shows the state -- United States Minor Outlying Islands
+  [FAIL] board member autocomplete holds the member -- NULL
+  [ok] stipend field holds the stipend -- NULL
+  [ok] country select holds the country -- '1228'
+  [ok] state select holds the state -- '1056'
+  [ok] unchanged save changes nothing --  Status message Board Terms #1 has been updated. Close message
+  [FAIL] board member input is required in the browser
+  [FAIL] emptied board member is refused -- Status message Board Terms #1 has been updated. Close message
+  [ok] refused save changes nothing
+  [FAIL] edited stipend is stored -- '0.00' Status message Board Terms #1 has been updated. Close message
+  [ok] edited country is stored -- '1039'
+  [ok] edited state is stored -- '1068'
+  [FAIL] page shows Canada, Ontario and 2500.50
+education record #2
+  [ok] page opens -- HTTP 200
+  [FAIL] page shows the GPA -- 2.76
+  [FAIL] page shows Graduated: Yes
+  [FAIL] GPA field holds the GPA -- NULL
+  [ok] graduated checkbox is checked
+  [ok] unchanged save changes nothing --  Status message Education History #2 has been updated. Close message
+  [FAIL] edited GPA is stored -- '2.76' Status message Education History #2 has been updated. Close message
+  [ok] unchecked graduated is stored as 0 -- '0'
+  [FAIL] page then shows Graduated: No
+
+191 passed, 81 failed
+  - civicrm_cv_ce_board_terms.custom_26 (entity_reference, ContactReference) formatter (NULL vs 'entity_reference_label')
+  - civicrm_cv_ce_board_terms.custom_26 (entity_reference, ContactReference) widget (NULL vs 'entity_reference_autocomplete')
+  - civicrm_cv_ce_board_terms.custom_30 (float, Money) formatter (NULL vs 'number_decimal')
+  - civicrm_cv_ce_board_terms.custom_30 (float, Money) widget (NULL vs 'number')
+  - civicrm_cv_ce_board_terms.custom_31 (list_integer, Country) formatter ('number_integer' vs 'list_default')
+  - civicrm_cv_ce_board_terms.custom_32 (list_integer, StateProvince) formatter ('number_integer' vs 'list_default')
+  - civicrm_cv_ce_education.custom_7 (string, String) formatter ('text_default' vs 'string')
+  - civicrm_cv_ce_education.custom_9 (string, String) formatter ('text_default' vs 'string')
+  - civicrm_cv_ce_education.custom_12 (float, Float) formatter (NULL vs 'number_decimal')
+  - civicrm_cv_ce_education.custom_12 (float, Float) widget (NULL vs 'number')
+  - civicrm_cv_ce_education.custom_13 (boolean, Boolean) formatter (NULL vs 'boolean')
+  - civicrm_cv_ce_event_sessions.custom_40 (string, String) formatter ('text_default' vs 'string')
+  - civicrm_cv_ce_event_sessions.custom_44 (entity_reference, ContactReference) formatter (NULL vs 'entity_reference_label')
+  - civicrm_cv_ce_event_sessions.custom_44 (entity_reference, ContactReference) widget (NULL vs 'entity_reference_autocomplete')
+  - civicrm_cv_ce_event_sessions.custom_46 (float, Money) formatter (NULL vs 'number_decimal')
+  - civicrm_cv_ce_event_sessions.custom_46 (float, Money) widget (NULL vs 'number')
+  - civicrm_cv_ce_event_sessions.custom_47 (string, Link) formatter ('text_default' vs 'string')
+  - civicrm_cv_ce_event_sessions.custom_49 (entity_reference, EntityReference) formatter (NULL vs 'entity_reference_label')
+  - civicrm_cv_ce_event_sessions.custom_49 (entity_reference, EntityReference) widget (NULL vs 'entity_reference_autocomplete')
+  - civicrm_cv_ce_professiona_7cb000.custom_50 (string, String) formatter ('text_default' vs 'string')
+  - civicrm_cv_ce_professiona_7cb000.custom_52 (float, Money) formatter (NULL vs 'number_decimal')
+  - civicrm_cv_ce_professiona_7cb000.custom_52 (float, Money) widget (NULL vs 'number')
+  - civicrm_cv_ce_professiona_7cb000.custom_53 (boolean, Boolean) formatter (NULL vs 'boolean')
+  - civicrm_cv_ce_professiona_7cb000.custom_54 (list_integer, Int) formatter ('number_integer' vs 'list_default')
+  - civicrm_cv_ce_skills.custom_18 (string, String) formatter ('text_default' vs 'string')
+  - civicrm_cv_ce_skills.custom_19 (list_integer, Int) formatter ('number_integer' vs 'list_default')
+  - civicrm_cv_ce_skills.custom_21 (boolean, Boolean) formatter (NULL vs 'boolean')
+  - civicrm_cv_ce_skills.custom_22 (string, Link) formatter ('text_default' vs 'string')
+  - civicrm_cv_ce_skills.custom_25 (entity_reference, ContactReference) formatter (NULL vs 'entity_reference_label')
+  - civicrm_cv_ce_skills.custom_25 (entity_reference, ContactReference) widget (NULL vs 'entity_reference_autocomplete')
+  - civicrm_cv_ce_vehicles.custom_34 (string, String) formatter ('text_default' vs 'string')
+  - civicrm_cv_ce_vehicles.custom_36 (string, String) formatter ('text_default' vs 'string')
+  - civicrm_cv_ce_vehicles.custom_38 (boolean, Boolean) formatter (NULL vs 'boolean')
+  - civicrm_cv_ce_board_terms #1 custom_26 shows Winford Smith II (not rendered)
+  - civicrm_cv_ce_board_terms #2 custom_30 shows 500.00 (not rendered)
+  - civicrm_cv_ce_education #1 custom_12 shows 3.69 (not rendered)
+  - civicrm_cv_ce_education #2 custom_13 shows Yes (not rendered)
+  - civicrm_cv_ce_event_sessions #1 custom_44 shows Felisha Roberts (not rendered)
+  - civicrm_cv_ce_event_sessions #1 custom_46 shows 15.00 (not rendered)
+  - civicrm_cv_ce_event_sessions #1 custom_49 shows Subject for Phone Call (not rendered)
+  - civicrm_cv_ce_professiona_7cb000 #1 custom_52 shows 120.00 (not rendered)
+  - civicrm_cv_ce_professiona_7cb000 #1 custom_53 shows Yes (not rendered)
+  - civicrm_cv_ce_skills #8 custom_21 shows Yes (not rendered)
+  - civicrm_cv_ce_skills #3 custom_25 shows Mrs. Junko Prentice-McReynolds (not rendered)
+  - civicrm_cv_ce_vehicles #1 custom_38 shows Yes (not rendered)
+  - civicrm_cv_ce_board_terms #1 custom_26 has a widget
+  - civicrm_cv_ce_board_terms #2 custom_30 has a widget
+  - civicrm_cv_ce_education #1 custom_12 has a widget
+  - civicrm_cv_ce_event_sessions #1 custom_44 has a widget
+  - civicrm_cv_ce_event_sessions #1 custom_46 has a widget
+  - civicrm_cv_ce_event_sessions #1 custom_49 has a widget
+  - civicrm_cv_ce_professiona_7cb000 #1 custom_52 has a widget
+  - civicrm_cv_ce_skills #3 custom_25 has a widget
+  - civicrm_cv_ce_board_terms #1 list: custom_26 shows Winford Smith II (got: 109)
+  - civicrm_cv_ce_board_terms #1 list: custom_27 shows Chair (got: chair)
+  - civicrm_cv_ce_education #1 list: custom_8 shows Bachelor of Science (got: BS)
+  - civicrm_cv_ce_professiona_7cb000 #1 list: custom_52 shows 120.00 (got: 120)
+  - civicrm_cv_ce_skills #1 list: custom_19 shows Competent (got: 3)
+  - page shows the speaker (Felisha Roberts)
+  - page shows the fee (15.00)
+  - page shows the related activity (Subject for Phone Call)
+  - speaker autocomplete holds the speaker (NULL)
+  - fee field holds the fee (NULL)
+  - activity autocomplete holds the activity (NULL)
+  - autocomplete offers Merrie Wattson (NULL)
+  - autocomplete offers activity Subject for Interview (NULL)
+  - edited speaker is stored ('159' vs 11 Status message Event Sessions #1 has been updated. Close message)
+  - edited activity is stored ('42' vs )
+  - edited fee is stored ('15.00')
+  - page shows the board member (Winford Smith II)
+  - page shows the stipend (0.00)
+  - board member autocomplete holds the member (NULL)
+  - board member input is required in the browser
+  - emptied board member is refused (Status message Board Terms #1 has been updated. Close message)
+  - edited stipend is stored ('0.00' Status message Board Terms #1 has been updated. Close message)
+  - page shows Canada, Ontario and 2500.50
+  - page shows the GPA (2.76)
+  - page shows Graduated: Yes
+  - GPA field holds the GPA (NULL)
+  - edited GPA is stored ('2.76' Status message Education History #2 has been updated. Close message)
+  - page then shows Graduated: No
+ [warning] Drush command terminated abnormally.
+
+restored: 12 displays, identical; 3 value sets
+[31mFailed to run drush --uri=https://drupal-civi-composer-exp-d11.ddev.site php:script scripts/smoke/j3-smoke.php: exit status 1[0m

@@ -1,0 +1,11 @@
+uuid: c955ff02-a1a7-4c74-93f0-0900cacd4863
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+id: civicrm_cv_ce_vehicles.add
+label: Add
+description: null
+targetEntityType: civicrm_cv_ce_vehicles
+cache: true

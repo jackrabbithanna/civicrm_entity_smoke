@@ -1,0 +1,11 @@
+uuid: afafe237-289c-47f8-ac81-9ee14d729ff5
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+id: civicrm_cv_ce_skills.ce_compact
+label: Compact
+description: null
+targetEntityType: civicrm_cv_ce_skills
+cache: true

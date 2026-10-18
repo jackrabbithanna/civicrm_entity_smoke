@@ -1,0 +1,11 @@
+uuid: 77e707a7-c3ee-4b1b-b872-e6dd15a8b19c
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+id: civicrm_cv_ce_vehicles.ce_compact
+label: Compact
+description: null
+targetEntityType: civicrm_cv_ce_vehicles
+cache: true

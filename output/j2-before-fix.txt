@@ -1,0 +1,533 @@
+1. Views data
+  [FAIL] civicrm_action_schedule.entity_value (serialize 2) -- not described
+  [FAIL] civicrm_action_schedule.entity_status (serialize 2) -- not described
+  [FAIL] civicrm_action_schedule.recipient_manual (serialize 5) -- not described
+  [FAIL] civicrm_action_schedule.recipient_listing (serialize 2) -- not described
+  [FAIL] civicrm_action_schedule.filter_contact_language (serialize 2) -- not described
+  [FAIL] civicrm_contact.contact_sub_type (serialize 1) -- not described
+  [FAIL] civicrm_contact.preferred_communication_method (serialize 1) -- not described
+  [FAIL] civicrm_contribution_page.payment_processor (serialize 2) -- not described
+  [FAIL] civicrm_contribution_page.recur_frequency_unit (serialize 2) -- not described
+  [FAIL] civicrm_event.payment_processor (serialize 2) -- not described
+  [FAIL] civicrm_group.group_type (serialize 1) -- not described
+  [FAIL] civicrm_group.parents (serialize 5) -- not described
+  [FAIL] civicrm_group.children (serialize 5) -- not described
+  [FAIL] civicrm_membership_type.relationship_type_id (serialize 2) -- not described
+  [FAIL] civicrm_membership_type.relationship_direction (serialize 2) -- not described
+  [FAIL] civicrm_participant.role_id (serialize 2) -- not described
+  [FAIL] civicrm_participant.fee_level (serialize 1) -- not described
+  [FAIL] civicrm_price_set.extends (serialize 1) -- not described
+  [FAIL] civicrm_tag.used_for (serialize 5) -- not described
+  [FAIL] civicrm_custom_group.extends_entity_column_value (serialize 1) -- not described
+  [FAIL] civicrm_cv_ce_education.honors_14 (serialize 1) -- not described
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 (serialize 1) -- not described
+  [FAIL] J32: ce_education.honors on the group table -- string
+  [FAIL] J32: ce_skills.languages on the group table -- string
+  [FAIL] J32: ce_profile_all.checkboxes on the group table -- string
+  [FAIL] J32: ce_profile_all.multiselect on the group table -- string
+  [FAIL] J32: ce_profile_all.countries on the group table -- numeric
+  [FAIL] J32: ce_profile_all.states on the group table -- numeric
+  [--] 22 list columns
+
+2. filters and contextual filters, against PHP
+  [--] civicrm_action_schedule.entity_value holds no items in 0 rows; empty checks only
+  [ok] civicrm_action_schedule.entity_value is empty -- 0 vs 0
+  [ok] civicrm_action_schedule.entity_value is not empty -- 0 vs 0
+  [--] civicrm_action_schedule.entity_status holds no items in 0 rows; empty checks only
+  [ok] civicrm_action_schedule.entity_status is empty -- 0 vs 0
+  [ok] civicrm_action_schedule.entity_status is not empty -- 0 vs 0
+  [--] civicrm_action_schedule.recipient_manual holds no items in 0 rows; empty checks only
+  [ok] civicrm_action_schedule.recipient_manual is empty -- 0 vs 0
+  [ok] civicrm_action_schedule.recipient_manual is not empty -- 0 vs 0
+  [--] civicrm_action_schedule.recipient_listing holds no items in 0 rows; empty checks only
+  [ok] civicrm_action_schedule.recipient_listing is empty -- 0 vs 0
+  [ok] civicrm_action_schedule.recipient_listing is not empty -- 0 vs 0
+  [--] civicrm_action_schedule.filter_contact_language holds no items in 0 rows; empty checks only
+  [ok] civicrm_action_schedule.filter_contact_language is empty -- 0 vs 0
+  [ok] civicrm_action_schedule.filter_contact_language is not empty -- 0 vs 0
+  [FAIL] civicrm_contact.contact_sub_type is empty -- 207 vs 195; extra 3,7,8,9,10
+  [FAIL] civicrm_contact.contact_sub_type is not empty -- 207 vs 12; extra 1,2,4,5,6
+  [FAIL] civicrm_contact.contact_sub_type is one of [Staff] -- 207 vs 12; extra 1,2,4,5,6
+  [FAIL] civicrm_contact.contact_sub_type is none of [Staff] -- 207 vs 195; extra 3,7,8,9,10
+  [FAIL] civicrm_contact.contact_sub_type argument Staff -- 207 vs 12; extra 1,2,4,5,6
+  [FAIL] civicrm_contact.contact_sub_type argument Staff, excluded -- 207 vs 195; extra 3,7,8,9,10
+  [FAIL] civicrm_contact.preferred_communication_method is empty -- 207 vs 106; extra 2,3,4,5,6
+  [FAIL] civicrm_contact.preferred_communication_method is not empty -- 207 vs 101; extra 1,7,11,12,15
+  [FAIL] civicrm_contact.preferred_communication_method is one of [3] -- 207 vs 26; extra 1,2,4,5,6
+  [FAIL] civicrm_contact.preferred_communication_method is none of [3] -- 207 vs 181; extra 3,8,10,14,30
+  [FAIL] civicrm_contact.preferred_communication_method argument 3 -- 207 vs 26; extra 1,2,4,5,6
+  [FAIL] civicrm_contact.preferred_communication_method argument 3, excluded -- 207 vs 181; extra 3,8,10,14,30
+  [FAIL] civicrm_contact.preferred_communication_method is all of [3, 4] -- 207 vs 0; extra 1,2,3,4,5
+  [FAIL] civicrm_contact.preferred_communication_method is one of [3, 4] -- 207 vs 47; extra 1,2,4,5,6
+  [FAIL] civicrm_contact.preferred_communication_method argument 3+4 -- 207 vs 47; extra 1,2,4,5,6
+  [FAIL] civicrm_contact.preferred_communication_method argument 3,4 -- 207 vs 0; extra 1,2,3,4,5
+  [FAIL] civicrm_contact.preferred_communication_method is one of [4] -- 207 vs 21; extra 1,2,3,4,5
+  [FAIL] civicrm_contact.preferred_communication_method is none of [4] -- 207 vs 186; extra 20,26,29,31,40
+  [FAIL] civicrm_contact.preferred_communication_method argument 4 -- 207 vs 21; extra 1,2,3,4,5
+  [FAIL] civicrm_contact.preferred_communication_method argument 4, excluded -- 207 vs 186; extra 20,26,29,31,40
+  [FAIL] civicrm_contact.preferred_communication_method is one of [5] -- 207 vs 21; extra 1,3,5,6,7
+  [FAIL] civicrm_contact.preferred_communication_method is none of [5] -- 207 vs 186; extra 2,4,17,19,37
+  [FAIL] civicrm_contact.preferred_communication_method argument 5 -- 207 vs 21; extra 1,3,5,6,7
+  [FAIL] civicrm_contact.preferred_communication_method argument 5, excluded -- 207 vs 186; extra 2,4,17,19,37
+  [FAIL] civicrm_contact.preferred_communication_method is one of [1] -- 207 vs 17; extra 1,2,3,4,6
+  [FAIL] civicrm_contact.preferred_communication_method is none of [1] -- 207 vs 190; extra 5,13,27,56,62
+  [FAIL] civicrm_contact.preferred_communication_method argument 1 -- 207 vs 17; extra 1,2,3,4,6
+  [FAIL] civicrm_contact.preferred_communication_method argument 1, excluded -- 207 vs 190; extra 5,13,27,56,62
+  [FAIL] civicrm_contribution_page.payment_processor is empty -- 3 vs 0; extra 1,2,3
+  [ok] civicrm_contribution_page.payment_processor is not empty -- 3 vs 3
+  [ok] civicrm_contribution_page.payment_processor is one of [1] -- 3 vs 3
+  [FAIL] civicrm_contribution_page.payment_processor is none of [1] -- 3 vs 0; extra 1,2,3
+  [ok] civicrm_contribution_page.payment_processor argument 1 -- 3 vs 3
+  [FAIL] civicrm_contribution_page.payment_processor argument 1, excluded -- 3 vs 0; extra 1,2,3
+  [--] civicrm_contribution_page.recur_frequency_unit holds no items in 3 rows; empty checks only
+  [ok] civicrm_contribution_page.recur_frequency_unit is empty -- 3 vs 3
+  [FAIL] civicrm_contribution_page.recur_frequency_unit is not empty -- 3 vs 0; extra 1,2,3
+  [FAIL] civicrm_event.payment_processor is empty -- 6 vs 0; extra 1,2,3,4,5
+  [ok] civicrm_event.payment_processor is not empty -- 6 vs 6
+  [ok] civicrm_event.payment_processor is one of [1] -- 6 vs 6
+  [FAIL] civicrm_event.payment_processor is none of [1] -- 6 vs 0; extra 1,2,3,4,5
+  [ok] civicrm_event.payment_processor argument 1 -- 6 vs 6
+  [FAIL] civicrm_event.payment_processor argument 1, excluded -- 6 vs 0; extra 1,2,3,4,5
+  [FAIL] civicrm_group.group_type is empty -- 4 vs 0; extra 1,2,3,4
+  [ok] civicrm_group.group_type is not empty -- 4 vs 4
+  [ok] civicrm_group.group_type is one of [1] -- 4 vs 4
+  [FAIL] civicrm_group.group_type is none of [1] -- 4 vs 0; extra 1,2,3,4
+  [ok] civicrm_group.group_type argument 1 -- 4 vs 4
+  [FAIL] civicrm_group.group_type argument 1, excluded -- 4 vs 0; extra 1,2,3,4
+  [FAIL] civicrm_group.group_type is all of [1, 2] -- 4 vs 3; extra 1
+  [ok] civicrm_group.group_type is one of [1, 2] -- 4 vs 4
+  [ok] civicrm_group.group_type argument 1+2 -- 4 vs 4
+  [FAIL] civicrm_group.group_type argument 1,2 -- 4 vs 3; extra 1
+  [FAIL] civicrm_group.group_type is one of [2] -- 4 vs 3; extra 1
+  [FAIL] civicrm_group.group_type is none of [2] -- 4 vs 1; extra 2,3,4
+  [FAIL] civicrm_group.group_type argument 2 -- 4 vs 3; extra 1
+  [FAIL] civicrm_group.group_type argument 2, excluded -- 4 vs 1; extra 2,3,4
+  [--] civicrm_group.parents holds no items in 4 rows; empty checks only
+  [ok] civicrm_group.parents is empty -- 4 vs 4
+  [FAIL] civicrm_group.parents is not empty -- 4 vs 0; extra 1,2,3,4
+  [--] civicrm_group.children holds no items in 4 rows; empty checks only
+  [ok] civicrm_group.children is empty -- 4 vs 4
+  [FAIL] civicrm_group.children is not empty -- 4 vs 0; extra 1,2,3,4
+  [FAIL] civicrm_membership_type.relationship_type_id is empty -- 3 vs 1; extra 1,3
+  [FAIL] civicrm_membership_type.relationship_type_id is not empty -- 3 vs 2; extra 2
+  [FAIL] civicrm_membership_type.relationship_type_id is one of [7] -- 3 vs 2; extra 2
+  [FAIL] civicrm_membership_type.relationship_type_id is none of [7] -- 3 vs 1; extra 1,3
+  [FAIL] civicrm_membership_type.relationship_type_id argument 7 -- 3 vs 2; extra 2
+  [FAIL] civicrm_membership_type.relationship_type_id argument 7, excluded -- 3 vs 1; extra 1,3
+  [FAIL] civicrm_membership_type.relationship_direction is empty -- 3 vs 1; extra 1,3
+  [FAIL] civicrm_membership_type.relationship_direction is not empty -- 3 vs 2; extra 2
+  [FAIL] civicrm_membership_type.relationship_direction is one of [b_a] -- 3 vs 2; extra 2
+  [FAIL] civicrm_membership_type.relationship_direction is none of [b_a] -- 3 vs 1; extra 1,3
+  [FAIL] civicrm_membership_type.relationship_direction argument b_a -- 3 vs 2; extra 2
+  [FAIL] civicrm_membership_type.relationship_direction argument b_a, excluded -- 3 vs 1; extra 1,3
+  [FAIL] civicrm_participant.role_id is empty -- 50 vs 0; extra 1,2,3,4,5
+  [ok] civicrm_participant.role_id is not empty -- 50 vs 50
+  [FAIL] civicrm_participant.role_id is one of [1] -- 50 vs 18; extra 2,3,4,6,7
+  [FAIL] civicrm_participant.role_id is none of [1] -- 50 vs 32; extra 1,5,9,15,18
+  [FAIL] civicrm_participant.role_id argument 1 -- 50 vs 18; extra 2,3,4,6,7
+  [FAIL] civicrm_participant.role_id argument 1, excluded -- 50 vs 32; extra 1,5,9,15,18
+  [FAIL] civicrm_participant.role_id is all of [1, 2] -- 50 vs 0; extra 1,2,3,4,5
+  [FAIL] civicrm_participant.role_id is one of [1, 2] -- 50 vs 30; extra 3,4,7,8,11
+  [FAIL] civicrm_participant.role_id argument 1+2 -- 50 vs 30; extra 3,4,7,8,11
+  [FAIL] civicrm_participant.role_id argument 1,2 -- 50 vs 0; extra 1,2,3,4,5
+  [FAIL] civicrm_participant.role_id is one of [2] -- 50 vs 12; extra 1,3,4,5,7
+  [FAIL] civicrm_participant.role_id is none of [2] -- 50 vs 38; extra 2,6,10,13,16
+  [FAIL] civicrm_participant.role_id argument 2 -- 50 vs 12; extra 1,3,4,5,7
+  [FAIL] civicrm_participant.role_id argument 2, excluded -- 50 vs 38; extra 2,6,10,13,16
+  [FAIL] civicrm_participant.role_id is one of [3] -- 50 vs 12; extra 1,2,4,5,6
+  [FAIL] civicrm_participant.role_id is none of [3] -- 50 vs 38; extra 3,7,11,14,17
+  [FAIL] civicrm_participant.role_id argument 3 -- 50 vs 12; extra 1,2,4,5,6
+  [FAIL] civicrm_participant.role_id argument 3, excluded -- 50 vs 38; extra 3,7,11,14,17
+  [FAIL] civicrm_participant.role_id is one of [4] -- 50 vs 8; extra 1,2,3,5,6
+  [FAIL] civicrm_participant.role_id is none of [4] -- 50 vs 42; extra 4,8,12,21,29
+  [FAIL] civicrm_participant.role_id argument 4 -- 50 vs 8; extra 1,2,3,5,6
+  [FAIL] civicrm_participant.role_id argument 4, excluded -- 50 vs 42; extra 4,8,12,21,29
+  [FAIL] civicrm_participant.fee_level is empty -- 50 vs 0; extra 1,2,3,4,5
+  [ok] civicrm_participant.fee_level is not empty -- 50 vs 50
+  [FAIL] civicrm_participant.fee_level is one of [Tiny-tots (ages 5-8)] -- 50 vs 18; extra 1,2,4,5,7
+  [FAIL] civicrm_participant.fee_level is none of [Tiny-tots (ages 5-8)] -- 50 vs 32; extra 3,6,9,12,15
+  [FAIL] civicrm_participant.fee_level argument Tiny-tots (ages 5-8) -- 50 vs 18; extra 1,2,4,5,7
+  [FAIL] civicrm_participant.fee_level argument Tiny-tots (ages 5-8), excluded -- 50 vs 32; extra 3,6,9,12,15
+  [FAIL] civicrm_participant.fee_level is all of [Tiny-tots (ages 5-8), Single] -- 50 vs 0; extra 1,2,3,4,5
+  [FAIL] civicrm_participant.fee_level is one of [Tiny-tots (ages 5-8), Single] -- 50 vs 34; extra 2,5,8,11,14
+  [FAIL] civicrm_participant.fee_level is one of [Single] -- 50 vs 16; extra 2,3,5,6,8
+  [FAIL] civicrm_participant.fee_level is none of [Single] -- 50 vs 34; extra 1,4,7,10,13
+  [FAIL] civicrm_participant.fee_level argument Single -- 50 vs 16; extra 2,3,5,6,8
+  [FAIL] civicrm_participant.fee_level argument Single, excluded -- 50 vs 34; extra 1,4,7,10,13
+  [FAIL] civicrm_participant.fee_level is one of [Soprano] -- 50 vs 16; extra 1,3,4,6,7
+  [FAIL] civicrm_participant.fee_level is none of [Soprano] -- 50 vs 34; extra 2,5,8,11,14
+  [FAIL] civicrm_participant.fee_level argument Soprano -- 50 vs 16; extra 1,3,4,6,7
+  [FAIL] civicrm_participant.fee_level argument Soprano, excluded -- 50 vs 34; extra 2,5,8,11,14
+  [FAIL] civicrm_price_set.extends is empty -- 8 vs 0; extra 1,2,3,4,5
+  [ok] civicrm_price_set.extends is not empty -- 8 vs 8
+  [FAIL] civicrm_price_set.extends is one of [2] -- 8 vs 3; extra 2,4,6,7,8
+  [FAIL] civicrm_price_set.extends is none of [2] -- 8 vs 5; extra 1,3,5
+  [FAIL] civicrm_price_set.extends argument 2 -- 8 vs 3; extra 2,4,6,7,8
+  [FAIL] civicrm_price_set.extends argument 2, excluded -- 8 vs 5; extra 1,3,5
+  [FAIL] civicrm_price_set.extends is all of [2, 1] -- 8 vs 0; extra 1,2,3,4,5
+  [FAIL] civicrm_price_set.extends is one of [2, 1] -- 8 vs 6; extra 2,4
+  [FAIL] civicrm_price_set.extends argument 2+1 -- 8 vs 6; extra 2,4
+  [FAIL] civicrm_price_set.extends argument 2,1 -- 8 vs 0; extra 1,2,3,4,5
+  [FAIL] civicrm_price_set.extends is one of [1] -- 8 vs 3; extra 1,2,3,4,5
+  [FAIL] civicrm_price_set.extends is none of [1] -- 8 vs 5; extra 6,7,8
+  [FAIL] civicrm_price_set.extends argument 1 -- 8 vs 3; extra 1,2,3,4,5
+  [FAIL] civicrm_price_set.extends argument 1, excluded -- 8 vs 5; extra 6,7,8
+  [FAIL] civicrm_price_set.extends is one of [3] -- 8 vs 2; extra 1,3,5,6,7
+  [FAIL] civicrm_price_set.extends is none of [3] -- 8 vs 6; extra 2,4
+  [FAIL] civicrm_price_set.extends argument 3 -- 8 vs 2; extra 1,3,5,6,7
+  [FAIL] civicrm_price_set.extends argument 3, excluded -- 8 vs 6; extra 2,4
+  [FAIL] civicrm_tag.used_for is empty -- 5 vs 0; extra 1,2,3,4,5
+  [ok] civicrm_tag.used_for is not empty -- 5 vs 5
+  [ok] civicrm_tag.used_for is one of [civicrm_contact] -- 5 vs 5
+  [FAIL] civicrm_tag.used_for is none of [civicrm_contact] -- 5 vs 0; extra 1,2,3,4,5
+  [ok] civicrm_tag.used_for argument civicrm_contact -- 5 vs 5
+  [FAIL] civicrm_tag.used_for argument civicrm_contact, excluded -- 5 vs 0; extra 1,2,3,4,5
+  [FAIL] civicrm_custom_group.extends_entity_column_value is empty -- 14 vs 11; extra 2,7,13
+  [FAIL] civicrm_custom_group.extends_entity_column_value is not empty -- 14 vs 3; extra 1,3,4,5,6
+  [FAIL] civicrm_custom_group.extends_entity_column_value is one of [1] -- 14 vs 2; extra 1,3,4,5,6
+  [FAIL] civicrm_custom_group.extends_entity_column_value is none of [1] -- 14 vs 12; extra 2,13
+  [FAIL] civicrm_custom_group.extends_entity_column_value argument 1 -- 14 vs 2; extra 1,3,4,5,6
+  [FAIL] civicrm_custom_group.extends_entity_column_value argument 1, excluded -- 14 vs 12; extra 2,13
+  [FAIL] civicrm_custom_group.extends_entity_column_value is all of [1, Staff] -- 14 vs 0; extra 1,2,3,4,5
+  [FAIL] civicrm_custom_group.extends_entity_column_value is one of [1, Staff] -- 14 vs 3; extra 1,3,4,5,6
+  [FAIL] civicrm_custom_group.extends_entity_column_value argument 1+Staff -- 14 vs 3; extra 1,3,4,5,6
+  [FAIL] civicrm_custom_group.extends_entity_column_value argument 1,Staff -- 14 vs 0; extra 1,2,3,4,5
+  [FAIL] civicrm_custom_group.extends_entity_column_value is one of [Staff] -- 14 vs 1; extra 1,2,3,4,5
+  [FAIL] civicrm_custom_group.extends_entity_column_value is none of [Staff] -- 14 vs 13; extra 7
+  [FAIL] civicrm_custom_group.extends_entity_column_value argument Staff -- 14 vs 1; extra 1,2,3,4,5
+  [FAIL] civicrm_custom_group.extends_entity_column_value argument Staff, excluded -- 14 vs 13; extra 7
+  [FAIL] civicrm_cv_ce_education.honors_14 is empty -- 157 vs 74; extra 2,5,6,12,13
+  [FAIL] civicrm_cv_ce_education.honors_14 is not empty -- 157 vs 83; extra 1,3,4,7,8
+  [FAIL] civicrm_cv_ce_education.honors_14 is one of [cum_laude] -- 157 vs 32; extra 1,3,4,6,7
+  [FAIL] civicrm_cv_ce_education.honors_14 is none of [cum_laude] -- 157 vs 125; extra 2,5,12,14,18
+  [FAIL] civicrm_cv_ce_education.honors_14 argument cum_laude -- 157 vs 32; extra 1,3,4,6,7
+  [FAIL] civicrm_cv_ce_education.honors_14 argument cum_laude, excluded -- 157 vs 125; extra 2,5,12,14,18
+  [FAIL] civicrm_cv_ce_education.honors_14 is all of [cum_laude, magna] -- 157 vs 7; extra 1,3,4,6,7
+  [FAIL] civicrm_cv_ce_education.honors_14 is one of [cum_laude, magna] -- 157 vs 56; extra 1,3,4,7,8
+  [FAIL] civicrm_cv_ce_education.honors_14 argument cum_laude+magna -- 157 vs 56; extra 1,3,4,7,8
+  [FAIL] civicrm_cv_ce_education.honors_14 argument cum_laude,magna -- 157 vs 7; extra 1,3,4,6,7
+  [FAIL] civicrm_cv_ce_education.honors_14 is one of [magna] -- 157 vs 31; extra 1,3,4,7,8
+  [FAIL] civicrm_cv_ce_education.honors_14 is none of [magna] -- 157 vs 126; extra 2,5,6,16,27
+  [FAIL] civicrm_cv_ce_education.honors_14 argument magna -- 157 vs 31; extra 1,3,4,7,8
+  [FAIL] civicrm_cv_ce_education.honors_14 argument magna, excluded -- 157 vs 126; extra 2,5,6,16,27
+  [FAIL] civicrm_cv_ce_education.honors_14 is one of [summa] -- 157 vs 30; extra 1,2,3,4,5
+  [FAIL] civicrm_cv_ce_education.honors_14 is none of [summa] -- 157 vs 127; extra 18,20,35,36,40
+  [FAIL] civicrm_cv_ce_education.honors_14 argument summa -- 157 vs 30; extra 1,2,3,4,5
+  [FAIL] civicrm_cv_ce_education.honors_14 argument summa, excluded -- 157 vs 127; extra 18,20,35,36,40
+  [FAIL] civicrm_cv_ce_education.honors_14 is one of [deans_list] -- 157 vs 27; extra 1,2,3,4,5
+  [FAIL] civicrm_cv_ce_education.honors_14 is none of [deans_list] -- 157 vs 130; extra 13,16,20,23,25
+  [FAIL] civicrm_cv_ce_education.honors_14 argument deans_list -- 157 vs 27; extra 1,2,3,4,5
+  [FAIL] civicrm_cv_ce_education.honors_14 argument deans_list, excluded -- 157 vs 130; extra 13,16,20,23,25
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 is empty -- 213 vs 0; extra 1,2,3,4,5
+  [ok] civicrm_cv_ce_skills.languages_used_23 is not empty -- 213 vs 213
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 is one of [es] -- 213 vs 82; extra 1,4,6,7,9
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 is none of [es] -- 213 vs 131; extra 2,3,5,8,10
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 argument es -- 213 vs 82; extra 1,4,6,7,9
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 argument es, excluded -- 213 vs 131; extra 2,3,5,8,10
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 is all of [es, de] -- 213 vs 27; extra 1,3,4,5,6
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 is one of [es, de] -- 213 vs 131; extra 1,4,7,9,15
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 argument es+de -- 213 vs 131; extra 1,4,7,9,15
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 argument es,de -- 213 vs 27; extra 1,3,4,5,6
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 is one of [de] -- 213 vs 76; extra 1,3,4,5,7
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 is none of [de] -- 213 vs 137; extra 2,6,10,11,12
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 argument de -- 213 vs 76; extra 1,3,4,5,7
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 argument de, excluded -- 213 vs 137; extra 2,6,10,11,12
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 is one of [ar] -- 213 vs 76; extra 1,2,3,5,6
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 is none of [ar] -- 213 vs 137; extra 4,7,9,13,20
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 argument ar -- 213 vs 76; extra 1,2,3,5,6
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 argument ar, excluded -- 213 vs 137; extra 4,7,9,13,20
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 is one of [zh] -- 213 vs 66; extra 1,2,5,6,7
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 is none of [zh] -- 213 vs 147; extra 3,4,8,13,14
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 argument zh -- 213 vs 66; extra 1,2,5,6,7
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 argument zh, excluded -- 213 vs 147; extra 3,4,8,13,14
+
+3. the display
+ [warning] Undefined array key "alter" FieldPluginBase.php:1239
+  [FAIL] civicrm_group.group_type display -- TypeError: Unsupported operand types: array + null
+  [FAIL] civicrm_cv_ce_education.honors_14 display -- TypeError: Unsupported operand types: array + null
+ [warning] Undefined array key "alter" FieldPluginBase.php:1239
+  [FAIL] civicrm_cv_ce_skills.languages_used_23 display -- TypeError: Unsupported operand types: array + null
+
+4. Views saved in api3 (config set)
+ [warning] Undefined array key "alter" FieldPluginBase.php:1239
+  [--] ce_action_schedule_j2_smoke: dropped fields entity_value, fields entity_status, fields recipient_manual, fields recipient_listing, fields filter_contact_language, fields operations, filters entity_status, filters entity_value, filters filter_contact_language, filters recipient_listing, filters recipient_manual
+  [ok] ce_action_schedule_j2_smoke:default list-field handlers -- none broken
+  [ok] ce_action_schedule_j2_smoke:default runs -- 0 rows
+  [ok] ce_action_schedule_j2_smoke:block_1 list-field handlers -- none broken
+  [ok] ce_action_schedule_j2_smoke:block_1 runs -- 0 rows
+  [ok] ce_action_schedule_j2_smoke:page_1 list-field handlers -- none broken
+  [ok] ce_action_schedule_j2_smoke:page_1 runs -- 0 rows
+  [--] ce_contact_j2_smoke: dropped fields contact_sub_type, fields preferred_communication_method, fields dupe_check, fields skip_greeting_processing, filters contact_sub_type, filters dupe_check
+  [ok] ce_contact_j2_smoke:default list-field handlers -- none broken
+  [ok] ce_contact_j2_smoke:default runs -- 0 rows
+  [ok] ce_contact_j2_smoke:block_1 list-field handlers -- none broken
+  [ok] ce_contact_j2_smoke:block_1 runs -- 207 rows
+  [ok] ce_contact_j2_smoke:page_1 list-field handlers -- none broken
+  [ok] ce_contact_j2_smoke:page_1 runs -- 0 rows
+  [--] ce_contact_vbo_j2_smoke: dropped fields views_bulk_operations_bulk_form
+  [ok] ce_contact_vbo_j2_smoke:default list-field handlers -- none broken
+  [ok] ce_contact_vbo_j2_smoke:default runs -- 0 rows
+  [ok] ce_contact_vbo_j2_smoke:page_1 list-field handlers -- none broken
+  [ok] ce_contact_vbo_j2_smoke:page_1 runs -- 0 rows
+  [--] ce_contribution_page_j2_smoke: dropped relationships campaign_id, fields payment_processor, fields recur_frequency_unit, fields campaign_id, fields operations, filters campaign_id
+  [ok] ce_contribution_page_j2_smoke:default list-field handlers -- none broken
+  [ok] ce_contribution_page_j2_smoke:default runs -- 3 rows
+  [ok] ce_contribution_page_j2_smoke:block_1 list-field handlers -- none broken
+  [ok] ce_contribution_page_j2_smoke:block_1 runs -- 3 rows
+  [ok] ce_contribution_page_j2_smoke:page_1 list-field handlers -- none broken
+  [ok] ce_contribution_page_j2_smoke:page_1 runs -- 3 rows
+  [--] ce_custom_group_j2_smoke: dropped fields extends_entity_column_value, fields operations, filters extends_entity_column_value
+  [ok] ce_custom_group_j2_smoke:default list-field handlers -- none broken
+  [ok] ce_custom_group_j2_smoke:default runs -- 14 rows
+  [ok] ce_custom_group_j2_smoke:block_1 list-field handlers -- none broken
+  [ok] ce_custom_group_j2_smoke:block_1 runs -- 14 rows
+  [ok] ce_custom_group_j2_smoke:page_1 list-field handlers -- none broken
+  [ok] ce_custom_group_j2_smoke:page_1 runs -- 14 rows
+  [--] ce_event_j2_smoke: dropped relationships campaign_id, fields payment_processor, fields campaign_id, fields bundle, filters bundle, filters campaign_id
+  [ok] ce_event_j2_smoke:default list-field handlers -- none broken
+  [ok] ce_event_j2_smoke:default runs -- 6 rows
+  [ok] ce_event_j2_smoke:block_1 list-field handlers -- none broken
+  [ok] ce_event_j2_smoke:block_1 runs -- 6 rows
+  [ok] ce_event_j2_smoke:page_1 list-field handlers -- none broken
+  [ok] ce_event_j2_smoke:page_1 runs -- 6 rows
+  [--] ce_group_j2_smoke: dropped fields group_type, fields parents, fields children, fields operations, filters children, filters group_type, filters parents
+  [ok] ce_group_j2_smoke:default list-field handlers -- none broken
+  [ok] ce_group_j2_smoke:default runs -- 4 rows
+  [ok] ce_group_j2_smoke:block_1 list-field handlers -- none broken
+  [ok] ce_group_j2_smoke:block_1 runs -- 4 rows
+  [ok] ce_group_j2_smoke:page_1 list-field handlers -- none broken
+  [ok] ce_group_j2_smoke:page_1 runs -- 4 rows
+  [--] ce_membership_type_j2_smoke: dropped fields relationship_type_id, fields relationship_direction, fields operations, filters relationship_direction, filters relationship_type_id
+  [ok] ce_membership_type_j2_smoke:default list-field handlers -- none broken
+  [ok] ce_membership_type_j2_smoke:default runs -- 3 rows
+  [ok] ce_membership_type_j2_smoke:block_1 list-field handlers -- none broken
+  [ok] ce_membership_type_j2_smoke:block_1 runs -- 3 rows
+  [ok] ce_membership_type_j2_smoke:page_1 list-field handlers -- none broken
+  [ok] ce_membership_type_j2_smoke:page_1 runs -- 3 rows
+  [--] ce_participant_j2_smoke: dropped relationships campaign_id, fields role_id, fields fee_level, fields campaign_id, filters campaign_id, filters fee_level, filters role_id
+  [ok] ce_participant_j2_smoke:default list-field handlers -- none broken
+  [ok] ce_participant_j2_smoke:default runs -- 50 rows
+  [ok] ce_participant_j2_smoke:block_1 list-field handlers -- none broken
+  [ok] ce_participant_j2_smoke:block_1 runs -- 50 rows
+  [ok] ce_participant_j2_smoke:page_1 list-field handlers -- none broken
+  [ok] ce_participant_j2_smoke:page_1 runs -- 50 rows
+  [--] ce_price_set_j2_smoke: dropped fields extends, fields operations, filters extends
+  [ok] ce_price_set_j2_smoke:default list-field handlers -- none broken
+  [ok] ce_price_set_j2_smoke:default runs -- 8 rows
+  [ok] ce_price_set_j2_smoke:block_1 list-field handlers -- none broken
+  [ok] ce_price_set_j2_smoke:block_1 runs -- 8 rows
+  [ok] ce_price_set_j2_smoke:page_1 list-field handlers -- none broken
+  [ok] ce_price_set_j2_smoke:page_1 runs -- 8 rows
+  [--] ce_tag_j2_smoke: dropped fields used_for, fields operations, filters used_for
+  [ok] ce_tag_j2_smoke:default list-field handlers -- none broken
+  [ok] ce_tag_j2_smoke:default runs -- 5 rows
+  [ok] ce_tag_j2_smoke:block_1 list-field handlers -- none broken
+  [ok] ce_tag_j2_smoke:block_1 runs -- 5 rows
+  [ok] ce_tag_j2_smoke:page_1 list-field handlers -- none broken
+  [ok] ce_tag_j2_smoke:page_1 runs -- 5 rows
+
+95 passed, 202 failed
+  - civicrm_action_schedule.entity_value (serialize 2) (not described)
+  - civicrm_action_schedule.entity_status (serialize 2) (not described)
+  - civicrm_action_schedule.recipient_manual (serialize 5) (not described)
+  - civicrm_action_schedule.recipient_listing (serialize 2) (not described)
+  - civicrm_action_schedule.filter_contact_language (serialize 2) (not described)
+  - civicrm_contact.contact_sub_type (serialize 1) (not described)
+  - civicrm_contact.preferred_communication_method (serialize 1) (not described)
+  - civicrm_contribution_page.payment_processor (serialize 2) (not described)
+  - civicrm_contribution_page.recur_frequency_unit (serialize 2) (not described)
+  - civicrm_event.payment_processor (serialize 2) (not described)
+  - civicrm_group.group_type (serialize 1) (not described)
+  - civicrm_group.parents (serialize 5) (not described)
+  - civicrm_group.children (serialize 5) (not described)
+  - civicrm_membership_type.relationship_type_id (serialize 2) (not described)
+  - civicrm_membership_type.relationship_direction (serialize 2) (not described)
+  - civicrm_participant.role_id (serialize 2) (not described)
+  - civicrm_participant.fee_level (serialize 1) (not described)
+  - civicrm_price_set.extends (serialize 1) (not described)
+  - civicrm_tag.used_for (serialize 5) (not described)
+  - civicrm_custom_group.extends_entity_column_value (serialize 1) (not described)
+  - civicrm_cv_ce_education.honors_14 (serialize 1) (not described)
+  - civicrm_cv_ce_skills.languages_used_23 (serialize 1) (not described)
+  - J32: ce_education.honors on the group table (string)
+  - J32: ce_skills.languages on the group table (string)
+  - J32: ce_profile_all.checkboxes on the group table (string)
+  - J32: ce_profile_all.multiselect on the group table (string)
+  - J32: ce_profile_all.countries on the group table (numeric)
+  - J32: ce_profile_all.states on the group table (numeric)
+  - civicrm_contact.contact_sub_type is empty (207 vs 195; extra 3,7,8,9,10)
+  - civicrm_contact.contact_sub_type is not empty (207 vs 12; extra 1,2,4,5,6)
+  - civicrm_contact.contact_sub_type is one of [Staff] (207 vs 12; extra 1,2,4,5,6)
+  - civicrm_contact.contact_sub_type is none of [Staff] (207 vs 195; extra 3,7,8,9,10)
+  - civicrm_contact.contact_sub_type argument Staff (207 vs 12; extra 1,2,4,5,6)
+  - civicrm_contact.contact_sub_type argument Staff, excluded (207 vs 195; extra 3,7,8,9,10)
+  - civicrm_contact.preferred_communication_method is empty (207 vs 106; extra 2,3,4,5,6)
+  - civicrm_contact.preferred_communication_method is not empty (207 vs 101; extra 1,7,11,12,15)
+  - civicrm_contact.preferred_communication_method is one of [3] (207 vs 26; extra 1,2,4,5,6)
+  - civicrm_contact.preferred_communication_method is none of [3] (207 vs 181; extra 3,8,10,14,30)
+  - civicrm_contact.preferred_communication_method argument 3 (207 vs 26; extra 1,2,4,5,6)
+  - civicrm_contact.preferred_communication_method argument 3, excluded (207 vs 181; extra 3,8,10,14,30)
+  - civicrm_contact.preferred_communication_method is all of [3, 4] (207 vs 0; extra 1,2,3,4,5)
+  - civicrm_contact.preferred_communication_method is one of [3, 4] (207 vs 47; extra 1,2,4,5,6)
+  - civicrm_contact.preferred_communication_method argument 3+4 (207 vs 47; extra 1,2,4,5,6)
+  - civicrm_contact.preferred_communication_method argument 3,4 (207 vs 0; extra 1,2,3,4,5)
+  - civicrm_contact.preferred_communication_method is one of [4] (207 vs 21; extra 1,2,3,4,5)
+  - civicrm_contact.preferred_communication_method is none of [4] (207 vs 186; extra 20,26,29,31,40)
+  - civicrm_contact.preferred_communication_method argument 4 (207 vs 21; extra 1,2,3,4,5)
+  - civicrm_contact.preferred_communication_method argument 4, excluded (207 vs 186; extra 20,26,29,31,40)
+  - civicrm_contact.preferred_communication_method is one of [5] (207 vs 21; extra 1,3,5,6,7)
+  - civicrm_contact.preferred_communication_method is none of [5] (207 vs 186; extra 2,4,17,19,37)
+  - civicrm_contact.preferred_communication_method argument 5 (207 vs 21; extra 1,3,5,6,7)
+  - civicrm_contact.preferred_communication_method argument 5, excluded (207 vs 186; extra 2,4,17,19,37)
+  - civicrm_contact.preferred_communication_method is one of [1] (207 vs 17; extra 1,2,3,4,6)
+  - civicrm_contact.preferred_communication_method is none of [1] (207 vs 190; extra 5,13,27,56,62)
+  - civicrm_contact.preferred_communication_method argument 1 (207 vs 17; extra 1,2,3,4,6)
+  - civicrm_contact.preferred_communication_method argument 1, excluded (207 vs 190; extra 5,13,27,56,62)
+  - civicrm_contribution_page.payment_processor is empty (3 vs 0; extra 1,2,3)
+  - civicrm_contribution_page.payment_processor is none of [1] (3 vs 0; extra 1,2,3)
+  - civicrm_contribution_page.payment_processor argument 1, excluded (3 vs 0; extra 1,2,3)
+  - civicrm_contribution_page.recur_frequency_unit is not empty (3 vs 0; extra 1,2,3)
+  - civicrm_event.payment_processor is empty (6 vs 0; extra 1,2,3,4,5)
+  - civicrm_event.payment_processor is none of [1] (6 vs 0; extra 1,2,3,4,5)
+  - civicrm_event.payment_processor argument 1, excluded (6 vs 0; extra 1,2,3,4,5)
+  - civicrm_group.group_type is empty (4 vs 0; extra 1,2,3,4)
+  - civicrm_group.group_type is none of [1] (4 vs 0; extra 1,2,3,4)
+  - civicrm_group.group_type argument 1, excluded (4 vs 0; extra 1,2,3,4)
+  - civicrm_group.group_type is all of [1, 2] (4 vs 3; extra 1)
+  - civicrm_group.group_type argument 1,2 (4 vs 3; extra 1)
+  - civicrm_group.group_type is one of [2] (4 vs 3; extra 1)
+  - civicrm_group.group_type is none of [2] (4 vs 1; extra 2,3,4)
+  - civicrm_group.group_type argument 2 (4 vs 3; extra 1)
+  - civicrm_group.group_type argument 2, excluded (4 vs 1; extra 2,3,4)
+  - civicrm_group.parents is not empty (4 vs 0; extra 1,2,3,4)
+  - civicrm_group.children is not empty (4 vs 0; extra 1,2,3,4)
+  - civicrm_membership_type.relationship_type_id is empty (3 vs 1; extra 1,3)
+  - civicrm_membership_type.relationship_type_id is not empty (3 vs 2; extra 2)
+  - civicrm_membership_type.relationship_type_id is one of [7] (3 vs 2; extra 2)
+  - civicrm_membership_type.relationship_type_id is none of [7] (3 vs 1; extra 1,3)
+  - civicrm_membership_type.relationship_type_id argument 7 (3 vs 2; extra 2)
+  - civicrm_membership_type.relationship_type_id argument 7, excluded (3 vs 1; extra 1,3)
+  - civicrm_membership_type.relationship_direction is empty (3 vs 1; extra 1,3)
+  - civicrm_membership_type.relationship_direction is not empty (3 vs 2; extra 2)
+  - civicrm_membership_type.relationship_direction is one of [b_a] (3 vs 2; extra 2)
+  - civicrm_membership_type.relationship_direction is none of [b_a] (3 vs 1; extra 1,3)
+  - civicrm_membership_type.relationship_direction argument b_a (3 vs 2; extra 2)
+  - civicrm_membership_type.relationship_direction argument b_a, excluded (3 vs 1; extra 1,3)
+  - civicrm_participant.role_id is empty (50 vs 0; extra 1,2,3,4,5)
+  - civicrm_participant.role_id is one of [1] (50 vs 18; extra 2,3,4,6,7)
+  - civicrm_participant.role_id is none of [1] (50 vs 32; extra 1,5,9,15,18)
+  - civicrm_participant.role_id argument 1 (50 vs 18; extra 2,3,4,6,7)
+  - civicrm_participant.role_id argument 1, excluded (50 vs 32; extra 1,5,9,15,18)
+  - civicrm_participant.role_id is all of [1, 2] (50 vs 0; extra 1,2,3,4,5)
+  - civicrm_participant.role_id is one of [1, 2] (50 vs 30; extra 3,4,7,8,11)
+  - civicrm_participant.role_id argument 1+2 (50 vs 30; extra 3,4,7,8,11)
+  - civicrm_participant.role_id argument 1,2 (50 vs 0; extra 1,2,3,4,5)
+  - civicrm_participant.role_id is one of [2] (50 vs 12; extra 1,3,4,5,7)
+  - civicrm_participant.role_id is none of [2] (50 vs 38; extra 2,6,10,13,16)
+  - civicrm_participant.role_id argument 2 (50 vs 12; extra 1,3,4,5,7)
+  - civicrm_participant.role_id argument 2, excluded (50 vs 38; extra 2,6,10,13,16)
+  - civicrm_participant.role_id is one of [3] (50 vs 12; extra 1,2,4,5,6)
+  - civicrm_participant.role_id is none of [3] (50 vs 38; extra 3,7,11,14,17)
+  - civicrm_participant.role_id argument 3 (50 vs 12; extra 1,2,4,5,6)
+  - civicrm_participant.role_id argument 3, excluded (50 vs 38; extra 3,7,11,14,17)
+  - civicrm_participant.role_id is one of [4] (50 vs 8; extra 1,2,3,5,6)
+  - civicrm_participant.role_id is none of [4] (50 vs 42; extra 4,8,12,21,29)
+  - civicrm_participant.role_id argument 4 (50 vs 8; extra 1,2,3,5,6)
+  - civicrm_participant.role_id argument 4, excluded (50 vs 42; extra 4,8,12,21,29)
+  - civicrm_participant.fee_level is empty (50 vs 0; extra 1,2,3,4,5)
+  - civicrm_participant.fee_level is one of [Tiny-tots (ages 5-8)] (50 vs 18; extra 1,2,4,5,7)
+  - civicrm_participant.fee_level is none of [Tiny-tots (ages 5-8)] (50 vs 32; extra 3,6,9,12,15)
+  - civicrm_participant.fee_level argument Tiny-tots (ages 5-8) (50 vs 18; extra 1,2,4,5,7)
+  - civicrm_participant.fee_level argument Tiny-tots (ages 5-8), excluded (50 vs 32; extra 3,6,9,12,15)
+  - civicrm_participant.fee_level is all of [Tiny-tots (ages 5-8), Single] (50 vs 0; extra 1,2,3,4,5)
+  - civicrm_participant.fee_level is one of [Tiny-tots (ages 5-8), Single] (50 vs 34; extra 2,5,8,11,14)
+  - civicrm_participant.fee_level is one of [Single] (50 vs 16; extra 2,3,5,6,8)
+  - civicrm_participant.fee_level is none of [Single] (50 vs 34; extra 1,4,7,10,13)
+  - civicrm_participant.fee_level argument Single (50 vs 16; extra 2,3,5,6,8)
+  - civicrm_participant.fee_level argument Single, excluded (50 vs 34; extra 1,4,7,10,13)
+  - civicrm_participant.fee_level is one of [Soprano] (50 vs 16; extra 1,3,4,6,7)
+  - civicrm_participant.fee_level is none of [Soprano] (50 vs 34; extra 2,5,8,11,14)
+  - civicrm_participant.fee_level argument Soprano (50 vs 16; extra 1,3,4,6,7)
+  - civicrm_participant.fee_level argument Soprano, excluded (50 vs 34; extra 2,5,8,11,14)
+  - civicrm_price_set.extends is empty (8 vs 0; extra 1,2,3,4,5)
+  - civicrm_price_set.extends is one of [2] (8 vs 3; extra 2,4,6,7,8)
+  - civicrm_price_set.extends is none of [2] (8 vs 5; extra 1,3,5)
+  - civicrm_price_set.extends argument 2 (8 vs 3; extra 2,4,6,7,8)
+  - civicrm_price_set.extends argument 2, excluded (8 vs 5; extra 1,3,5)
+  - civicrm_price_set.extends is all of [2, 1] (8 vs 0; extra 1,2,3,4,5)
+  - civicrm_price_set.extends is one of [2, 1] (8 vs 6; extra 2,4)
+  - civicrm_price_set.extends argument 2+1 (8 vs 6; extra 2,4)
+  - civicrm_price_set.extends argument 2,1 (8 vs 0; extra 1,2,3,4,5)
+  - civicrm_price_set.extends is one of [1] (8 vs 3; extra 1,2,3,4,5)
+  - civicrm_price_set.extends is none of [1] (8 vs 5; extra 6,7,8)
+  - civicrm_price_set.extends argument 1 (8 vs 3; extra 1,2,3,4,5)
+  - civicrm_price_set.extends argument 1, excluded (8 vs 5; extra 6,7,8)
+  - civicrm_price_set.extends is one of [3] (8 vs 2; extra 1,3,5,6,7)
+  - civicrm_price_set.extends is none of [3] (8 vs 6; extra 2,4)
+  - civicrm_price_set.extends argument 3 (8 vs 2; extra 1,3,5,6,7)
+  - civicrm_price_set.extends argument 3, excluded (8 vs 6; extra 2,4)
+  - civicrm_tag.used_for is empty (5 vs 0; extra 1,2,3,4,5)
+  - civicrm_tag.used_for is none of [civicrm_contact] (5 vs 0; extra 1,2,3,4,5)
+  - civicrm_tag.used_for argument civicrm_contact, excluded (5 vs 0; extra 1,2,3,4,5)
+  - civicrm_custom_group.extends_entity_column_value is empty (14 vs 11; extra 2,7,13)
+  - civicrm_custom_group.extends_entity_column_value is not empty (14 vs 3; extra 1,3,4,5,6)
+  - civicrm_custom_group.extends_entity_column_value is one of [1] (14 vs 2; extra 1,3,4,5,6)
+  - civicrm_custom_group.extends_entity_column_value is none of [1] (14 vs 12; extra 2,13)
+  - civicrm_custom_group.extends_entity_column_value argument 1 (14 vs 2; extra 1,3,4,5,6)
+  - civicrm_custom_group.extends_entity_column_value argument 1, excluded (14 vs 12; extra 2,13)
+  - civicrm_custom_group.extends_entity_column_value is all of [1, Staff] (14 vs 0; extra 1,2,3,4,5)
+  - civicrm_custom_group.extends_entity_column_value is one of [1, Staff] (14 vs 3; extra 1,3,4,5,6)
+  - civicrm_custom_group.extends_entity_column_value argument 1+Staff (14 vs 3; extra 1,3,4,5,6)
+  - civicrm_custom_group.extends_entity_column_value argument 1,Staff (14 vs 0; extra 1,2,3,4,5)
+  - civicrm_custom_group.extends_entity_column_value is one of [Staff] (14 vs 1; extra 1,2,3,4,5)
+  - civicrm_custom_group.extends_entity_column_value is none of [Staff] (14 vs 13; extra 7)
+  - civicrm_custom_group.extends_entity_column_value argument Staff (14 vs 1; extra 1,2,3,4,5)
+  - civicrm_custom_group.extends_entity_column_value argument Staff, excluded (14 vs 13; extra 7)
+  - civicrm_cv_ce_education.honors_14 is empty (157 vs 74; extra 2,5,6,12,13)
+  - civicrm_cv_ce_education.honors_14 is not empty (157 vs 83; extra 1,3,4,7,8)
+  - civicrm_cv_ce_education.honors_14 is one of [cum_laude] (157 vs 32; extra 1,3,4,6,7)
+  - civicrm_cv_ce_education.honors_14 is none of [cum_laude] (157 vs 125; extra 2,5,12,14,18)
+  - civicrm_cv_ce_education.honors_14 argument cum_laude (157 vs 32; extra 1,3,4,6,7)
+  - civicrm_cv_ce_education.honors_14 argument cum_laude, excluded (157 vs 125; extra 2,5,12,14,18)
+  - civicrm_cv_ce_education.honors_14 is all of [cum_laude, magna] (157 vs 7; extra 1,3,4,6,7)
+  - civicrm_cv_ce_education.honors_14 is one of [cum_laude, magna] (157 vs 56; extra 1,3,4,7,8)
+  - civicrm_cv_ce_education.honors_14 argument cum_laude+magna (157 vs 56; extra 1,3,4,7,8)
+  - civicrm_cv_ce_education.honors_14 argument cum_laude,magna (157 vs 7; extra 1,3,4,6,7)
+  - civicrm_cv_ce_education.honors_14 is one of [magna] (157 vs 31; extra 1,3,4,7,8)
+  - civicrm_cv_ce_education.honors_14 is none of [magna] (157 vs 126; extra 2,5,6,16,27)
+  - civicrm_cv_ce_education.honors_14 argument magna (157 vs 31; extra 1,3,4,7,8)
+  - civicrm_cv_ce_education.honors_14 argument magna, excluded (157 vs 126; extra 2,5,6,16,27)
+  - civicrm_cv_ce_education.honors_14 is one of [summa] (157 vs 30; extra 1,2,3,4,5)
+  - civicrm_cv_ce_education.honors_14 is none of [summa] (157 vs 127; extra 18,20,35,36,40)
+  - civicrm_cv_ce_education.honors_14 argument summa (157 vs 30; extra 1,2,3,4,5)
+  - civicrm_cv_ce_education.honors_14 argument summa, excluded (157 vs 127; extra 18,20,35,36,40)
+  - civicrm_cv_ce_education.honors_14 is one of [deans_list] (157 vs 27; extra 1,2,3,4,5)
+  - civicrm_cv_ce_education.honors_14 is none of [deans_list] (157 vs 130; extra 13,16,20,23,25)
+  - civicrm_cv_ce_education.honors_14 argument deans_list (157 vs 27; extra 1,2,3,4,5)
+  - civicrm_cv_ce_education.honors_14 argument deans_list, excluded (157 vs 130; extra 13,16,20,23,25)
+  - civicrm_cv_ce_skills.languages_used_23 is empty (213 vs 0; extra 1,2,3,4,5)
+  - civicrm_cv_ce_skills.languages_used_23 is one of [es] (213 vs 82; extra 1,4,6,7,9)
+  - civicrm_cv_ce_skills.languages_used_23 is none of [es] (213 vs 131; extra 2,3,5,8,10)
+  - civicrm_cv_ce_skills.languages_used_23 argument es (213 vs 82; extra 1,4,6,7,9)
+  - civicrm_cv_ce_skills.languages_used_23 argument es, excluded (213 vs 131; extra 2,3,5,8,10)
+  - civicrm_cv_ce_skills.languages_used_23 is all of [es, de] (213 vs 27; extra 1,3,4,5,6)
+  - civicrm_cv_ce_skills.languages_used_23 is one of [es, de] (213 vs 131; extra 1,4,7,9,15)
+  - civicrm_cv_ce_skills.languages_used_23 argument es+de (213 vs 131; extra 1,4,7,9,15)
+  - civicrm_cv_ce_skills.languages_used_23 argument es,de (213 vs 27; extra 1,3,4,5,6)
+  - civicrm_cv_ce_skills.languages_used_23 is one of [de] (213 vs 76; extra 1,3,4,5,7)
+  - civicrm_cv_ce_skills.languages_used_23 is none of [de] (213 vs 137; extra 2,6,10,11,12)
+  - civicrm_cv_ce_skills.languages_used_23 argument de (213 vs 76; extra 1,3,4,5,7)
+  - civicrm_cv_ce_skills.languages_used_23 argument de, excluded (213 vs 137; extra 2,6,10,11,12)
+  - civicrm_cv_ce_skills.languages_used_23 is one of [ar] (213 vs 76; extra 1,2,3,5,6)
+  - civicrm_cv_ce_skills.languages_used_23 is none of [ar] (213 vs 137; extra 4,7,9,13,20)
+  - civicrm_cv_ce_skills.languages_used_23 argument ar (213 vs 76; extra 1,2,3,5,6)
+  - civicrm_cv_ce_skills.languages_used_23 argument ar, excluded (213 vs 137; extra 4,7,9,13,20)
+  - civicrm_cv_ce_skills.languages_used_23 is one of [zh] (213 vs 66; extra 1,2,5,6,7)
+  - civicrm_cv_ce_skills.languages_used_23 is none of [zh] (213 vs 147; extra 3,4,8,13,14)
+  - civicrm_cv_ce_skills.languages_used_23 argument zh (213 vs 66; extra 1,2,5,6,7)
+  - civicrm_cv_ce_skills.languages_used_23 argument zh, excluded (213 vs 147; extra 3,4,8,13,14)
+  - civicrm_group.group_type display (TypeError: Unsupported operand types: array + null)
+  - civicrm_cv_ce_education.honors_14 display (TypeError: Unsupported operand types: array + null)
+  - civicrm_cv_ce_skills.languages_used_23 display (TypeError: Unsupported operand types: array + null)
+ [warning] Drush command terminated abnormally.
+[31mFailed to run drush --uri=https://drupal-civi-composer-exp-d11.ddev.site php:script scripts/smoke/j2-smoke.php: exit status 1[0m

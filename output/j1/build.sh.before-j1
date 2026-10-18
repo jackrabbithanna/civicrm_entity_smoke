@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+# Builds (or rebuilds) the CiviCRM Entity multi-record smoke-test fixture.
+#
+#   scripts/smoke/build.sh            seed + configure + verify
+#   scripts/smoke/build.sh --reinstall-civicrm
+#                                     first drop CiviCRM and reinstall it with
+#                                     the generated sample data (DESTRUCTIVE:
+#                                     all CiviCRM data is replaced)
+#
+# Every step is idempotent. Run from the project root.
+set -euo pipefail
+cd "$(dirname "$0")/../.."
+URI=https://drupal-civi-composer-exp-d11.ddev.site
+drush() { ddev drush --uri="$URI" "$@"; }
+
+if [[ "${1:-}" == "--reinstall-civicrm" ]]; then
+  # Retire the record types first. Dropping the tables underneath installed
+  # record types leaves Drupal's cached entity types naming groups that no
+  # longer exist, and the route rebuild CiviCRM triggers while enabling its
+  # extensions then fails: CivicrmEntity::baseFieldDefinitions() finds no
+  # SupportedEntities info for the type ("The id field definition does not
+  # exist"), and the next rebuild reports "Recursive router rebuild detected".
+  echo "== Deleting multi-record custom groups"
+  drush php:eval '\Drupal::service("civicrm")->initialize(); foreach (\Civi\Api4\CustomGroup::get(FALSE)->addSelect("id", "name")->addWhere("is_multiple", "=", TRUE)->execute() as $g) { \Civi\Api4\CustomGroup::delete(FALSE)->addWhere("id", "=", $g["id"])->execute(); echo "deleted {$g["name"]}\n"; }'
+  drush cr
+  echo "== Reinstalling CiviCRM with sample data"
+  drush php:eval '\Drupal::service("civicrm")->initialize(); \Drupal::moduleHandler()->loadInclude("civicrm", "install"); _civicrm_setup()->uninstallDatabase(); echo "dropped\n";'
+  drush php:script scripts/smoke/civi-reinstall-sample.php
+  drush cr
+fi
+
+echo "== Seeding CiviCRM custom groups and values"
+drush php:script scripts/smoke/civi-seed-custom-data.php
+
+echo "== CiviCRM Entity settings"
+drush php:script scripts/smoke/ce-settings.php
+drush cr
+
+echo "== Drupal configuration"
+drush php:script scripts/smoke/drupal-smoke-config.php
+drush cr
+
+echo "== Verifying"
+drush php:script scripts/smoke/verify-smoke.php

@@ -1,0 +1,43 @@
+Mode: api4_native
+filter_format: 'basic_html'
+
+1. J6: no format chosen
+  [FAIL] the status report has an entry for it
+  [FAIL] it names the fallback format
+  [FAIL] civicrm_entity_install() chooses Basic HTML -- ""
+  [ok] then the status report has no entry
+
+2. J39: Basic HTML, CKEditor 5
+  [FAIL] event 1: markup Basic HTML does not allow is edited without CKEditor
+  [FAIL] event 1: with a note saying so
+  [FAIL] event 1: saved unchanged, CiviCRM's value is unchanged -- now: <p>Heading one</p><p>Plain red under <strong>bold</strong></p><p>Cell</p><p>A div</p>
+  [FAIL] session record 1: markup Basic HTML does not allow is edited without CKEditor
+  [FAIL] session record 1: with a note saying so
+  [ok] session record 1: saved unchanged, CiviCRM's value is unchanged -- said: Status message Event Sessions #1 has been updated. Close message
+  [FAIL] contact 8: markup Basic HTML does not allow is edited without CKEditor
+  [FAIL] contact 8: with a note saying so
+  [ok] contact 8: saved unchanged, CiviCRM's value is unchanged -- said: Status message Eleonor Barkley has been updated. Close message
+  [FAIL] event 1: edited as HTML, the edit is saved and the rest kept -- CKEditor, no HTML to edit; Status message Fall Fundraiser Dinner has been updated. Close message <p>Heading one</p><p>Plain red under <strong>bold</strong></p><p>Cell</p><p>A div</p>
+  [ok] event 1: markup Basic HTML allows keeps CKEditor, with no note
+  [ok] event 1: saved unchanged through CKEditor, it is unchanged -- Status message Fall Fundraiser Dinner has been updated. Close message
+
+3. Other formats
+  [ok] full_html: CKEditor stays
+  [ok] full_html: saved unchanged, all the markup is kept -- now: <h1>Heading one</h1><p>Plain <span style="color:red;">red</span> <u>under</u> <strong>bold</strong></p><table class="table"><tbody><tr><td>Cell</td></tr></tbody></table><div class="note">A div</div>
+  [ok] plain_text: no editor, and no note
+  [ok] plain_text: saved unchanged, the value is unchanged
+
+Restored filter_format 'basic_html' and the values.
+
+J6/J39: 9 passed, 11 failed
+  FAIL: the status report has an entry for it
+  FAIL: it names the fallback format
+  FAIL: civicrm_entity_install() chooses Basic HTML ("")
+  FAIL: event 1: markup Basic HTML does not allow is edited without CKEditor
+  FAIL: event 1: with a note saying so
+  FAIL: event 1: saved unchanged, CiviCRM's value is unchanged (now: <p>Heading one</p><p>Plain red under <strong>bold</strong></p><p>Cell</p><p>A div</p>)
+  FAIL: session record 1: markup Basic HTML does not allow is edited without CKEditor
+  FAIL: session record 1: with a note saying so
+  FAIL: contact 8: markup Basic HTML does not allow is edited without CKEditor
+  FAIL: contact 8: with a note saying so
+  FAIL: event 1: edited as HTML, the edit is saved and the rest kept (CKEditor, no HTML to edit; Status message Fall Fundraiser Dinner has been updated. Close message <p>Heading one</p><p>Plain red under <strong>bold</strong></p><p>Cell</p><p>A div</p>)

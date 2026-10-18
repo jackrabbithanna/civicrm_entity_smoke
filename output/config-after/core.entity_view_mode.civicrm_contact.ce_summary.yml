@@ -1,0 +1,11 @@
+uuid: a2eada6e-9edc-427c-a84a-d2da83ce4c71
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+id: civicrm_contact.ce_summary
+label: 'Smoke summary'
+description: null
+targetEntityType: civicrm_contact
+cache: true

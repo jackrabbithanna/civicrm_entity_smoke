@@ -1,0 +1,393 @@
+uuid: 0b60d895-10e9-4050-bd53-58773aac7ec5
+langcode: en
+status: true
+dependencies:
+  module:
+    - civicrm_entity
+    - datetime
+    - options
+    - text
+    - user
+id: ce_smoke_board_terms
+label: 'Smoke: Board terms'
+module: views
+description: 'CiviCRM Entity 5.0.x multi-record custom field smoke test.'
+tag: ce_smoke
+base_table: civicrm_cv_ce_board_terms
+base_field: id
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Board terms'
+      fields:
+        organization:
+          id: organization
+          table: civicrm_contact
+          field: display_name
+          relationship: organization
+          entity_type: civicrm_contact
+          entity_field: display_name
+          plugin_id: field
+          label: Organization
+          exclude: true
+          type: string
+          settings:
+            link_to_entity: true
+        member:
+          id: member
+          table: civicrm_contact
+          field: display_name
+          relationship: member
+          entity_type: civicrm_contact
+          entity_field: display_name
+          plugin_id: field
+          label: 'Board member'
+          type: string
+          settings:
+            link_to_entity: true
+        role:
+          id: role
+          table: civicrm_cv_ce_board_terms
+          field: role_27
+          entity_type: civicrm_cv_ce_board_terms
+          entity_field: custom_27
+          plugin_id: field
+          label: Role
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+        term_start:
+          id: term_start
+          table: civicrm_cv_ce_board_terms
+          field: term_start_28
+          entity_type: civicrm_cv_ce_board_terms
+          entity_field: custom_28
+          plugin_id: field
+          label: 'Term Start'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'M j, Y'
+          group_column: value
+          group_columns: {  }
+        term_end:
+          id: term_end
+          table: civicrm_cv_ce_board_terms
+          field: term_end_29
+          entity_type: civicrm_cv_ce_board_terms
+          entity_field: custom_29
+          plugin_id: field
+          label: 'Term End'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'M j, Y'
+          group_column: value
+          group_columns: {  }
+        stipend:
+          id: stipend
+          table: civicrm_cv_ce_board_terms
+          field: annual_stipend_30
+          entity_type: civicrm_cv_ce_board_terms
+          entity_field: custom_30
+          plugin_id: field
+          label: 'Annual Stipend'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ','
+            decimal_separator: .
+            scale: 2
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+        country:
+          id: country
+          table: civicrm_cv_ce_board_terms
+          field: seat_country_31
+          entity_type: civicrm_cv_ce_board_terms
+          entity_field: custom_31
+          plugin_id: field
+          label: 'Seat Country'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+        state:
+          id: state
+          table: civicrm_cv_ce_board_terms
+          field: seat_state_province_32
+          entity_type: civicrm_cv_ce_board_terms
+          entity_field: custom_32
+          plugin_id: field
+          label: 'Seat State/Province'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+        bio:
+          id: bio
+          table: civicrm_cv_ce_board_terms
+          field: custom_33__value
+          entity_type: civicrm_cv_ce_board_terms
+          entity_field: custom_33
+          plugin_id: field
+          label: 'Board Bio'
+          exclude: false
+          element_label_colon: false
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 100
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: true
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access CiviCRM'
+      cache:
+        type: tag
+        options: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          plugin_id: text_custom
+          empty: true
+          content: 'No records match.'
+          tokenize: false
+      sorts:
+        organization_sort:
+          id: organization_sort
+          table: civicrm_contact
+          field: sort_name
+          relationship: organization
+          entity_type: civicrm_contact
+          entity_field: sort_name
+          plugin_id: standard
+          order: ASC
+        term_start:
+          id: term_start
+          table: civicrm_cv_ce_board_terms
+          field: term_start_28
+          entity_type: civicrm_cv_ce_board_terms
+          entity_field: custom_28
+          plugin_id: datetime
+          order: DESC
+          granularity: day
+      filters:
+        role:
+          id: role
+          table: civicrm_cv_ce_board_terms
+          field: role_27
+          entity_type: civicrm_cv_ce_board_terms
+          entity_field: custom_27
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          exposed: true
+          expose:
+            operator_id: role_op
+            label: Role
+            description: ''
+            use_operator: false
+            operator: role_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: role
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: table
+        options:
+          grouping:
+            -
+              field: organization
+              rendered: true
+              rendered_strip: false
+          row_class: ''
+          default_row_class: true
+          columns:
+            organization: organization
+            member: member
+            role: role
+            term_start: term_start
+            term_end: term_end
+            stipend: stipend
+            country: country
+            state: state
+            bio: bio
+          default: '-1'
+          info:
+            organization:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            member:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            role:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            term_start:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            term_end:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            stipend:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            country:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            state:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            bio:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          order: asc
+          empty_table: true
+          caption: ''
+          description: ''
+      row:
+        type: fields
+        options: {  }
+      relationships:
+        organization:
+          id: organization
+          table: civicrm_cv_ce_board_terms
+          field: entity_id
+          admin_label: Organization
+          entity_type: civicrm_cv_ce_board_terms
+          entity_field: entity_id
+          plugin_id: standard
+          required: true
+        member:
+          id: member
+          table: civicrm_cv_ce_board_terms
+          field: board_member_26
+          admin_label: 'Board member'
+          entity_type: civicrm_cv_ce_board_terms
+          entity_field: custom_26
+          plugin_id: standard
+          required: false
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          plugin_id: result
+          empty: false
+          content: 'Displaying @start - @end of @total'
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  page_1:
+    id: page_1
+    display_title: Page
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: smoke/board-terms
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }

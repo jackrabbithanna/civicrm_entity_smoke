@@ -1,0 +1,14 @@
+uuid: 36de0dff-c627-43aa-9fbd-9c3270270ba1
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.smoke_contact_viewer
+  module:
+    - user
+id: user_remove_role_action.smoke_contact_viewer
+label: 'Remove the smoke_contact_viewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: smoke_contact_viewer

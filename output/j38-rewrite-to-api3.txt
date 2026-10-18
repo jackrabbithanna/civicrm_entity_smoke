@@ -1,0 +1,28 @@
++---------------+-------------+----------+------+----+
+| Configuration | Entity type | Location | From | To |
++---------------+-------------+----------+------+----+
+
+api4_native -> api3: 0 rename(s) across 0 configuration object(s).
+
+2 configuration object(s) could not be rewritten.
++---------------------+-------------------------------------------------------------+
+| Configuration       | Error                                                       |
++---------------------+-------------------------------------------------------------+
+| entity_view_display | The "civicrm_cv_ce_board_terms" entity type does not exist. |
+| entity_form_display | The "civicrm_cv_ce_board_terms" entity type does not exist. |
++---------------------+-------------------------------------------------------------+
+Rewrote 0 field reference(s).
++--------------------------------------+
+| Snapshot ID                          |
++--------------------------------------+
+| 558a68d0-b4ee-4db0-8ae5-c10cce3b39ef |
++--------------------------------------+
+
+2 configuration object(s) could not be rewritten.
++---------------------+-------------------------------------------------------------+
+| Configuration       | Error                                                       |
++---------------------+-------------------------------------------------------------+
+| entity_view_display | The "civicrm_cv_ce_board_terms" entity type does not exist. |
+| entity_form_display | The "civicrm_cv_ce_board_terms" entity type does not exist. |
++---------------------+-------------------------------------------------------------+
+[31mFailed to run drush --uri=https://drupal-civi-composer-exp-d11.ddev.site civicrm-entity:config-rewrite --from=api4_native --apply -y: exit status 1[0m

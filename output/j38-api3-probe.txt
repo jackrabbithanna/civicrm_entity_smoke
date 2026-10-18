@@ -1,0 +1,39 @@
+Mode: api3
+programmatic, no row: contact 93, stored null
+browser, no row: contact 94, stored null
+browser, emptied: contact 10, stored ["1","1"]
+browser, Yes: contact 12, stored ["1","1"]
+browser, No: contact 8, stored ["0","0"]
+  [ok] boolean_radio emptied through API4 for contact 10
+
+1. The default contact form
+  [ok] no saved default contact form display
+  [ok] custom_70 widget -- 'options_buttons' vs 'options_buttons'
+  [ok] custom_71 widget -- 'boolean_checkbox' vs 'boolean_checkbox'
+  [ok] is_deceased widget -- 'boolean_checkbox' vs 'boolean_checkbox'
+  [ok] the saved edit form keeps the checkbox for custom_70
+
+2. The default form, saved unchanged (programmatic, admin)
+  [FAIL] the form saves -- {"custom_7][0][value":"School field is required.","custom_34][0][value":"Make field is required.","custom_50][0][value":"Association field is required.","custom_23":"<em class=\"placeholder\">Languages Used<\/em>: this field cannot hold more than 1 values."}
+  [ok] boolean_radio stays empty -- null
+  [FAIL] boolean_toggle stores 0, as CiviCRM's advcheckbox does -- null
+
+3. The saved edit form, in the browser (admin)
+  [ok] no row: contact 94's checkbox is unticked
+  [ok] no row: unchanged save leaves boolean_radio empty -- null 
+  [ok] emptied: contact 10's checkbox is unticked
+  [ok] emptied: unchanged save leaves boolean_radio empty -- ["NULL","1"] 
+  [FAIL] emptied: ticked, it stores 1 -- ["NULL","1"] 
+  [ok] Yes: contact 12's checkbox is ticked
+  [FAIL] Yes: unticked, it stores 0 -- ["1","1"] 
+  [ok] No: contact 8's unchanged save keeps 0 -- ["0","0"] 
+
+13 passed, 4 failed
+  - the form saves ({"custom_7][0][value":"School field is required.","custom_34][0][value":"Make field is required.","custom_50][0][value":"Association field is required.","custom_23":"<em class=\"placeholder\">Languages Used<\/em>: this field cannot hold more than 1 values."})
+  - boolean_toggle stores 0, as CiviCRM's advcheckbox does (null)
+  - emptied: ticked, it stores 1 (["NULL","1"] )
+  - Yes: unticked, it stores 0 (["1","1"] )
+ [warning] Drush command terminated abnormally.
+
+restored 5 contacts
+[31mFailed to run drush --uri=https://drupal-civi-composer-exp-d11.ddev.site php:script scripts/smoke/j38-smoke.php: exit status 1[0m

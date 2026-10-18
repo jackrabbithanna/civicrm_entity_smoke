@@ -1,0 +1,281 @@
+1. Views data: custom field filters allow empty
+  [ok] ce_board_terms.member (ContactReference/Autocomplete-Select) -- civicrm_entity_contact_reference
+  [FAIL] ce_board_terms.role (String/Select) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_board_terms.term_start (Date/Select Date) -- civicrm_entity_date, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_board_terms.term_end (Date/Select Date) -- civicrm_entity_date, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_board_terms.stipend (Money/Text) -- numeric, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_board_terms.country (Country/Select) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_board_terms.state (StateProvince/Select) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_board_terms.bio (Memo/RichTextEditor) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_education.school (String/Text) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_education.degree (String/Select) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_education.field_of_study (String/Text) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_education.start_date (Date/Select Date) -- civicrm_entity_date, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_education.end_date (Date/Select Date) -- civicrm_entity_date, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_education.gpa (Float/Text) -- numeric, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_education.graduated (Boolean/Radio) -- boolean, no allow empty in Views data
+  [FAIL] ce_education.honors (String/CheckBox) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_education.notes (Memo/TextArea) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_education.transcript (File/File) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_event_logistics.dress_code (String/Select) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_event_logistics.parking_info (Memo/TextArea) -- string, no allow empty in Views data, empty operators not offered
+  [ok] ce_event_logistics.presenting_sponsor (ContactReference/Autocomplete-Select) -- civicrm_entity_contact_reference
+  [FAIL] ce_event_logistics.livestream_url (Link/Link) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_event_logistics.minimum_age (Int/Text) -- numeric, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_event_sessions.session_title (String/Text) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_event_sessions.starts_at (Date/Select Date) -- civicrm_entity_date, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_event_sessions.duration_minutes (Int/Text) -- numeric, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_event_sessions.room (String/Select) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [ok] ce_event_sessions.speaker (ContactReference/Autocomplete-Select) -- civicrm_entity_contact_reference
+  [FAIL] ce_event_sessions.capacity (Int/Text) -- numeric, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_event_sessions.fee (Money/Text) -- numeric, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_event_sessions.materials_url (Link/Link) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_event_sessions.description (Memo/RichTextEditor) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_event_sessions.related_activity (EntityReference/Autocomplete-Select) -- numeric, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_meeting_details.agenda (Memo/RichTextEditor) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_meeting_details.outcome (String/Select) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_meeting_details.follow_up_on (Date/Select Date) -- civicrm_entity_date, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_meeting_details.attendee_count (Int/Text) -- numeric, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_professional_memberships_history.association (String/Text) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_professional_memberships_history.member_since (Date/Select Date) -- civicrm_entity_date, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_professional_memberships_history.annual_dues (Money/Text) -- numeric, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_professional_memberships_history.currently_active (Boolean/Toggle) -- boolean, no allow empty in Views data
+  [FAIL] ce_professional_memberships_history.level (Int/Select) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.text (String/Text) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.select (String/Select) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.radio (String/Radio) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.checkboxes (String/CheckBox) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.multiselect (String/Select) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.autocomplete (String/Autocomplete-Select) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.integer (Int/Text) -- numeric, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.int_radio (Int/Radio) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.float (Float/Text) -- numeric, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.money (Money/Text) -- numeric, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.memo (Memo/TextArea) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.rich_text (Memo/RichTextEditor) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.date (Date/Select Date) -- civicrm_entity_date, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.datetime (Date/Select Date) -- civicrm_entity_date, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.boolean_radio (Boolean/Radio) -- boolean, no allow empty in Views data
+  [FAIL] ce_profile_all.boolean_toggle (Boolean/Toggle) -- boolean, no allow empty in Views data
+  [FAIL] ce_profile_all.state (StateProvince/Select) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.country (Country/Select) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.countries (Country/Select) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.file (File/File) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.link (Link/Link) -- string, no allow empty in Views data, empty operators not offered
+  [ok] ce_profile_all.contact_ref (ContactReference/Autocomplete-Select) -- civicrm_entity_contact_reference
+  [FAIL] ce_profile_all.event_ref (EntityReference/Autocomplete-Select) -- numeric, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_profile_all.hidden (String/Hidden) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_skills.skill (String/Text) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_skills.proficiency (Int/Radio) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_skills.years_experience (Int/Text) -- numeric, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_skills.certified (Boolean/Toggle) -- boolean, no allow empty in Views data
+  [FAIL] ce_skills.cert_url (Link/Link) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_skills.languages (String/Select) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_skills.last_used (Date/Select Date) -- civicrm_entity_date, no allow empty in Views data, empty operators not offered
+  [ok] ce_skills.endorsed_by (ContactReference/Autocomplete-Select) -- civicrm_entity_contact_reference
+  [FAIL] ce_vehicles.make (String/Text) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_vehicles.model_year (Int/Text) -- numeric, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_vehicles.plate (String/Text) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_vehicles.color (String/Radio) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] ce_vehicles.parking_permit (Boolean/Radio) -- boolean, no allow empty in Views data
+  [FAIL] ce_vehicles.registered_until (Date/Select Date) -- civicrm_entity_date, no allow empty in Views data, empty operators not offered
+  [FAIL] constituent_information.Most_Important_Issue (String/Radio) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] constituent_information.Marital_Status (String/Select) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] constituent_information.Marriage_Date (Date/Select Date) -- civicrm_entity_date, no allow empty in Views data, empty operators not offered
+  [FAIL] Donor_Information.Known_areas_of_interest (Memo/TextArea) -- string, no allow empty in Views data, empty operators not offered
+  [FAIL] Donor_Information.How_long_have_you_been_a_donor_ (String/Radio) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [FAIL] Food_Preference.Soup_Selection (String/Radio) -- civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered
+  [--] 86 filters described; by plugin: {"civicrm_entity_contact_reference":5,"civicrm_entity_in_operator":25,"civicrm_entity_date":12,"numeric":15,"string":23,"boolean":6}
+
+2. empty / not empty on contacts, against SQL
+  [--] 207 contacts
+  [FAIL] ce_education.school not empty -- 207 vs 60
+  [FAIL] ce_education.school empty -- 207 vs 147
+  [FAIL] ce_profile_all.text not empty -- 207 vs 80
+  [FAIL] ce_profile_all.text empty -- 207 vs 127
+  [FAIL] ce_profile_all.select not empty -- 207 vs 69
+  [FAIL] ce_profile_all.select empty -- 207 vs 138
+  [FAIL] ce_profile_all.radio not empty -- 207 vs 80
+  [FAIL] ce_profile_all.radio empty -- 207 vs 127
+  [FAIL] ce_profile_all.checkboxes not empty -- 207 vs 48
+  [FAIL] ce_profile_all.checkboxes empty -- 207 vs 159
+  [FAIL] ce_profile_all.multiselect not empty -- 207 vs 80
+  [FAIL] ce_profile_all.multiselect empty -- 207 vs 127
+  [FAIL] ce_profile_all.autocomplete not empty -- 207 vs 80
+  [FAIL] ce_profile_all.autocomplete empty -- 207 vs 127
+  [FAIL] ce_profile_all.integer not empty -- 207 vs 80
+  [FAIL] ce_profile_all.integer empty -- 207 vs 127
+  [FAIL] ce_profile_all.int_radio not empty -- 207 vs 80
+  [FAIL] ce_profile_all.int_radio empty -- 207 vs 127
+  [FAIL] ce_profile_all.float not empty -- 207 vs 80
+  [FAIL] ce_profile_all.float empty -- 207 vs 127
+  [FAIL] ce_profile_all.money not empty -- 207 vs 69
+  [FAIL] ce_profile_all.money empty -- 207 vs 138
+  [FAIL] ce_profile_all.memo not empty -- 207 vs 80
+  [FAIL] ce_profile_all.memo empty -- 207 vs 127
+  [FAIL] ce_profile_all.rich_text not empty -- 207 vs 80
+  [FAIL] ce_profile_all.rich_text empty -- 207 vs 127
+  [FAIL] ce_profile_all.date not empty -- 207 vs 69
+  [FAIL] ce_profile_all.date empty -- 207 vs 138
+  [FAIL] ce_profile_all.datetime not empty -- 207 vs 80
+  [FAIL] ce_profile_all.datetime empty -- 207 vs 127
+  [ok] ce_profile_all.boolean_radio not empty -- 80 vs 80
+  [ok] ce_profile_all.boolean_radio empty -- 127 vs 127
+  [ok] ce_profile_all.boolean_toggle not empty -- 80 vs 80
+  [ok] ce_profile_all.boolean_toggle empty -- 127 vs 127
+  [FAIL] ce_profile_all.state not empty -- 207 vs 80
+  [FAIL] ce_profile_all.state empty -- 207 vs 127
+  [FAIL] ce_profile_all.country not empty -- 207 vs 80
+  [FAIL] ce_profile_all.country empty -- 207 vs 127
+  [FAIL] ce_profile_all.countries not empty -- 207 vs 80
+  [FAIL] ce_profile_all.countries empty -- 207 vs 127
+  [FAIL] ce_profile_all.file not empty -- 207 vs 8
+  [FAIL] ce_profile_all.file empty -- 207 vs 199
+  [FAIL] ce_profile_all.link not empty -- 207 vs 69
+  [FAIL] ce_profile_all.link empty -- 207 vs 138
+  [ok] ce_profile_all.contact_ref not empty -- 69 vs 69
+  [ok] ce_profile_all.contact_ref empty -- 138 vs 138
+  [FAIL] ce_profile_all.event_ref not empty -- 207 vs 80
+  [FAIL] ce_profile_all.event_ref empty -- 207 vs 127
+  [FAIL] ce_profile_all.hidden not empty -- 207 vs 80
+  [FAIL] ce_profile_all.hidden empty -- 207 vs 127
+
+3. the directory page, its text filter set to not empty
+  [--] configured: longerthan "0"
+  [FAIL] ce_smoke_contact_directory:page_1 with not empty -- 207 vs 80 (first pass: 203)
+
+4. Views UI: the directory's filter forms offer the operators
+  [FAIL] filter has_profile (string) -- HTTP 200, empty false, not empty false
+  [FAIL] filter size (civicrm_entity_in_operator) -- HTTP 200, empty false, not empty false
+
+11 passed, 128 failed
+  - ce_board_terms.role (String/Select) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_board_terms.term_start (Date/Select Date) (civicrm_entity_date, no allow empty in Views data, empty operators not offered)
+  - ce_board_terms.term_end (Date/Select Date) (civicrm_entity_date, no allow empty in Views data, empty operators not offered)
+  - ce_board_terms.stipend (Money/Text) (numeric, no allow empty in Views data, empty operators not offered)
+  - ce_board_terms.country (Country/Select) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_board_terms.state (StateProvince/Select) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_board_terms.bio (Memo/RichTextEditor) (string, no allow empty in Views data, empty operators not offered)
+  - ce_education.school (String/Text) (string, no allow empty in Views data, empty operators not offered)
+  - ce_education.degree (String/Select) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_education.field_of_study (String/Text) (string, no allow empty in Views data, empty operators not offered)
+  - ce_education.start_date (Date/Select Date) (civicrm_entity_date, no allow empty in Views data, empty operators not offered)
+  - ce_education.end_date (Date/Select Date) (civicrm_entity_date, no allow empty in Views data, empty operators not offered)
+  - ce_education.gpa (Float/Text) (numeric, no allow empty in Views data, empty operators not offered)
+  - ce_education.graduated (Boolean/Radio) (boolean, no allow empty in Views data)
+  - ce_education.honors (String/CheckBox) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_education.notes (Memo/TextArea) (string, no allow empty in Views data, empty operators not offered)
+  - ce_education.transcript (File/File) (string, no allow empty in Views data, empty operators not offered)
+  - ce_event_logistics.dress_code (String/Select) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_event_logistics.parking_info (Memo/TextArea) (string, no allow empty in Views data, empty operators not offered)
+  - ce_event_logistics.livestream_url (Link/Link) (string, no allow empty in Views data, empty operators not offered)
+  - ce_event_logistics.minimum_age (Int/Text) (numeric, no allow empty in Views data, empty operators not offered)
+  - ce_event_sessions.session_title (String/Text) (string, no allow empty in Views data, empty operators not offered)
+  - ce_event_sessions.starts_at (Date/Select Date) (civicrm_entity_date, no allow empty in Views data, empty operators not offered)
+  - ce_event_sessions.duration_minutes (Int/Text) (numeric, no allow empty in Views data, empty operators not offered)
+  - ce_event_sessions.room (String/Select) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_event_sessions.capacity (Int/Text) (numeric, no allow empty in Views data, empty operators not offered)
+  - ce_event_sessions.fee (Money/Text) (numeric, no allow empty in Views data, empty operators not offered)
+  - ce_event_sessions.materials_url (Link/Link) (string, no allow empty in Views data, empty operators not offered)
+  - ce_event_sessions.description (Memo/RichTextEditor) (string, no allow empty in Views data, empty operators not offered)
+  - ce_event_sessions.related_activity (EntityReference/Autocomplete-Select) (numeric, no allow empty in Views data, empty operators not offered)
+  - ce_meeting_details.agenda (Memo/RichTextEditor) (string, no allow empty in Views data, empty operators not offered)
+  - ce_meeting_details.outcome (String/Select) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_meeting_details.follow_up_on (Date/Select Date) (civicrm_entity_date, no allow empty in Views data, empty operators not offered)
+  - ce_meeting_details.attendee_count (Int/Text) (numeric, no allow empty in Views data, empty operators not offered)
+  - ce_professional_memberships_history.association (String/Text) (string, no allow empty in Views data, empty operators not offered)
+  - ce_professional_memberships_history.member_since (Date/Select Date) (civicrm_entity_date, no allow empty in Views data, empty operators not offered)
+  - ce_professional_memberships_history.annual_dues (Money/Text) (numeric, no allow empty in Views data, empty operators not offered)
+  - ce_professional_memberships_history.currently_active (Boolean/Toggle) (boolean, no allow empty in Views data)
+  - ce_professional_memberships_history.level (Int/Select) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.text (String/Text) (string, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.select (String/Select) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.radio (String/Radio) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.checkboxes (String/CheckBox) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.multiselect (String/Select) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.autocomplete (String/Autocomplete-Select) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.integer (Int/Text) (numeric, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.int_radio (Int/Radio) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.float (Float/Text) (numeric, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.money (Money/Text) (numeric, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.memo (Memo/TextArea) (string, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.rich_text (Memo/RichTextEditor) (string, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.date (Date/Select Date) (civicrm_entity_date, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.datetime (Date/Select Date) (civicrm_entity_date, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.boolean_radio (Boolean/Radio) (boolean, no allow empty in Views data)
+  - ce_profile_all.boolean_toggle (Boolean/Toggle) (boolean, no allow empty in Views data)
+  - ce_profile_all.state (StateProvince/Select) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.country (Country/Select) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.countries (Country/Select) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.file (File/File) (string, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.link (Link/Link) (string, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.event_ref (EntityReference/Autocomplete-Select) (numeric, no allow empty in Views data, empty operators not offered)
+  - ce_profile_all.hidden (String/Hidden) (string, no allow empty in Views data, empty operators not offered)
+  - ce_skills.skill (String/Text) (string, no allow empty in Views data, empty operators not offered)
+  - ce_skills.proficiency (Int/Radio) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_skills.years_experience (Int/Text) (numeric, no allow empty in Views data, empty operators not offered)
+  - ce_skills.certified (Boolean/Toggle) (boolean, no allow empty in Views data)
+  - ce_skills.cert_url (Link/Link) (string, no allow empty in Views data, empty operators not offered)
+  - ce_skills.languages (String/Select) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_skills.last_used (Date/Select Date) (civicrm_entity_date, no allow empty in Views data, empty operators not offered)
+  - ce_vehicles.make (String/Text) (string, no allow empty in Views data, empty operators not offered)
+  - ce_vehicles.model_year (Int/Text) (numeric, no allow empty in Views data, empty operators not offered)
+  - ce_vehicles.plate (String/Text) (string, no allow empty in Views data, empty operators not offered)
+  - ce_vehicles.color (String/Radio) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_vehicles.parking_permit (Boolean/Radio) (boolean, no allow empty in Views data)
+  - ce_vehicles.registered_until (Date/Select Date) (civicrm_entity_date, no allow empty in Views data, empty operators not offered)
+  - constituent_information.Most_Important_Issue (String/Radio) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - constituent_information.Marital_Status (String/Select) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - constituent_information.Marriage_Date (Date/Select Date) (civicrm_entity_date, no allow empty in Views data, empty operators not offered)
+  - Donor_Information.Known_areas_of_interest (Memo/TextArea) (string, no allow empty in Views data, empty operators not offered)
+  - Donor_Information.How_long_have_you_been_a_donor_ (String/Radio) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - Food_Preference.Soup_Selection (String/Radio) (civicrm_entity_in_operator, no allow empty in Views data, empty operators not offered)
+  - ce_education.school not empty (207 vs 60)
+  - ce_education.school empty (207 vs 147)
+  - ce_profile_all.text not empty (207 vs 80)
+  - ce_profile_all.text empty (207 vs 127)
+  - ce_profile_all.select not empty (207 vs 69)
+  - ce_profile_all.select empty (207 vs 138)
+  - ce_profile_all.radio not empty (207 vs 80)
+  - ce_profile_all.radio empty (207 vs 127)
+  - ce_profile_all.checkboxes not empty (207 vs 48)
+  - ce_profile_all.checkboxes empty (207 vs 159)
+  - ce_profile_all.multiselect not empty (207 vs 80)
+  - ce_profile_all.multiselect empty (207 vs 127)
+  - ce_profile_all.autocomplete not empty (207 vs 80)
+  - ce_profile_all.autocomplete empty (207 vs 127)
+  - ce_profile_all.integer not empty (207 vs 80)
+  - ce_profile_all.integer empty (207 vs 127)
+  - ce_profile_all.int_radio not empty (207 vs 80)
+  - ce_profile_all.int_radio empty (207 vs 127)
+  - ce_profile_all.float not empty (207 vs 80)
+  - ce_profile_all.float empty (207 vs 127)
+  - ce_profile_all.money not empty (207 vs 69)
+  - ce_profile_all.money empty (207 vs 138)
+  - ce_profile_all.memo not empty (207 vs 80)
+  - ce_profile_all.memo empty (207 vs 127)
+  - ce_profile_all.rich_text not empty (207 vs 80)
+  - ce_profile_all.rich_text empty (207 vs 127)
+  - ce_profile_all.date not empty (207 vs 69)
+  - ce_profile_all.date empty (207 vs 138)
+  - ce_profile_all.datetime not empty (207 vs 80)
+  - ce_profile_all.datetime empty (207 vs 127)
+  - ce_profile_all.state not empty (207 vs 80)
+  - ce_profile_all.state empty (207 vs 127)
+  - ce_profile_all.country not empty (207 vs 80)
+  - ce_profile_all.country empty (207 vs 127)
+  - ce_profile_all.countries not empty (207 vs 80)
+  - ce_profile_all.countries empty (207 vs 127)
+  - ce_profile_all.file not empty (207 vs 8)
+  - ce_profile_all.file empty (207 vs 199)
+  - ce_profile_all.link not empty (207 vs 69)
+  - ce_profile_all.link empty (207 vs 138)
+  - ce_profile_all.event_ref not empty (207 vs 80)
+  - ce_profile_all.event_ref empty (207 vs 127)
+  - ce_profile_all.hidden not empty (207 vs 80)
+  - ce_profile_all.hidden empty (207 vs 127)
+  - ce_smoke_contact_directory:page_1 with not empty (207 vs 80 (first pass: 203))
+  - filter has_profile (string) (HTTP 200, empty false, not empty false)
+  - filter size (civicrm_entity_in_operator) (HTTP 200, empty false, not empty false)
+ [warning] Drush command terminated abnormally.
+[31mFailed to run drush --uri=https://drupal-civi-composer-exp-d11.ddev.site php:script scripts/smoke/j4-smoke.php: exit status 1[0m

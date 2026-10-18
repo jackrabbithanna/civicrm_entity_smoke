@@ -1,0 +1,43 @@
+1. Handlers
+  [ok] field         civicrm_entity_activity_attachments              civicrm_activity.attachments (1 uses)
+  [ok] field         civicrm_entity_activity_end_datetime             civicrm_activity.activity_end_datetime (1 uses)
+  [ok] field         civicrm_entity_custom_field                      civicrm_value_meeting_detai_13.agenda_80 (85 uses)
+  [ok] field         civicrm_entity_custom_file                       civicrm_value_profile_all_f_12.file_75 (2 uses)
+  [ok] field         civicrm_entity_distance                          civicrm_address.distance (1 uses)
+  [ok] field         civicrm_entity_list_field                        civicrm_action_schedule.entity_value (22 uses)
+  [ok] field         civicrm_entity_mailing_event                     civicrm_mailing.bounce (10 uses)
+  [ok] field         civicrm_entity_mailing_event_opened_rate         civicrm_mailing.opened_rate (1 uses)
+  [ok] filter        civicrm_entity_civicrm_activity_contact_record   civicrm_activity.source_contact_id (3 uses)
+  [ok] filter        civicrm_entity_civicrm_address_proximity         civicrm_address.proximity (1 uses)
+  [ok] filter        civicrm_entity_civicrm_address_state_province    civicrm_address.state_province_id (1 uses)
+  [ok] filter        civicrm_entity_contact_reference                 civicrm_value_profile_all_f_12.contact_reference_77 (5 uses)
+  [ok] filter        civicrm_entity_date                              civicrm_value_meeting_detai_13.follow_up_on_82 (12 uses)
+  [ok] filter        civicrm_entity_in_operator                       civicrm_action_schedule.entity_value (48 uses)
+  [ok] argument      civicrm_entity_date                              civicrm_value_meeting_detai_13.follow_up_on_82 (12 uses)
+  [ok] argument      civicrm_entity_list                              civicrm_action_schedule.entity_value (28 uses)
+  [ok] relationship  civicrm_entity_activity_contact                  civicrm_activity.contact (2 uses)
+  [ok] relationship  civicrm_entity_civicrm_bridge                    civicrm_contact.civicrm_tag (2 uses)
+  [ok] relationship  civicrm_entity_civicrm_case_activity             civicrm_activity.civicrm_case (2 uses)
+  [ok] relationship  civicrm_entity_civicrm_case_contact              civicrm_case.civicrm_contact (2 uses)
+  [ok] relationship  civicrm_entity_civicrm_contact_user              civicrm_contact.user (2 uses)
+  [ok] relationship  civicrm_entity_civicrm_group_contact             civicrm_contact.civicrm_group (2 uses)
+  [ok] relationship  civicrm_entity_civicrm_relationship              civicrm_contact.reverse__civicrm_relationship__contact_id_a (2 uses)
+  [ok] relationship  civicrm_entity_reverse                           civicrm_activity.reverse__civicrm_activity__parent_id (125 uses)
+  [ok] relationship  civicrm_entity_reverse_location                  civicrm_contact.reverse__civicrm_address__contact_id (2 uses)
+  [ok] relationship  civicrm_entity_reverse_location_phone            civicrm_contact.reverse__civicrm_phone__contact_id (1 uses)
+  [ok] relationship  civicrm_entity_reverse_website_type              civicrm_contact.reverse__civicrm_website__contact_id (1 uses)
+  [ok] sort          civicrm_entity_distance_sort                     civicrm_address.distance (1 uses)
+
+1. Display plugins
+  [ok] access             civicrm_entity_contact_checksum
+  [ok] query              civicrm_views_query
+  [ok] argument_default   current_user_contact_id
+  [ok] argument_default   current_user_contact_subtype
+  [ok] argument_validator entity:civicrm_contact
+
+2. State filter
+  [ok] the filter is the module's -- Drupal\civicrm_entity\Plugin\views\filter\StateProvince
+  [ok] it offers CiviCRM's states -- 4080
+  [ok] addresses in two states -- 46 vs SQL 46
+
+36 passed, 0 failed
